@@ -188,7 +188,7 @@ async function personalInformationUIValidationSuccess() {
   //   await doSomethingWithPersonalInformationMessage((msg)=> msg = '')
   //   await personalInfoShowRequestLoadingStatusIsIdle((isIdle) => isIdle = true)
 
-     await  axios.post('https://statichurryaskstaticrunmovementshamed/futuremacholder/validatingpersonalinformation', {
+     await  axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/validatingpersonalinformation', {
                  firstname: firstname,
                  middlename: middlename,
                  lastname: lastname    
@@ -338,7 +338,7 @@ const verifyContactNumber = async () => {
 
   doSometingWithcontactnumberverifyingloadingstatus((isIdle)=> isIdle = true)
 
-  await axios.get('https://statichurryaskstaticrunmovementshamed/futuremacholder/validatingcontactnumberinformation')
+  await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/validatingcontactnumberinformation')
     .then( async (response)=> {
         console.log(response)
         await doSomethingWithVerifyphonenumbercode((code) => code = response.data)
@@ -361,7 +361,7 @@ const verifyPhoneDigitCode = () => {
   if ( userDigitCode.toString() == verifyphonenumbercode.toString() ) {
   
 
-    axios.post('https://statichurryaskstaticrunmovementshamed/futuremacholder/validatephonenumber', {
+    axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/validatephonenumber', {
         contactnumber: contactnumber
     })
     .then( async (response)=> {
@@ -389,7 +389,7 @@ function startResendCountDownTimer() {
 }
 const resendOTP = async () => {
 
-  await axios.get('https://statichurryaskstaticrunmovementshamed/futuremacholder/validatingcontactnumberinformation')
+  await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/validatingcontactnumberinformation')
 
   .then( async (response)=> {
     console.log(response)
@@ -603,7 +603,7 @@ const invest = async () => {
   
   doSomethingInvestLoadingStatus((isIdle)=> isIdle = true)
 
-  axios.post('https://statichurryaskstaticrunmovementshamed/futuremacholder/invest', {
+  axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/invest', {
     firstname: firstname,
     middlename: middlename,
     lastname: lastname,

@@ -161,7 +161,7 @@ const myFavoriteMacSet = (e, idx, data) => {
     //document.cookie = `Itemname=${cartitem}, item=${cartitem}`
     //alert(JSON.stringify(props.currentlyLoginUser))
     //// phone numner or a combination of username middlename and lastname being hashed using base encoding with salt and hash again with the same information
-    axios.post('https://statichurryaskstaticrunmovementshamed/item/cartitems/myfavorite', {
+    axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/cartitems/myfavorite', {
                                                            user: props.currentlyLoginUser,
                                                            item: data
                                                            })
@@ -279,7 +279,7 @@ const submitPayPalPassword = async (token) => {
   const timeStamp = new Date().toISOString();
 
 
-  await axios.post('https://statichurryaskstaticrunmovementshamed/funds/singletransfer', {
+  await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/funds/singletransfer', {
          token: token,
          senderBatchID: `Payout_${timeStamp}`,
          desiredAmount: Number(desiredAmountPayPalTransfer).toFixed(2)

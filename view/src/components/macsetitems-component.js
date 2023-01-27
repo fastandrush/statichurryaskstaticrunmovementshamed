@@ -219,7 +219,7 @@ export default  function  MacSetItems(props) {
 
     doSomethingWithSpecificMacProductObjClicked((specificproductobjclicked)=> specificproductobjclicked = true)
 
-    await axios.post('http://localhost:4000/macministrator/showspecificproduct', {
+    await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/showspecificproduct', {
                                                                                 productname: _product.innerText
                                                                                  })
      .then((response)=> {
@@ -620,7 +620,7 @@ let _itemData = undefined;
 
 for ( let exec = 0 ; exec < shippingDetails.length; exec++ ) {
 
-  await axios.post('https://statichurryaskstaticrunmovementshamed/shipping/jandt/calculateshippingprice', {
+  await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/shipping/jandt/calculateshippingprice', {
                                                                   idx: shippingDetails[exec].idx,
                                                                   weight: shippingDetails[exec].weight,
                                                                   to: shippingDetails[exec].userlocation,

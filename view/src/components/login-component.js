@@ -107,7 +107,7 @@ export default function LoginComponent() {
     const mn = parsedDetails[1];
     const ln = parsedDetails[2];
     
-    await axios.post('https://statichurryaskstaticrunmovementshamed/authentication/authenticate/validate', {
+    await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/authentication/authenticate/validate', {
       fn: fn,
       mn: mn,
       ln: ln,

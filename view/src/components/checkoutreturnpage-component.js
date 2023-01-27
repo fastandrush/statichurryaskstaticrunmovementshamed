@@ -35,7 +35,7 @@ export default function CheckoutReturnPage(props) {
 
    let paypalToken = undefined 
 
-   await axios.get('http://localhost:4000/item/asktoken/singletransfer')
+   await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/asktoken/singletransfer')
   
     .then( async (response)=> {
        await capturePayment(response.data)
@@ -46,7 +46,7 @@ export default function CheckoutReturnPage(props) {
   }
 
   const capturePayment = async (payPalToken) => {
-    axios.post('http://localhost:4000/item/checkout/capturepayment', {
+    axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/checkout/capturepayment', {
         token: payPalToken,
         payerToken: PayerToken,
         payerID: PayerID

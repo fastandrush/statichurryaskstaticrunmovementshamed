@@ -34,7 +34,12 @@ const fundsRoute = require('./controller/fundsRoute.js');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
 
 
 const sessionInilizationConfiguration = {
@@ -92,4 +97,5 @@ if ( process.env.NODE.ENV === 'production' ) {
 
 } 
 
+console.log(process.env.ATLAS_URI)
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));

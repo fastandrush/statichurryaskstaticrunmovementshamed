@@ -219,6 +219,7 @@ async function getUser(parsedUser) {
   let userdata = undefined;
  
   // qeurying user collection to get a favorite items on cart
+              https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/getcurrentlyloginmacuser/
   axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/getcurrentlyloginmacuser/', { 
     user: parsedUser
   })
@@ -268,7 +269,7 @@ async function getUser(parsedUser) {
 // loading the fetch news or post's assuming user's will click directly on cart on page load
 async function getMacSetItems(userlocation) {
   
-   await axios.get('https://statichurryaskstaticrunmovementshamed/macsetitem/get')
+   await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macsetitem/get')
 
        .then( async (response)=> {
 
@@ -383,7 +384,7 @@ const getShippingRate = async (shippingDetails) => {
  // or load on /  
  for ( let exec = 0 ; exec <  shippingDetails.length; exec++ ) {
  
-   await axios.post('https://statichurryaskstaticrunmovementshamed/shipping/jandt/calculateshippingprice', {
+   await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/shipping/jandt/calculateshippingprice', {
                                                                    idx: shippingDetails[exec].idx,
                                                                    weight: shippingDetails[exec].weight,
                                                                    to: shippingDetails[exec].userlocation,
@@ -503,7 +504,7 @@ async function addShippingToCartTotalPrice() {
 }
 
 function getMacContent(route) {
-   axios.get('https://statichurryaskstaticrunmovementshamed/maccontent/maccontent/maccontent')
+   axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/maccontent/maccontent/maccontent')
  
         .then( async (response)=> {
              console.log(response.data)
@@ -514,7 +515,7 @@ function getMacContent(route) {
 } 
 
 function getPopularPosts() {
-   axios.get('https://statichurryaskstaticrunmovementshamed/maccontent/popularposts/popularposts')
+   axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/maccontent/popularposts/popularposts')
        .then( async (response)=> {
           console.log(response.data)
           doSomethingPopularPosts((data)=> data = response.data)
@@ -524,7 +525,7 @@ function getPopularPosts() {
 }
 
 function getLatestPosts() {
-    axios.get('https://statichurryaskstaticrunmovementshamed/maccontent/maccontent/maccontent')
+    axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/maccontent/maccontent/maccontent')
       .then( async (response)=> {
           console.log(response.data)
           doSomethingLatestPosts((data)=> data = response.data)
@@ -535,7 +536,7 @@ function getLatestPosts() {
 }
 
 function getItemsAllSort() {
-  axios.get('https://statichurryaskstaticrunmovementshamed/getitems/sortall')
+  axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/getitems/sortall')
     .then((response)=> {
        console.log(response.data)
        const data = response.data
@@ -545,7 +546,7 @@ function getItemsAllSort() {
 }
 
 async function getAddressesScope() {
-  await axios.get('https://statichurryaskstaticrunmovementshamed/population/spot')
+  await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/population/spot')
      .then((response)=> {
        console.log(response.data)
        addressesScope.push(response.data)
@@ -554,7 +555,7 @@ async function getAddressesScope() {
 }
 
 function getMacNewsSequence1() {
-   axios.get('https://statichurryaskstaticrunmovementshamed/news/whatupmacnews/getmacnews1')
+   axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/news/whatupmacnews/getmacnews1')
       .then((response)=> {
           console.log(response.data);
           getRestOfTheMacNews()
@@ -562,7 +563,7 @@ function getMacNewsSequence1() {
 }
 
 function getRestOfTheMacNews() {
-   axios.get('https://statichurryaskstaticrunmovementshamed/news/whatupmainnews/whatsupallrestofthemacnews')
+   axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/news/whatupmainnews/whatsupallrestofthemacnews')
       .then((response)=> {
          console.log(response.data);
          getPhNews();
@@ -570,14 +571,14 @@ function getRestOfTheMacNews() {
 }
 
 function getPhNews() {
-     axios.get('https://statichurryaskstaticrunmovementshamed/news/whatsupphnews/allofthephnews')
+     axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/news/whatsupphnews/allofthephnews')
      .then((response)=> {
        console.log(response.data)
      })
 }
 
  function getVideos() {
-    axios.get('https://statichurryaskstaticrunmovementshamed/news/whatsupphnews/allvideos')
+    axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/news/whatsupphnews/allvideos')
      .then((response)=> {
         console.log(response.data)
         doSomethingWithVideos((videos)=> videos = response.data)
@@ -587,7 +588,7 @@ function getPhNews() {
 }
 
 async function getId() {
-   await axios.get('https://statichurryaskstaticrunmovementshamed/futuremacholder/checkcount')
+   await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/checkcount')
   .then((response)=> {
      console.log(response.data)
      doSomethindWithUserId((id)=> id = response.data.length)

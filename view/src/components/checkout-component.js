@@ -149,10 +149,9 @@ async function spreadShare() {
   
   for (let exec = 0 ; exec < itemData.length; exec++) {
 
-    alert(item[exec])
     setTimeout(async function timer() {
       
-      await  axios.post('http://localhost:4000/share/gross/items', {
+      await  axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/share/gross/items', {
                                                          idx: item[exec].idx,
                                                          macuser: props.currentlyLoginUser.firstname,
                                                          itemname: item[exec].itemname,
@@ -183,7 +182,7 @@ const buy = () => {
 
 const checkoutPurchaseButton = async (evt) => {
 
-  axios.get('http://localhost:4000/funds/asktoken/singletransfer')
+  axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/funds/asktoken/singletransfer')
 
   .then( async (response)=> {
 
@@ -200,7 +199,7 @@ const submitCheckoutPurchaseDetails = async (token) => {
   
   const timeStamp = new Date().toISOString();
 
-  await axios.post('http://localhost:4000/item/checkout/collectpayment', {
+  await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/checkout/collectpayment', {
        token: token,
        senderBatchID: `Payout_${timeStamp}`,
        desiredAmount: "10.00"

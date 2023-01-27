@@ -338,7 +338,7 @@ const getShippingRate = async (shippingDetails, data, parsedTotalFavCartItemPric
 
   for ( let exec = 0 ; exec < shippingDetails.length; exec++ ) {
     
-    await axios.post('https://statichurryaskstaticrunmovementshamed/shipping/jandt/calculateshippingprice', {
+    await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/shipping/jandt/calculateshippingprice', {
                                                                     idx: shippingDetails[exec].idx,
                                                                     weight: shippingDetails[exec].weight,
                                                                     to: shippingDetails[exec].userlocation,

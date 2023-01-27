@@ -61,7 +61,7 @@ export default function Macministrator() {
 
   async function getAllMac() {
 
-   await axios.get('https://statichurryaskstaticrunmovementshamed/macministrator/getallmacs')
+   await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/getallmacs')
       .then( async (response)=> {
         await getMacData((macs)=> macs = response.data)
         await macDataContainerIsIdle((idle)=> idle = true)
@@ -71,7 +71,7 @@ export default function Macministrator() {
   }
 
   async function getOriginatorProductSummary() {
-    await axios.get('https://statichurryaskstaticrunmovementshamed/macministrator/getproductoriginatorsummary')
+    await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/getproductoriginatorsummary')
         .then( async (response)=> {
           console.log(response.data)
           await doSomethingWithOriginatorProductSummary((data)=> data = response.data)
@@ -909,7 +909,7 @@ function DashboardContentProductSummary(props) {
   }
 
   const getOriginatorProductStatisticsGraph = async (e) => {
-    await axios.post('https://statichurryaskstaticrunmovementshamed/macministrator/getorignatorproductstatisticsgraphsecondweek', {
+    await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/getorignatorproductstatisticsgraphsecondweek', {
                                                        originator: e.target.innerText
                                                     })
     .then( async (response)=> {
@@ -931,7 +931,7 @@ function DashboardContentProductSummary(props) {
   async function getOriginatorFirstWeekProductStatisticsGraph(e) {
     
 
-    await axios.post('https://statichurryaskstaticrunmovementshamed/macministrator/getorignatorproductstatisticsgraphfirstweek', {
+    await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/getorignatorproductstatisticsgraphfirstweek', {
       originator: e.target.innerText
    })
    .then( async (response)=> {
