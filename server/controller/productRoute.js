@@ -12,7 +12,6 @@ Router.route('/sortall').get( async (req, res)=> {
   await mongodb.connect(process.env.ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    bufferCommands: false,
     dbName: 'Item',
     autoCreate: false
   })
@@ -33,7 +32,6 @@ Router.route('/specificitem').post( async (req, res)=> {
   await mongodb.connect(process.env.ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    bufferCommands: false,
     dbName: 'Item',
     autoCreate: false
   })

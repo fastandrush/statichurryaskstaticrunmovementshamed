@@ -26,7 +26,6 @@ Router.route('/addamacsetitem').post( upload.single('macsetitemcontentdisplay'),
    await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Macsetitem',
       autoCreate: false
    })
@@ -68,7 +67,6 @@ Router.route('/get').get( async (req, res)=> {
    await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'Macsetitem',
          autoCreate: false
    })
@@ -114,7 +112,6 @@ async function updateMacSetItemGetProduct(req, res, next) {
    await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Item',
       autoCreate: false
    })
@@ -141,7 +138,6 @@ Router.route('/updatemacsetitem/').post( async (req, res) => {
    await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Macsetitem',
       autoCreate: false
    })
@@ -164,7 +160,6 @@ Router.route('/getmacsetitemss').get( async (req, res)=> {
    await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Macsetitem',
       autoCreate: false
    })

@@ -16,7 +16,6 @@ Router.route('/compromise').post(async (req, res)=> {
       await mongodb.connect(process.env.ATLAS_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            bufferCommands: false,
             dbName: 'Storeditemrevenue',
             autoCreate: false  
       })

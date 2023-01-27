@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
 const mongodb = require('./lib/mongodb/database');
 
-mongoose.set('bufferCommands', false);
+//mongoose.set('bufferCommands', false);
 
 const cors = require('cors');
 
@@ -40,7 +40,6 @@ app.use(cors());
 const sessionInilizationConfiguration = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  bufferCommands: false,
   dbName: 'Sessions',
   autoCreate: false
 }

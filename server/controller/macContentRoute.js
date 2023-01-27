@@ -54,7 +54,6 @@ Router.route('/add/macnewsimage').post( uploadMacNews.single('content'), async (
       await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'MacContent',
          autoCreate: false
        })
@@ -95,7 +94,6 @@ Router.route('/add/macnewsytlink').post( uploadMacNews.single('content'), async 
       await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'MacContent  ',
          autoCreate: false
        })
@@ -135,7 +133,6 @@ Router.route('/add/popularpostsimage').post( uploadMainNews.single('content'), a
       await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'PopularPosts',
          autoCreate: false
        })
@@ -177,7 +174,6 @@ Router.route('/add/popularpostslink').post( uploadMacNews.single('content'), asy
       await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'PopularPosts',
          autoCreate: false
        })
@@ -216,7 +212,6 @@ Router.route('/ddd').post( async (req, res)=> {
       await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'Mainnews',
          autoCreate: false
        })
@@ -254,7 +249,6 @@ Router.route('/maccontent/maccontent').get( async (req, res) => {
      await mongodb.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        bufferCommands: false,
         dbName: 'MacContent',
         autoCreate: false
       })
@@ -299,7 +293,6 @@ Router.route('/popularposts/popularposts').get( async (req, res) => {
      await mongodb.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        bufferCommands: false,
         dbName: 'PopularPosts',
         autoCreate: false
       })

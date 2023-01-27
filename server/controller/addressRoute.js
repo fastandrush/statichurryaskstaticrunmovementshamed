@@ -17,7 +17,6 @@ async function getProvinceCityBaranggay(req, res, next) {
      await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'Investor',
          autoCreate: false
       })

@@ -20,7 +20,6 @@ Router.route('/getallmacs').get( async (req, res)=> {
       await mongodb.connect(process.env.ATLAS_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            bufferCommands: false,
             dbName: 'Investor',
             autoCreate: false
       })
@@ -65,7 +64,6 @@ Router.route('/getspecificmac').post( async (req, res)=> {
    await mongodb.connect(process.env.ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    bufferCommands: false,
     dbName: 'Investor',
     autoCreate: false 
    })
@@ -111,7 +109,6 @@ Router.route('/getproductoriginatorsummary').get( async (req, res)=> {
     await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Product',
       autoCreate: false,
       maxPoolSize: 1
@@ -386,7 +383,6 @@ Router.route('/getorignatorproductstatisticsgraphfirstweek').post( async (req, r
     await mongodb.connect(process.env.ATLAS_URI, {
        useNewUrlParser: true,
        useUnifiedTopology: true,
-       bufferCommands: false,
        dbName: 'Product',
        autoCreate: false,
        maxPoolSize: 1
@@ -567,7 +563,6 @@ async function handleFirstProductAdd(req, res, next) {
     await mongodb.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        bufferCommands: false,
         dbName: 'Item',
         autoCreate: false,
         maxPoolSize: 1
@@ -878,7 +873,6 @@ Router.route('/addproduct').post( uploadFileImages,  handleFirstProductAdd, asyn
   await mongodb.connect(process.env.ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    bufferCommands: false,
     dbName: 'Items',
     autoCreate: false,
     maxPoolSize: 1
@@ -1181,7 +1175,6 @@ Router.route('/getproduct/macsetitemupdate').post( async (req,res)=> {
     await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Item',
       autoCreate: false,
       maxPoolSize: 1
@@ -1221,7 +1214,6 @@ Router.route('/showspecificproduct').post( async (req, res)=> {
     await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Item',
       autoCreate: false,
       maxPoolSize: 5

@@ -27,7 +27,6 @@ async function updateProductStatisticsOnShare(req, res, next) {
         await mongodb.connect(process.env.ATLAS_URI, {
           useNewUrlParser: true,
           useUnifiedTopology: true,
-          bufferCommands: false,
           dbName: 'Item',
           autoCreate: false  
         })
@@ -185,7 +184,6 @@ async function spreadShare(req, res, next) {
   await mongodb.connect(process.env.ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    bufferCommands: false,
     dbName: 'Investor',
     autoCreate: false  
   })
@@ -226,7 +224,6 @@ async function compromiseSalesStatistics(req, res, next) {
     await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Macgross',
       autoCreate: false  
     })
@@ -272,7 +269,6 @@ Router.route('/dummy/gross').post(  async (req, res)=> {
       await mongodb.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        bufferCommands: false,
         dbName: 'Macgross',
         autoCreate: false  
       })

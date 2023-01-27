@@ -426,7 +426,6 @@ async function createScope(req, res, next) {
   await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Investor',
       autoCreate: false
   })
@@ -534,7 +533,6 @@ async function appendScope(req, res, next) {
    await mongodb.connect(process.env.ATLAS_URI, {
          useNewUrlParser: true,
          useUnifiedTopology: true,
-         bufferCommands: false,
          dbName: 'Investor',
          autoCreate: false
      })
@@ -570,7 +568,6 @@ Router.route('/validatingpersonalinformation').post( async (req, res)=> {
    await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Macuser',
       autoCreate: false
    })
@@ -640,7 +637,6 @@ Router.route('/validatephonenumber').post(async (req, res)=> {
    await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Macuser',
       autoCreate: false
    })
@@ -678,7 +674,6 @@ Router.route('/getcurrentlyloginmacuser').post(async (req, res)=> {
       await mongoose.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        bufferCommands: false,
         dbName: 'Investor',
         autoCreate: false
       })

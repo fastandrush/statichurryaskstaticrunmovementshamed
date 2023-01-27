@@ -29,7 +29,6 @@ Router.route('/jandt/getshippingrate').post( async (req, res)=> {
     await mongodb.connect(process.env.ATLAS_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            bufferCommands: false,
             dbName: 'Shipping',
             autoCreate: false
    })
@@ -80,7 +79,6 @@ Router.route('/jandt/updateshippingrate').post( async (req, res) => {
         await mongodb.connect(process.env.ATLAS_URI, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
-                bufferCommands: false,
                 dbName: 'Shipping',
                 autoCreate: false
        })
@@ -118,7 +116,6 @@ Router.route('/jandt/addshippinglocation').post( async (req, res)=> {
      await mongodb.connect(process.env.ATLAS_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            bufferCommands: false,
             dbName: 'Shipping',
             autoCreate: false
     })
@@ -156,7 +153,6 @@ Router.route('/jandt/calculateshippingprice').post( async (req, res)=> {
     await mongodb.connect(process.env.ATLAS_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      bufferCommands: false,
       dbName: 'Shipping',
       autoCreate: false,
     })
@@ -211,7 +207,6 @@ Router.route('/').post( async (req, res)=> {
       await mongodb.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        bufferCommands: false,
         dbName: 'Shipping',
         autoCreate: false
       })
