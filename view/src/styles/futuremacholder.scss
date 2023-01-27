@@ -1,0 +1,514 @@
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+#futuremacholder {
+  position: relative;
+  background-color: rgb(235, 225, 225);
+  width: 100%;
+  height: 100vh;
+  font: auto {
+    family: $main-font;
+  }
+}
+#personalinformation {
+  position: relative;
+  background-color: $subbgcolor;
+  width: 50%;
+  height: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  top: 5%;
+  user-select: none;
+  //overflow: hidden;
+}
+#personalinformation-definetioncontainer {
+  position: absolute;
+  background-color: #e9bcb7;
+  background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: auto {
+    size: 25px;
+  }
+}
+#personalinformationgreeting {
+  letter-spacing: 3px;
+  font: auto {
+    size: 28px;
+  }
+}
+#contactinformationgreeting {
+  letter-spacing: 3px;
+  font: auto {
+   size: 28px;
+  }
+}
+#addressinformationgreeting {
+  letter-spacing: 3px;
+  font: auto {
+   size: 28px;
+  }
+}
+#personalinformation-formcontainer {
+  position: absolute;
+  background-color:  rgb(189, 184, 184);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: top 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#personalinformation-contentcontainer {
+  display: flex;
+}
+#personalinformationform {
+  //background-color: chocolate;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#firstname {
+  border: none;
+  border-radius: 20px;
+  height: 7%;
+  width: 40%;
+  text-align: center;
+}
+#middlename {
+  border: none;
+  border-radius: 20px;
+  height: 7%;
+  width: 40%;
+  text-align: center;
+}
+#lastname {
+  border: none;
+  border-radius: 20px;
+  height: 7%;
+  width: 40%;
+  text-align: center;
+}
+#personalinformationform-guidescontainer {
+  //background-color: aqua;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#personalinformation-exitbuttoncontainer {
+  width: 100%;
+  height: auto;
+}
+#personalinformation-exitbutton {
+  position: relative;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  width: 15%;
+  padding: 5px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100%;
+}
+#personalinformation-skipbutton {
+position:relative;
+background-color: white;
+border: none;
+border-radius: 20px;
+width: 15%;
+padding: 5px 10px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+top: 150%;
+}
+/////////
+#contactinformation {
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  width: 50%;
+  height: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5.9%;
+  border-radius: 30px;
+  user-select: none;
+  //overflow: hidden;
+}
+#contactinformation-definetioncontainer {
+  position: absolute;
+  background-color: #98d9e1;
+  background-image: linear-gradient(315deg, #98d9e1 0%, #d6aed6 74%);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+  font: auto {
+    size: 25px;
+  }
+}
+#contactinformation-formcontainer {
+  position: absolute;
+  background-color: rgb(87, 136, 192);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: top 1s ease;
+  display: flex;
+  flex-direction: column;
+}
+#contactinformationform {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+#contactinformation-contentcontainer {
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+#contactinformationform-guidescontainer {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#contactnumber::-webkit-outer-spin-button,
+#contactnumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#contactnumber {
+  border: none;
+  border-radius: 20px;
+  height: 7%;
+  width: 40%;
+  text-align: center;
+}
+#contactemail {
+  border: none;
+  border-radius: 20px;
+  height: 7%;
+  width: 40%;
+  text-align: center;
+}
+#phonumberverified {
+  position: relative;
+  background-color: rgb(34, 189, 34);
+  color: white;
+  padding: 1px 30px;
+  border-radius: 20px;
+  letter-spacing: 1.5px;
+  top: 100%;
+}
+#contactnumberverificationmessage {
+  text-align: center;
+  align-items: center;
+}
+#verify-digitcodecontainer {
+  position: relative;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+#verifyphonenumber-digitscontainer {
+  display: flex;
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactinfo-verifydigitcodesbutton {
+  position: relative;
+  background-color: rgb(93, 214, 93);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30%;
+}
+#resend-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+}
+#resend {
+  position: relative;
+  top: 40%;
+  left: -2%;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  &:hover {
+    color: dodgerblue;
+  }
+  user-select: none;
+}
+#resend-countdown {
+  position: relative;
+  left: 5%;
+}
+////
+.digitcodefields {
+  width: 30px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  outline-style: none;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-left: 5px;
+  top: 5%;
+}
+#contactinfo-verifycontactnumberspinner {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100%;
+}
+#contactinfo-verifycontactnumberbutton {
+  position: relative;
+  background-color: rgb(93, 214, 93);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30%;
+}
+#contactinformation-exitbuttoncontainer {
+  width: 100%;
+  height: 10%;
+}
+#contanctinformation-exitbutton {
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  width: 15%;
+  padding: 5px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: -3.5vh;
+}
+#contanctinformation-skipbutton {
+  position: relative;
+  background-color: white;
+  border: 0.5px solid black;
+  border-radius: 20px;
+  width: 15%;
+  padding: 5px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: -2vh;
+}
+//////
+#addressinformation {
+  position: relative;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  width: 50%;
+  height: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 8%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  //overflow: hidden;
+}
+#addressinformation-contentcontainer {
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+#addressinformationform {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.addressfields {
+  border: 0.5px solid black;
+  border-radius: 20px;
+  height: 7%;
+  width: 40%;
+  text-align: center;
+  margin-top: 8px;
+} 
+#addresstinformationform-guidescontainer {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#addressinformation-definetioncontainer {
+  position: absolute;
+  background-color: #44355b;
+  background-image: linear-gradient(315deg, #44355b 0%, #ececec 74%);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: auto {
+    size: 25px;
+  }
+}
+#addressinformation-formcontainer {
+  position: absolute;
+  background-color:white;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: top 1s ease;
+}
+#addressinformation-exitbuttoncontainer {
+  width: 100%;
+  height: 10%;
+}
+#addressinformation-exitloadingspinner {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#addressinformation-exitbutton {
+  position: relative;
+  background-color: white;
+  border: 0.5px solid black;
+  border-radius: 20px;
+  width: 15%;
+  padding: 5px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: -3vh;
+}
+#addressinformation-skipbutton {
+  position: relative;
+  background-color: white;
+  border: 0.5px solid black;
+  border-radius: 20px;
+  width: 15%;
+  padding: 5px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: -1vh;
+}
+//////
+#investloadingspinner {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 120px;
+}
+#investbutton {
+  position: relative;
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  border: none;
+  height: 10%;
+  border-radius: 10px;
+  top: 120px;
+  padding: 10px 40px;
+}
+#investbutton-finishsteps {
+  position: relative;
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  border: none;
+  width: 20%;
+  height: 7%;
+  border-radius: 15px;
+  margin-top: 4.6%;
+  padding: 5px 30px;
+  letter-spacing: 2px;
+}
+#firstnameerror {
+  color: red;
+}
+#middlenameerror {
+  color: red;
+}
+#lastnameerror {
+  color: red;
+}
+#contacterror {
+  color: red;
+}
+.addressfielderror {
+  position: relative;
+  color: red;
+  top: 2.2%;
+}
+#personalinforequestloadingstatus {
+  position: relative;
+  left: 2%;
+}
+#addressinforequestloadingstatus {
+  position: relative;
+  left: 2%;
+}
+#contactinforequestloadingstatus {
+  position: relative;
+  left: 2%;
+}
+#personalinfogoodstatusmessage {
+  color: rgb(30, 255, 30);
+  letter-spacing: 15px;
+}
+#contactinformationvalidationsuccessmessage {
+  color: rgb(30, 255, 30);
+  letter-spacing: 15px;
+}
+#addressinformationsuccessmessage {
+  color: rgb(30, 255, 30);
+  letter-spacing: 15px;
+}

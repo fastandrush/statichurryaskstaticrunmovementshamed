@@ -1,0 +1,169 @@
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+#footer {
+  position: relative; 
+  background-color: #3f145f;
+  width: 100%;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+}
+#footer-container1 {
+  position: relative; 
+  height: 65%;
+  width: 100%;
+  display: flex;
+  padding: 10px 80px;
+}
+///// main containers
+.footercotainer1-container1 {
+  background-color: magenta;
+}
+.footercotainer1-container2 {
+  padding: 5px 10px 5px 10px;
+}
+.footercotainer1-container3 {
+  padding: 5px 10px 5px 10px;
+}
+.footerheaders {
+  font: auto {
+    family: $main-font;
+  }
+  color: white;
+}
+.footercontainer1-container2postcontainer {
+  height: 89%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.footercontainer1-container2postcontainer::-webkit-scrollbar {
+  display: none;
+}
+.footercontainer1-container2postcontainer {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+.footer-post {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+}
+.footercontainer1-container2positioncontainer {
+ display: flex;
+}
+.footer-postimage {
+  height: 70%;
+  width: 100%;
+}
+.footer-indication {
+  font: auto {
+    family: $sub-font;
+    size: 14px;
+  }
+  margin-left: 4%;
+  color: white;
+  letter-spacing: 1.5%;
+}
+#footercontainer1-container2popularpostcontainer {
+  background-color: aqua;
+  height: 89%;
+  width: 100%;
+}
+#footer-container2 {
+  position: relative; 
+  height: 25%;
+  width: 100%;
+  display: flex;
+  padding: 10px 40px;
+}
+#footermaccreditcard-indication {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#footermaccreditcard-image {
+  height: 50%;
+  width: 100%;
+  border-radius: 10px;
+}
+#footermaccreditcard-header {
+  font: auto {
+    family: $sub-font;
+  }
+  text-align: center;
+  margin-left: -13%;
+  margin-top: 12%;
+  color: white;
+  letter-spacing: 5px;
+}
+#footer-aboutcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+.footer-aboutindications {
+  position: relative;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  top: 18%;
+}
+.footer-aboutindicationpointer {
+  color: white;
+  font: auto {
+    family: $sub-font;
+    size: 14px;
+  }
+}
+#footer-socialiconscontainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-socialicons {
+  background-color: rgb(71, 69, 69);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+}
+.footer-icons {
+  color: white;
+}
+#footer-container3 {
+  position: relative; 
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+#footer-container3positioningcontainer {
+  display: flex;
+  align-items: center;
+}
+#footer-containerdesignedbyheaders {
+  font: auto {
+    family: $sub-font;
+  }
+  margin-left: 2.3%;
+  margin-top: 2.5%;
+  color: white;
+}
+#footer-hr {
+  background-color: gray;
+  width: 80%;
+  height: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5%;
+} 

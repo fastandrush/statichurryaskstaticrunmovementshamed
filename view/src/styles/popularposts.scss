@@ -1,0 +1,84 @@
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+#popularposts {
+  background-color: $subbgcolor;
+  //background-color: dodgerblue;
+  border: 1px solid white;
+  height: 450px;
+  width: 90%;
+  padding: 10px;
+  margin-top: 60px;
+  border-radius: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#popularpostsheader-container {
+  display: flex;
+  height: 8%;
+  letter-spacing: 1px;
+}
+#popularpostsheader-popularposts {
+  font: {
+    family: $sub-font;
+    variant: small-caps;
+    size: 18px;
+  }
+  letter-spacing: 10px;
+  color: white;
+  margin-left: 3%;
+}
+#popularpostsheadercontainer-viewall {
+  display: flex;
+  justify-content: flex-end;
+}
+#popularpostsheader-viewall {
+  position: relative;
+  font: {
+    family: $sub-font;
+    variant: small-caps;
+    size: 11px;
+  }
+  letter-spacing: 2px;
+  color: white;
+  right: 5%;
+  top: 5px;
+}
+#popularposts-hr {
+ // background-color: gray;
+  width: 100%;
+  height: 1px;
+}
+#popularposts-popularpostscontainer {
+ // background-color: $subbgcolor;
+  width: 100%;
+  height: 92%;
+  display: flex;
+  overflow-y: hidden;
+}
+#popularposts-swiper {
+  width: 100%;
+  height: 100%;
+}
+.popularposts-swiperslide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //border: 1px solid white;
+}
+.popularposts-companypostcontainer {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+.popularpostsimage {
+  height: 100%;
+  width: 100%;
+}

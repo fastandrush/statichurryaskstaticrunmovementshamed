@@ -1,0 +1,90 @@
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+
+#checkoutpagereturnpage {
+ position:relative;
+ background-color:rgb(88, 51, 88);
+ height:100vh;
+ width:100vw;
+ margin-left:auto;
+ margin-right:auto;
+}
+#checkoutpagereturnpage-capturecontainer {
+ position:relative;
+ height:100%;
+ width:100%;
+ padding:30px;
+}
+#checkoutpagereturnpagecapturecontainer-paymentdetailscontainer{
+ position:relative;
+}
+#checkoutpagereturnpagecapturecontainer-paymentdetails{
+ position:relative;
+ background-color:white;
+ height:100%;
+ width:100%;
+ font: auto {
+    family: $sub-font;
+ }
+ padding: 30px 10px;
+}
+#checkoutpagereturnpagecapturecontainer-pdgooddayheader{
+    position:relative;
+    font: auto {
+        family: $sub-font;
+     }
+}
+#checkoutpagereturnpagecapturecontainer-pdgreetingsheader{
+    position:relative;
+    font: auto {
+        family: $robotic-font;
+     }
+     margin-top: 3vh;
+     left:1.2vh;
+}
+#checkoutpagereturnpagecapturecontainer-pdstatusheader{
+    position:relative;
+    font: auto {
+        family: $sub-font;
+     }
+     top: 2vh;
+     left:1.2vh;
+}
+#checkoutpagereturnpagecapturecontainer-pdtransactionrecieptheader{
+    position:relative;
+    font: auto {
+        family: $sub-font;
+     }
+     top: 3vh;
+     left:1.2vh;
+}
+#checkoutpagereturnpagecapturecontainer-pdcompletenameheader{
+    position:relative;
+    font: auto {
+        family: $sub-font;
+     }
+     top: 3.5vh;
+     left:1.2vh;
+}
+#checkoutpagereturnpagecapturecontainer-pdemailheader{
+    position:relative;
+    font: auto {
+        family: $sub-font;
+     }
+     top: 4.5vh;
+     left:1.2vh;
+}
+#checkoutpagereturnpagecapturecontainer-itemdetails{
+position:relative;
+color: white;
+}
+#checkoutpagereturnpage-loadingindicationcontainer {
+ position:relative;
+ height:100%;
+ width:100%;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}

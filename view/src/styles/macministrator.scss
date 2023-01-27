@@ -1,0 +1,1927 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+
+#macministrator {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+///// single mac and single query container
+#singlemacandsinglemacquerycontainer {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 40%;
+  transition: left 0.3s ease;
+}
+#singlemacandsinglemacquerycontainer-contentcontainer {
+  position: relative;
+  height: 96%;
+  width: 100%;
+  display: flex;
+}
+#singlemacandsinglemacquerycontainer-contents {
+  width: 99%;
+  height: 100%;
+}
+#singlemacandsinglemacquerycontainer-outerclosebuttoncontainer {
+  width: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#singlemacquery {
+  position: relative;
+  background-color: white;
+  width: auto;
+  height: auto;
+  left: 1200%;
+  padding: 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font: auto {
+    family: $sub-font;
+  }
+  user-select: none;
+}
+#singlemacandsinglemacquerycontainer-innerclosebuttoncontainer {
+  display: flex;
+  justify-content: flex-end;
+  height: 4%;
+  width: 100%;
+}
+#singlemacandsinglemacquerycontainer-innerclosebutton {
+  position: relative;
+  color: red;
+  font: auto {
+    family: $sub-font;
+  }
+  left: -3%;
+  user-select: none;
+}
+/// mac data container
+#macdatacontainer {
+  position: absolute;
+  //background-color: #485461;
+  //background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  background-color:gray;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+#macdatacontainer::-webkit-scrollbar {
+  display: none;
+}
+#macdatacontainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#macdataspinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mac {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//// false mac aututhenticated container
+.macindividualcontainer-unauthenticated {
+  position: relative;
+ //background-color: #fdb813;
+ //background-image: linear-gradient(315deg, #fdb813 0%, #788cb6 74%);
+  height: 90%;
+  width: 90%;
+  border-radius: 20px;
+  padding: 50px 30px;
+  border: 1px solid white;
+  overflow-y: scroll;
+}
+.macindividualcontainer-unauthenticated::-webkit-scrollbar {
+  display: none;
+}
+.macindividualcontainer-unauthenticated {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.macindividual-sequenceid {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-name {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-datefirstauthenticated {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-isauthenticated {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-isauthenticatedfalse {
+  color: rgb(184, 43, 18);
+}
+.macmacindividual-maccredits {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-investmentcount {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-service {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-serviceauthentication {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-devidants {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+}
+.macmacindividual-childrencontainer {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  border-radius: 30px;
+  padding: 10px 10px;
+}
+////// dashboard
+#dashboard {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transition: top 1s ease;
+}
+#dashboard::-webkit-scrollbar {
+  display: none;
+}
+#dashboard {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+//// dashboard contents
+#dashboard-contentcontainer {
+  position: relative;
+  height: 96%;
+  width: 100%;
+  padding: 5px 10px;
+  overflow-y: scroll;
+}
+#dashboard-contentcontainer::-webkit-scrollbar {
+  display: none;
+}
+#dashboard-contentcontainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+//// dashboard header
+#dashboardcontentheader {
+  background-color: magenta;
+  width: 95%;
+  height: auto;
+  border-radius: 30px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
+.dashboardcontent-timeanddate {
+  font: auto {
+    family: $sub-font;
+    size: 22px;
+    weight: 700;
+  }
+  color: white;
+}
+#dashboardcontent-gooddaywelcomegreeting {
+  font: auto {
+    size: 24px;
+  }
+  color: white;
+}
+.dashboardcontent-poiters {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+    weight: 700;
+  }
+  color: white;
+  margin-left: 1%;
+}
+/// dashboard user status pointer container
+#dashboardcontentuserdetails {
+  position: relative;
+  width: 100%;
+  height: 55%;
+  margin-top: 4%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dashboardcontentuserdetails-container {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items:column;
+  justify-content:center;
+  align-items:center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  padding: 10px 20px;
+}
+.dashboardcontentuserdetails-activecontainer {
+  position:relative;
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+  font: auto {
+    family: $sub-font;
+    size:40px;
+  }
+  text-align:center;
+  color:white;
+  display:flex; 
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.dashboardcontentuserdetails-offlinecontainer {
+  position:relative;
+  background-color: #f8ef42;
+  background-image: linear-gradient(315deg, #f8ef42 0%, #0fd64f 74%);
+  font: auto {
+    family: $sub-font;
+    size:40px;
+  }
+  text-align:center;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.dashboardcontentuserdetails-unathenticatedcontainer {
+  position:relative;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  font: auto {
+    family: $sub-font;
+    size:40px;
+  }
+  text-align:center;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.dashboardcontentuserdetails-authenticatedcontainer {
+  position:relative;
+  background-color: #dbcbd8;
+  background-image: linear-gradient(316deg, #dbcbd8 0%, #2e4057 74%);
+  font: auto {
+    family: $sub-font;
+    size:40px;
+  }
+  text-align:center;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-top: 3%;
+}
+///// dashboard product summary container
+#dashboardcontentproductsummary {
+  position: relative;
+  border:1px solid black;
+  width: 95%;
+  height: 80%;
+  display:flex;
+  margin-top: 6%;
+  margin-left:auto;
+  margin-right:auto;
+}
+#dashboard-productsummarycontainer {
+  position: relative;
+  border-right:none;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+#dashboardproductsummary-header {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+  margin-left: 1%;
+}
+#productsummary-detailscontainer {
+  display: flex;
+}
+.productsummary-productoriginator {
+  font: auto {
+
+  }
+  letter-spacing: 1px;
+  margin-left: 2%;
+}
+.productsummary-percentagebarcontainer {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.productsummary-percentagebarcontainergetscope {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+.productsummary-percentagebarlength {
+  background-color: tomato;
+  width: 100%;
+  height: 10%;
+  border-radius: 50px;
+  margin-top: -4.5%;
+}
+.productsummary-percentagebarscope {
+  background-color: green;
+  width: 1%;
+  height: 100%;
+  border-radius: 50px;
+}
+.productsummary-numeralpercentage {
+  position: relative;
+  left: 2%;
+}
+.productsummary-prodcutlistcontainer {
+  position: relative;
+  background-color: black;
+  display: flex;
+  width: 83.5%;
+  height: auto;
+  padding: 20px 10px 10px 10px;
+  border: 1px solid black;
+  margin-top: -6%;
+  display: none;
+}
+.productsummary-prodcutlistcontainer::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 15%;
+  height: 8%;
+  top: -3%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border: 1px solid black;
+}
+.productsummary-pointers {
+  color: white;
+  font: auto {
+    family: $sub-font;
+    size: 13px;
+  }
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+//// dashboard summary last two weeks container
+#dashboardproductsummary-lasttwoweeks {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#dashboardproductsummary-swiper {
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
+#dashboardproductsummary-lasttwoweeksheader {
+  position: relative;
+  border: 1px solid black;
+  border-top:none;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+}
+/// defined for positioning
+#dashboardproductsummary-settingsbutton {
+  position: relative;
+  height: 60%;
+  width: 60%;
+  left: 1.5vh;
+  top: 1.4vh;
+}
+#dashboardproductsummary-lasttwoweekstable {
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+#dashboardproductsummary-lasttwoweekstableofcontents {
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
+#dashboardproductsummary-contentscontainer {
+  position:relative;
+  width: 100%;
+  height: 90%;
+  display: flex;  
+}
+//// style sheet for days container
+#dashboardproductsummary-dayscontainer {
+  position:relative;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  top:0.1vh;
+}
+#dashboardproductsummary-dayspositioningcontainer {
+  display: flex;
+  align-items: center;
+}
+//// style sheet for last two week pointers container
+#dashboardproductsummary-lasttwoweekspointercontainer {
+  position:relative;
+  border: 1px solid black;  
+  border-right: none;
+  
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 0px 10px 0px;
+}
+#issunday {
+  color: tomato;
+  text-align: center;
+}
+.dashboardproductsummarylasttwoweeks-days {
+  text-align: center;
+} 
+/// style sheet for last two week bar container
+#dashboardproductsummary-lasttwoweeksbarcontainer {
+  position:realtive;
+  border: 1px solid black;
+  border-top:none;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1.5%;
+}
+.dashboardproductsummary-lasttwoweeksbarpositionningcontainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.dashboardproductsummary-lasttwoweeksbarfullscope {
+  position: absolute;
+  background-color: tomato;
+  width: 3%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 30px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.dashboardproductsummary-lasttwoweeksbarscope {
+  background-color: green;
+  width: 100%;
+  height: 1%;
+  border-radius: 30px;
+  transition: height 1s ease;
+}
+.dashboardproductsummary-lasttwoweeksinsidestatisticspositioningcontainer {
+  position: absolute;
+  background-color: white;
+  width: 250%;
+  height: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, -52%);
+  z-index: 1;
+  display: none;
+  padding-left: 4%;
+}
+.lasttwoweeks-insidestatisticscontainer {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid red;
+  z-index: 2;
+  padding-left: 4%;
+}
+///// present statistics container
+#dashboardproductsummary-presentstatistics {
+  position:relative;
+  border:1px solid black;
+  height: 95%;
+  width: 95%;
+  margin-top: 1%;
+  margin-left:auto;
+  margin-right:auto;
+}
+///// dashboard conf container and buttons
+#dashboard-innerclosebuttoncontainer {
+  position: relative;
+  background-color: white;
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#dashboard-innerdashboardclosebutton {
+  position: relative;
+  color: red;
+  right: 1.5%;
+  top: -10%;
+  user-select: none;
+}
+#dashboard-outerclosebuttoncontainer {
+  position: relative;
+  height: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#dashboard-outerdashboardclosebutton {
+  position: absolute;
+  background-color: white;
+  top: 40%;
+  right: 1%;
+  font: auto {
+    family: $sub-font;
+  }
+  padding: 1px 5px;
+  border-radius: 5px;
+  user-select: none;
+  letter-spacing: 2px;
+}
+////// dashboard video configuration stylesheet
+#macministratordashboardpublishvideoandcontentconfiguration {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin-top: 10%;
+  border-radius: 20px;
+  padding: 10px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#macministratordashboardpublishvideoandcontent-swiper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#macministratordashboardpublishvideoandcontent-swiperslide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#macministratordashboardpublishvideoandcontent-crudcontainer {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+#macministratordashboardpublishvideoandcontent-crudcontainercontents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+#macministratordashboardpublishvideoandcontent-crudcontainerspecificcommand {
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+#macministratordashboardpublishvideoandcontent-crudcontainerspecificcommand::-webkit-scrollbar {
+  width: 1.5vw;
+}
+/* Track */
+#macministratordashboardpublishvideoandcontent-crudcontainerspecificcommand::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+#macministratordashboardpublishvideoandcontent-crudcontainerspecificcommand::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+/* Handle on hover */
+#macministratordashboardpublishvideoandcontent-crudcontainerspecificcommand::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.macministratordashboardpublishvideoandcontent-crudcommandcontainer {
+  position: relative;
+  display: flex;
+  height: 33.33%;
+  width: 100%;
+  margin-top:1vh;
+}
+.dashboardspecificcommandcontainer-crudoperationpositioningcontainer {
+  position:relative;
+  height:100%;
+}
+.macministratordashboardpublishvideoandcontent-header {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+  }
+  margin-top: 2%;
+  margin-left: 1%;
+}
+.macministratordashboardpublishvideoandcontent-pointers {
+  font: auto {
+    family: $sub-font;
+  }
+  margin-left: 1%;
+}
+.macministratordashboardpublishvideoandcontent-crudaddbutton {
+  position: relative;
+  background-color: rgb(82, 219, 82);
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  top: 1%;
+  margin-left: 1%;
+}
+.macministratordashboardpublishvideoandcontent-crudeditbutton {
+  position: relative;
+  background-color: dodgerblue;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 1%;
+  top: 1%;
+}
+.macministratordashboardpublishvideoandcontent-cruddeletebutton {
+  position: relative;
+  background-color: red;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 1%;
+  top: 1%;
+}
+.macministratordashboardpublishvideoandcontent-crudsendnotifbutton {
+  position: relative;
+  background-color: magenta;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 1%;
+  top: 1%;
+}
+.dashboardspecificcommandcontainer-imagepositioningcontainer {
+  position:relative;
+  height:100%;
+}
+.dashboardspecificommandcontainer-imagecontainer {
+  position:relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background-color: magenta;
+}
+.dashboardspecificommandcontainer-image{
+  position:relative;
+  height:100%;
+  width:100%;
+}
+//// dashboard video configuration stylesheet crud command container / starting with close button since declared as a snippet
+// snippet / first container
+#dashboardspecificcommandcontainer-closebtncontainer {
+  position: relative;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#dashboardspecificcommandcontainer-closebtn {
+  background-color: red;
+  height: 80%;
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding-bottom: 0.4%;
+  color: white;
+  user-select: none;
+}
+// used id identifiers for container and class identifiers for global styling used on all administrator stylesheet
+// snippet / second container
+#dashboardspecificcommandcontainer-commandcontainer {
+  position:relative;
+  height: 95%;
+  width: 100%;
+  padding: 30px 50px;
+}
+#dashboardspecificommandcontainer-imagecontainer {
+ position:relative;
+ height:100%;
+}
+
+/// container for adding video and images / displaying the selected file video and image in UI
+#dashboardspecificcommandcontainer-addcontentcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboardspecificcommandcontainer-videoandcontetndispalyimage {
+  height: 20%;
+  width: 20%;
+}
+.dashboardspecificcommandcontainer-videoandcontentlabel {
+  background-color: rgb(81, 149, 218);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  margin-top: 4.5%;
+}
+.dashboardspecificcommandcontainer-videoandcontentor {
+  margin-top: 2%;
+  user-select: none;
+}
+.dashboardspecificcommandcontainer-videoandcontentytlinkinputfield {
+  border: none;
+  border-bottom: 1px solid black;
+  outline-style: none;
+  font: auto {
+    family: $main-font;
+  }
+  letter-spacing: 2px;
+  width: 70%;
+  text-align: center;
+}
+/// input fields container
+.dashboardspecificcommandcontainer-inputfieldcontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 100px;
+} 
+.dashboardspecificcommandcontainer-addvideoorcontentfieldscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120%;
+  width: 70%;
+  padding: 0px 40px;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfieldslabelsequence {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+  }
+  top: 3%;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfieldslabel {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+  }
+  top: 3%;
+  margin-top: 5%;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfieldssequence {
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 2px;
+  text-align: center;
+  border: none;
+  border: 1px solid black;
+  width: 100%;
+  outline-style: none;
+  border-radius: 20px;
+  width: 20%;
+
+  text-align: center;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfields {
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 2px;
+  padding-left: 2%;
+  border: none;
+  border: 1px solid black;
+  display: block;
+  width: 100%;
+  outline-style: none;
+  padding-top: 2.5%;
+  border-radius: 20px;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfields::-webkit-scrollbar {
+  display: none;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfields {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentfieldsdate {
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 2px;
+  padding-left: 2%;
+  border: none;
+  border: 1px solid black;
+  width: 100%;
+  outline-style: none;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 2%;
+}
+/// product crud container
+#dashboardproductcontainer {
+  position: relative;
+  width: 90%;
+  height: 83%;
+  margin-top: 12%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+#dashboardproductcontainer-header {
+  font: auto {
+    family: $sub-font;
+  }
+}
+/// product crud dashboard command container / pick command container
+#dashboardproductpositioningcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 10px;
+}
+/// product crud dashboard command container / pick command container
+.dashboardproduct-crudcontainer {
+  position:relative;
+  height: 50%;
+  width: 33.3%;
+  border-radius: 20px;
+  margin-top: 0.5%;
+}
+.dashboardproduct-crudcontaineradd {
+  background-color: rgb(114, 179, 114);
+  height: 50%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.dashboardproduct-crudcontaineredit {
+  height: 50%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.dashboardproduct-crudcontainerdelete {
+  position:relative;
+  height: 50%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.dashboardproduct-crudcontainergetspecific {
+  position:relative;
+  height: 50%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.dashboardproduct-crudcontainergetall {
+  height: 50%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.dashboardproductcrudcontainerbutton {
+  position:relative;
+  background-color: rgb(22, 20, 20);
+  border:none;
+  border-radius:40px;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  height:99%;
+  width:98%;
+  letter-spacing:0.2vh;
+}
+////// dashboard product command container / crud operations
+#dashboardproductcommandcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  background-color: white;
+  padding: 10px;
+}
+#dashboardproductcommandpositioningcontainer {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#dashboardproductcommandclosecontainer {
+  position: relative;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+#dashboardproductcommandclosebtn {
+  color: white;
+  background-color: tomato;
+  border-radius: 30px;
+  border: none;
+  margin-right: 0%;
+  padding: 0.1% 1% 2.1% 1%;
+}
+/// swiper for querying and crud operations / full
+#dashboardproductcommandquerycontainer {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  padding: 5px;
+}
+/// swiper for querying and crud operations / main
+#dashboardproductcommandquerycontainer-swiper {
+  position: relative;
+
+  height: 100%;
+  width: 100vw;
+}
+//// product get, edit, delete operations
+.dashboardproductcommandquerycontainer-swiperslide1 {
+  height: 100%;
+  width: 100%;
+}
+//// product get, edit, delete applying fields operations / input fields
+.dashboardproductcommandquerycontainer-swiperslide2 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 10px 30px;
+  overflow-y: scroll;
+}
+.dashboardproductcommandquerycontainer-swiperslide2::-webkit-scrollbar {
+  width: 20px;
+}
+.dashboardproductcommandquerycontainer-swiperslide2::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.dashboardproductcommandquerycontainer-swiperslide2::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+.dashboardproductcommandquerycontainer-swiperslide2::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.dashboardproductcommandquerycontainer-contentcontainer1 {
+  position: relative;
+  height: 95%;
+  width: 100%;
+  top: 3%;
+  overflow-y: scroll;
+}
+.dashboardproductcommandquerycontainer-contentcontainer1::-webkit-scrollbar {
+  width: 20px;
+}
+.dashboardproductcommandquerycontainer-contentcontainer1::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.dashboardproductcommandquerycontainer-contentcontainer1::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+.dashboardproductcommandquerycontainer-contentcontainer1::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.dashboardproductcommandquery-fieldscontainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0px 100px;
+}
+.dashboardproductcommandlabel {
+  position: relative;
+  display: block;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  top: 3.5vh;
+}
+.dashboardproductcommandfield {
+  text-decoration: none;
+  outline-style: none;
+  text-align: center;
+  width: 40%;
+  height: 6vh;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+}
+.dashboardproductcommandlocationfield {
+  position: relative;
+  text-decoration: none;
+  outline-style: none;
+  text-align: center;
+  height: 6vh;
+  width: 45%;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5%;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  top: 2%;
+}
+.dashboardproductcommandlabel-productdescription {
+  display: block;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  margin-top: 2%;
+}
+.dashboardproductcommanddescriptiontextarea {
+  display: block;
+  outline-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35vh;
+  width: 60%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+//// dashboard product extra information
+.dashboardproductextrainformation {
+  position: relative;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+.dashboardproductextrainformation-addextrainformationbtncontainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.dashboardproductextrainformation-addextrainformationbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0px 13px 5px 13px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: dodgerblue;
+  font-size: 25px;
+  color: white;
+  z-index: 1;
+}
+#dashboardextrainformationcontainer {
+  position: relative;
+  margin-top: 2.5%;
+  height: 100%;
+  width: 100%;
+}
+.dashboardextrainformation {
+  height: 7vh;
+  width: inherit;
+  margin-top: 4.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboardextrainformation-field {
+  border: none;
+  outline-style: none;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  width: 90%;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1px;
+}
+.dashboardextrainformation-buttonscontainer {
+  display: flex;
+}
+.dashboardextrainformation-addbutton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: dodgerblue;
+  padding: 1px 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+}
+.dashboardextrainformation-data {
+  border: none;
+
+  font: auto {
+    family: $sub-font;
+  }
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dashboardextrainformation-deletebutton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: tomato;
+  padding: 1px 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  margin-left: 7%;
+}
+////////////////////////////
+//// product get, edit, delete applying fields operations / video and images fields
+.dashboardproductcommandquery-videofieldscontainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0px 10%;
+  margin-top: 5%;
+}
+#dashboardspecificcommandcontainer-addcontentcontainerproducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboardspecificcommandcontainer-videoandcontetndispalyimage {
+  height: 20%;
+  width: 20%;
+}
+.dashboardspecificcommandcontainer-videoandcontentlabel {
+  background-color: rgb(81, 149, 218);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  margin-top: 4.5%;
+}
+.dashboardspecificcommandcontainer-videoandcontentor {
+  margin-top: 2%;
+  user-select: none;
+}
+.dashboardspecificcommandcontainer-videoandcontentytlinkinputfield {
+  border: none;
+  border-bottom: 1px solid black;
+  outline-style: none;
+  font: auto {
+    family: $main-font;
+  }
+  letter-spacing: 2px;
+  width: 70%;
+  text-align: center;
+}
+//// product get, edit, delete applying fields operations / video and images fields add video or content button
+.dashboardspecificcommandcontainer-addvideoorcontentbtncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentbtncontainer {
+  height: 120%;
+}
+.dashboardspecificcommandcontainer-addvideoorcontentbtn {
+  background-color: rgb(81, 149, 218);
+  color: white;
+  padding: 10px 50px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  border: none;
+}
+.dashboardspecificcommandcontainer-editvideoorcontentbtn {
+  background-color: magenta;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  border: none;
+  letter-spacing: 1.5px;
+}
+.dashboardspecificcommandcontainer-deletevideoorcontentbtn {
+  background-color: tomato;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  border: none;
+}
+.dashboardspecificcommandcontainer-note {
+  font: auto {
+    family: $sub-font;
+  }
+  line-height: 180%;
+  margin-top: 1.6%;
+}
+////// dashboardspecificcommandcontainer-videoandcontentytlinkinputfieldsnippet
+.dashboardspecificcommandcontainer-videoandcontentytlinkinputfieldsnippet {
+  outline-style: none;
+  border: none;
+  text-decoration: none;
+  width: 70%;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+}
+////// main selection images
+#dashboardspecificcommandcontainer-mainselectionimagescontainer {
+  margin-top: 15%;
+}
+#dashboardspecificcommandcontainer-mainselectionimageheader {
+  font: auto {
+    family: $sub-font;
+  }
+}
+.dashboardproductcommandqueryvideofieldscontainer-addmainselectionimagebtn {
+  background-color: dodgerblue;
+  width: 7%;
+  height: 7%;
+  border-radius: 20px;
+  margin-top: 3%;
+  border: none;
+  outline-style: none;
+}
+.dashboardproductcommandquery-mainselectionimage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.dashboardproductcommandquery-mainselectionimagecontainer {
+  width: 25%;
+  height: 30vh;
+  margin-top: 3%;
+}
+.dashboardproductcommandquery-mainselectioimageimagecontainer {
+  height: 85%;
+  width: 100%;
+}
+.dashboardspecificcommandcontainer-videoandcontetndisplayimage {
+  height: 80%;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dashboardspecificcommandcontainer-videoandcontetndisplayimageselection {
+  height: 80%;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dashboardproductcommandquery-mainselectionimagebtncontainer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 15%;
+  width: 100%;
+  margin-top: -5%;
+}
+.dashboardproductcommandquery-mainselectionimagechangebtn {
+  background-color: rgb(209, 49, 209);
+  border: none;
+  font: auto {
+    family: $sub-font;
+  }
+  color: white;
+  border-radius: 20px;
+  padding: 1px 3px;
+}
+.dashboardproductcommandquery-mainselectionimageaddbtn {
+  background-color: dodgerblue;
+  border: none;
+  font: auto {
+    family: $sub-font;
+  }
+  color: white;
+  border-radius: 20px;
+  padding: 1px 3px;
+}
+.dashboardproductcommandquery-mainselectionimagedeletebtn {
+  background-color: tomato;
+  border: none;
+  font: auto {
+    family: $sub-font;
+  }
+  color: white;
+  border-radius: 20px;
+  padding: 1px 3px;
+}
+////// choose color avalability
+#dashboardspecificcommandcontainer-choosecoloravalability {
+  width: 100%;
+  height: 30vh;
+  margin-top: 13%;
+}
+#dashboardspecificcommandcontainer-choosecoloravalabilityheader {
+  font: auto {
+    family: $sub-font;
+  }
+}
+#dashboardspecificcommandcontainer-colorcontainer {
+  margin-top: 2%;
+}
+///// selection images full container
+#dashboardspecificcommandcontainer-selectionimagesfullcontainer {
+  margin-top: 20%;
+}
+#dashboardspecificcommandcontainer-selectionimageheader {
+  font: auto {
+    family: $sub-font;
+  }
+}
+/////// selection images
+#dashboardspecificcommandcontainer-selectionimages {
+  background-color: red;
+  width: 100%;
+  height: 40%;
+  margin-top: 5%;
+}
+//////// pick available sizes container
+#dashboardspecificcommandcontainer-pickavailablesizes {
+  width: 100%;
+  height: 20%;
+  margin-top: 14%;
+}
+#dashboardspecificcommandcontainer-pickavailablesizesheader {
+  font: auto {
+    family: $sub-font;
+  }
+}
+#dashboardspecificcommandcontainer-pickavailablesizespositioningcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+.pickaavailablesizes {
+  border: 1px solid gray;
+  width: 10%;
+  height: 100%;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  user-select: none;
+}
+////// pick shipping options 
+#dashboardspecificcommandcontainer-pickshippingoptions {
+  width: 100%;
+  height: 20%;
+  margin-top: 14%;
+}
+#dashboardspecificcommandcontainer-pickshippingoptionsheader {
+  font: auto {
+    family: $sub-font;
+  }
+}
+#dashboardspecificcommandcontainer-pickshippingoptionspositioningcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-left: 5%;
+  height: 15vh;
+  width: 100%;
+}
+.pickshippingoptions-mac {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  color: white;
+  border-radius: 20px;
+}
+.pickshippingoptions-jandtexpress {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.pickshippingoptions-lbc {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.pickshippingoptions-shippingcompany {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 20;
+}
+.pickshippingoptions-dp {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+///////
+#dashboardspecificcommandcontainer-colorcontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dashboardspecificcommandpositioningcontainer-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 25%;
+  width: 20%;
+}
+.dashboardspecificcommandcontainer-color {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+}
+//////// execute command button container
+.dashboardproductcommandquerycontainer-contentcontainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  width: 100%;
+}
+#dashboardproductcommandquerycontainer-commandbutton {
+  background-color: dodgerblue;
+  color: white;
+  padding: 5px 40px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+}
+.dashboardproductcommandlabelstock {
+  position: relative;
+  display: block;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  margin-top: 5.5vh;
+}
+.dashboardproductcommandfieldstock {
+  text-decoration: none;
+  outline-style: none;
+  text-align: center;
+  width: 40%;
+  height: 6vh;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1%;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+}
+#dashboardproduct-selecttypeofitem {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+}
+//// mac set items add video and image container 
+#dashboardspecificcommandcontainer-addcontentcontainerproductsmacsetitems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.dashboardspecificcommandcontainer-videoandcontetndispalyimagemacsetitems {
+  height: 20%;
+  width: 20%;
+}
+.dashboardspecificcommandcontainer-videoandcontentlabelmacsetitems {
+  background-color: rgb(81, 149, 218);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  margin-top: 4.5%;
+}
+.dashboardspecificcommandcontainer-videoandcontentormacsetitems {
+  margin-top: 2%;
+  user-select: none;
+}
+.dashboardspecificcommandcontainer-videoandcontentytlinkinputfieldsnippetmacsetitems {
+  outline-style: none;
+  border: none;
+  text-decoration: none;
+  width: 70%;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+}
+#productadd-loadingspinner {
+
+}
+////// update mac set container 
+#dashboardproductcommandupdatecontainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+#dashboardproductcommand-updatemacsetitemclosebuttoncontainer {
+  position: relative;
+  height: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#dashboardproductcommand-updatemacsetitemclosebutton {
+  background-color: tomato;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  padding: 3px 13px 6px 13px;
+}
+#dashboardproductcommand-updatemacsetitemcontentcontainer {
+  position: relative;
+  height: 93%;
+  width: 100%;
+  margin-top: 1%;
+}
+#dashboardproductcommand-updatecontainerofcontainers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardproductcommand-updatemacsetitembuttoncontainer {
+  //background-color: red;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardproductcommand-updatemacsetitembutton {
+  background-color: dodgerblue;
+  border-radius: 20px;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font: auto {
+     family: $sub-font;
+  }
+  letter-spacing: 2px;
+}
+#dashboardproductcommand-updateitembuttoncontainer {
+  //background-color: green;
+  height: 50%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardproductcommand-updateitembutton {
+  background-color: dodgerblue;
+  border-radius: 20px;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font: auto {
+     family: $sub-font;
+  }
+  letter-spacing: 2px;
+}
+#dashboardproductcommand-updatemacitemcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-y: scroll;
+  padding: 20px 0px;
+}
+#dashboardproductcommand-updatemacitemcontainer::-webkit-scrollbar {
+  width: 20px;
+}
+#dashboardproductcommand-updatemacitemcontainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+#dashboardproductcommand-updatemacitemcontainer::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+#dashboardproductcommand-updatemacitemcontainer::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+#dashboardproductcommandupdatemacitem-updatemacsetitemheader {
+  text-align: center;
+  margin-top: 2%;
+  font: auto {
+    family: $sub-font;
+  }
+}
+#dashboardproductcommandupdatemacitem-updatemacsetitemnumberfield {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  border: 1px solid black;
+  outline-style: none;
+}
+#dashboardproductcommandupdatemacitem-searchbutton {
+  background-color: dodgerblue;
+  font: auto {
+    family: $sub-font;
+  }
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 40px;
+  border: none;
+  border: 1px solid black;
+  margin-top: 1%;
+  border-radius: 30px;
+  letter-spacing: 3px;
+}
+#dashboardproductcommandupdatemacitem-updatemacsetsearchitemheader {
+  text-align: center;
+  margin-top: 0%;
+  font: auto {
+    family: $sub-font;
+  }
+}
+#dashboardproductcommandupdatemacitem-specificproductcontainer {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardproductcommandupdatemacitem-specificproductcont1 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboardproductcommandupdatemacitem-indication {
+  text-decoration: underline;
+}
+#dashboardproductcommandupdatemacitem-specificproductcont2 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardproductcommandupdatemacitem-productdp {
+  height: 75%;
+  width: 75%;  
+}
+#dashboardproductcommand-updateitemcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+#dashboardproductcommandupdatemacitem-commandbuttoncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+#dashboardproductcommandupdatemacitem-commandbuttonadd {
+  background-color: dodgerblue;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  border: 1px solid black;
+  outline-style: none;
+  color: white;
+  letter-spacing: 2px;
+  font: auto {
+    family: $sub-font;
+  }
+}
+#dashboardproductcommandupdatemacitem-commandbuttonremove {
+  background-color: tomato;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  border: 1px solid black;
+  outline-style: none;
+  margin-left: 3%;
+  color: white;
+  letter-spacing: 2px;
+  font: auto {
+    family: $sub-font;
+  }
+}

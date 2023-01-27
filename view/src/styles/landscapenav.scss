@@ -1,0 +1,64 @@
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+#landscapenav {
+  height: 100px;
+  background-color:  #3f145f;
+}
+#landscapenav-linknav {
+  background-color:#3f145f;
+  height: 30%;
+  width: 100%;
+}
+#landscapenav-headernav {
+  background-color: #3f145f;
+  height: 70%;
+  width: 100%;
+  color: white;
+}
+#landscapenavheadernav-container1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.landscapenavheadernav-userauthbutton {
+  text-decoration: none;
+  outline-style: none;
+  border: none;
+  margin-right: 2%;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 1.5px;
+  &:hover {
+    color: red;
+  }
+  transition: color 0.3s ease;
+}
+.landscapenavheadernav-userauthbuttonsignup {
+  text-decoration: none;
+  outline-style: none;
+  border: none;
+  margin-right: 2.2%;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: auto {
+    family: $sub-font;
+  }
+  &:hover {
+    color: red;
+  }
+  padding: 1px 20px;
+  letter-spacing: 1px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}

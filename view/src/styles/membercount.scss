@@ -1,0 +1,47 @@
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+$population-font: 'Comfortaa', cursive;
+#membercount {
+  background-color: $subbgcolor;
+  width: 100%;
+  height: 400px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 30px;
+  border: 0.5px solid white;
+  margin-top: 10%;
+  overflow-y: scroll;
+}
+#membercount::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#membercount {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+#membercount-header {
+  font: auto {
+    size: 14px;
+    family: $main-font;
+  }
+  letter-spacing: 6.5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#populationscopeapply-proportion {
+   margin-left: 2%;
+}
+.membourcount-scopepopulationheader {
+  font: auto {
+    size: 12px;
+    family: $population-font;
+  }
+  margin-top: 2%;
+}
+

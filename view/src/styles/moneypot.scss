@@ -1,0 +1,29 @@
+#moneypot {
+  margin-top: 50px;
+}
+#moneypotdisplay-container {
+  width: 90%;
+  height: 800px;
+  overflow: hidden;
+}
+#moneypotbabyimage {
+  width: 100%;
+  height: 70%;
+}
+#moneypotbabyimageindication-container {
+  background-color: rgb(235, 222, 222);
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.moneypotbabyimageindication {
+  color: black;
+  text-align: center;
+  font: auto {
+    size: 15px;
+    weight: 500;
+  }
+  letter-spacing: 1px;
+}

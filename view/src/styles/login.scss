@@ -1,0 +1,111 @@
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$lobster-font:   'Caveat', cursive;
+$containersonidlebgcolor: #e2e4e1;
+
+#loginpage {
+    position: relative;
+    background-color: #381b4b;
+    height: 100vh;
+    width: 100%;
+}
+#formcontainer { 
+    background-color: transparent;
+    height: calc(100% - 20%);
+    width: calc(100% - 30%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    overflow: hidden;
+    
+} 
+#loginpage-macheader {
+    color: white;
+    font: auto {
+        size: 13px;
+        family: $lobster-font;
+    }
+    margin-left: 2%;
+    letter-spacing: 20px;
+}
+#form {
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  overflow: hidden;
+}
+#formwithincontainer1 {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loginfield-fullname {
+    background-color: transparent;
+    text-align: center;
+    width: 25%;
+    height: 9%;
+    color: white;
+    font: auto {
+        family: $sub-font;
+    }
+    outline-style: none;
+    letter-spacing: 3px;
+    font: auto {
+        size: 17px;
+        family: $main-font;
+    }
+    border: none;
+    border-bottom: 1px solid aqua;
+    &:hover {
+      width: 60%;
+      border: 1px solid tomato;
+    }
+    transition: 1s ease;
+}
+#loginfield-loginbtn {
+    position: relative;
+    background-color: rgb(40, 103, 165);
+    //border-radius: 20px;
+    color: white;
+    font: auto {
+        family: $main-font;
+    }
+    outline-style: none;
+    padding: 2px 0%;
+    width: 60%;
+    top: -1.5%;
+    letter-spacing: 1px;
+}
+#loginfield-loginforgotpassword {
+    letter-spacing: 5px;
+    margin-top: 4%;
+    font: auto {
+      family: $main-font;
+  }
+}
+#formwithincontainer2 {
+  height: 100%;
+  overflow: hidden;
+}
+#loginpage-octuposdp {
+  height: 100%;
+  width: 100%;
+  &:hover {
+    transform: scale(1.1,1.1);
+  }
+  transition: transform 3s ease;
+}
+

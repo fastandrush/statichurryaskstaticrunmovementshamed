@@ -1,0 +1,36 @@
+#verifyphonenumber {
+    background-color: rgb(87, 136, 192);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.digitcodefields::-webkit-outer-spin-button,
+.digitcodefields::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#verifyphonenumber-digitscontainer {
+    display: flex;
+
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digitcodefields {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    outline-style: none;
+    text-decoration: none;
+    top: 5%;
+}
+#verifyphonedigitscodebutton {
+    margin-top: 1%;
+    padding: 1px 20px;
+}

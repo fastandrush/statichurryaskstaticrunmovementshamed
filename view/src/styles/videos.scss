@@ -1,0 +1,25 @@
+#videos {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  border: 1px solid red;
+}
+#videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#videos {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.videocontainer {
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}
+.video {
+  border: 1px solid white;
+}
