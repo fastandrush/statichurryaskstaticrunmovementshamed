@@ -220,7 +220,7 @@ async function getUser(parsedUser) {
  
   // qeurying user collection to get a favorite items on cart
              
-  axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/getcurrentlyloginmacuser/', { 
+  axios.post('https://statichurryaskstaticrunmovementshamedapi.onrender.com/futuremacholder/getcurrentlyloginmacuser/', { 
     user: parsedUser
   })
 
