@@ -20,11 +20,11 @@ import CheckoutReturnPage from './components/checkoutreturnpage-component.js';
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://statichurryaskstaticrunmovementshamed-api.onrender.com/';
-
 import './styles/mac.scss';
 
 function MAC() {
+
+axios.defaults.baseURL = 'https://statichurryaskstaticrunmovementshamed-api.onrender.com/';
 
 const location = useLocation();
 const [, updateState] = useState();
