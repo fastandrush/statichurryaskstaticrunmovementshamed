@@ -86,21 +86,15 @@ app.use('/funds', fundsRoute);
 app.use(express.static('public'));
 
 mongodb.log(mongoose.connection);
-console.log(process.env.NODE.ENV)
-
-app.get('*', (req,res) => {
-  res.sendFile(path.join(_dirname, 'public', 'index.html'));
-}
+console.log(process.env.NODE_ENV)
 
 
-{/*
-if ( process.env.NODE.ENV === 'production' ) {
-  app.get('*', (req,res) => {
+if ( process.env.NODE_ENV === 'production' ) {
+  app.get('/', (req,res) => {
      res.sendFile(path.join(_dirname, 'public', 'index.html'));
   })
 
 }  
-*/} 
 
 
 
