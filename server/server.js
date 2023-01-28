@@ -83,7 +83,7 @@ app.use('/funds', fundsRoute);
 
 //app.use(express.static(__dirname, 'view/build'))
 
-app.use(express.static('public'));
+app.use(express.static('build'));
 
 mongodb.log(mongoose.connection);
 console.log(process.env.NODE_ENV)
@@ -91,7 +91,7 @@ console.log(process.env.NODE_ENV)
 
 if ( process.env.NODE_ENV === 'production' ) {
   app.get('/', (req,res) => {
-     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   })
 
 }  
