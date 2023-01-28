@@ -83,7 +83,7 @@ app.use('/funds', fundsRoute);
 
 //app.use(express.static(__dirname, 'view/build'))
 
-app.use(express.static(__dirname, 'view/build'));
+app.use(express.static('public'));
 
 mongodb.log(mongoose.connection);
 console.log(process.env.NODE_ENV)
