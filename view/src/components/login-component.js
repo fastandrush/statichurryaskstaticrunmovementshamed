@@ -99,6 +99,8 @@ export default function LoginComponent() {
 
   }
   
+  axios.defaults.baseURL = 'https://statichurryaskstaticrunmovementshamed-api.onrender.com/';
+
   const login = async () => {
   
     const parsedDetails = userDetails.split(" ");
