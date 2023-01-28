@@ -49,8 +49,8 @@ const [macNews, doSomethingWithTheMacNews] = useState([
                                                 goal: 'Goal',
                                                 author: 'Author',
                                                 date: 'Date',
-                                                ytlinkstatus: 'true',
-                                                ytlink: 'true',
+                                                ytlinkstatus: 'false',
+                                                ytlink: 'false',
                                                 sequence: 1
                                                 }]); 
 
