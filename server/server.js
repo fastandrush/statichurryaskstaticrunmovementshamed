@@ -88,12 +88,19 @@ app.use(express.static('public'));
 mongodb.log(mongoose.connection);
 console.log(process.env.NODE.ENV)
 
+app.get('*', (req,res) => {
+  res.sendFile(path.join(_dirname, 'public', 'index.html'));
+}
+
+
+{/*
 if ( process.env.NODE.ENV === 'production' ) {
   app.get('*', (req,res) => {
      res.sendFile(path.join(_dirname, 'public', 'index.html'));
   })
 
-}   
+}  
+*/} 
 
 
 
