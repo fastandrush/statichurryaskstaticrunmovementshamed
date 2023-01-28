@@ -81,11 +81,6 @@ app.use('/storeditemrevenue', storedItemRevenueRoute);
 app.use('/funds', fundsRoute);
 
 
-app.get('/', (req, res)=> {
-  console.log(req.sessionID)
-  res.send(req.sessionID)
-})
-
 mongodb.log(mongoose.connection);
 
 if ( process.env.NODE.ENV === 'production' ) {
