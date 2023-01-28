@@ -81,16 +81,16 @@ app.use('/storeditemrevenue', storedItemRevenueRoute);
 app.use('/funds', fundsRoute);
 
 
-app.use(express.static(__dirname, 'view/build'))
+//app.use(express.static(__dirname, 'view/build'))
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 mongodb.log(mongoose.connection);
 console.log(process.env.NODE.ENV)
 
 if ( process.env.NODE.ENV === 'production' ) {
   app.get('*', (req,res) => {
-     res.sendFile(path.join(_dirname, 'view/build', 'index.html'));
+     res.sendFile(path.join(_dirname, 'public', 'index.html'));
   })
 
 }   
