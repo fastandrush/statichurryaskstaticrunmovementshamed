@@ -304,7 +304,7 @@ const closeConfirmMACPassword = () => {
   toggleTransferFundsConfirmPasswordOpacity((opacity)=> opacity = '0')
 }
 
-const onScrollFunctio = (evt) => {
+const onScrollFunction = (evt) => {
   alert('Synced')
 }
 
