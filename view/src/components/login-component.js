@@ -110,6 +110,7 @@ export default function LoginComponent() {
     const ln = parsedDetails[2];
     
     const url = '/authentication/authenticate/validate'
+    
     await axios.post(url, {
       fn: fn,
       mn: mn,

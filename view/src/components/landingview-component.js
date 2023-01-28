@@ -304,9 +304,14 @@ const closeConfirmMACPassword = () => {
   toggleTransferFundsConfirmPasswordOpacity((opacity)=> opacity = '0')
 }
 
+const onScrollFunctio = (evt) => {
+  alert('Synced')
+}
+
   return(
 
-    <Container id='landingview' fluid>
+    <Container id='landingview' fluid 
+               onScroll={(evt)=> onScrollFunction(evt)}>
         
       {/* Confirm password on paypout modal */}
       <Col id='landingview-confirmpasswordtransferfundscontainer'
