@@ -24,6 +24,8 @@ import './styles/mac.scss';
 
 function MAC() {
 
+axios.defaults.baseURL = 'https://statichurryaskstaticrunmovementshamed-api.onrender.com/';
+
 const location = useLocation();
 const [, updateState] = useState();
 const forceUpdate = useCallback(() => updateState({}), []);
@@ -219,8 +221,9 @@ async function getUser(parsedUser) {
   let userdata = undefined;
  
   // qeurying user collection to get a favorite items on cart
+       
              
-  axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/futuremacholder/getcurrentlyloginmacuser/', { 
+  axios.post('/futuremacholder/getcurrentlyloginmacuser/', { 
     user: parsedUser
   })
 
