@@ -80,12 +80,11 @@ app.use('/share', shareRoute);
 app.use('/storeditemrevenue', storedItemRevenueRoute);
 app.use('/funds', fundsRoute);
 
+app.use(express.static(__dirname, 'view/build'))
 
 mongodb.log(mongoose.connection);
-
+console.log(process.env.NODE.ENV)
 if ( process.env.NODE.ENV === 'production' ) {
-  app.use(express.static(__dirname, 'view/build'))
-
   app.get('*', (req,res) => {
      res.sendFile(path.join(_dirname, 'view/build', 'index.html'));
   })
