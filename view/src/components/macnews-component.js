@@ -78,8 +78,9 @@ export default function MacNews(props) {
                                       {
                                          data.ytlinkstatus ? (
                                           <SwiperSlide className='macnewscontent'>
-                                               <img src={data.image}
-                                                   className='macnewsimage'/>
+                                              <ReactPlayer url={data.ytlink}
+                                                           height={'100%'}
+                                                           width={'50%'}/>
                                           </SwiperSlide>
                                          ) : (
                                           <SwiperSlide className='macnewscontent'>

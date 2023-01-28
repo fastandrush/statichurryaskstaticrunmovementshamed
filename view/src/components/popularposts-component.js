@@ -50,10 +50,11 @@ export default function PopularPosts(props) {
                              {
                             data.ytlinkstatus ? (
                               <SwiperSlide className='popularposts-swiperslide'>
-                                   <Col className='popularposts-companypostcontainer'>
-                                       <img src={data.image}
-                                         className='popularpostsimage'/>
-                                   </Col>
+                                  <SwiperSlide className='macnewscontent'>
+                                    <ReactPlayer url={data.ytlink}
+                                                           height={'100%'}
+                                                           width={'50%'}/>
+                                  </SwiperSlide>
                               </SwiperSlide>
                             ) : (
                               <SwiperSlide className='popularposts-swiperslide'>
