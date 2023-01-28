@@ -222,8 +222,8 @@ async function getUser(parsedUser) {
  
   // qeurying user collection to get a favorite items on cart
        
-             
-  axios.post('/futuremacholder/getcurrentlyloginmacuser/', { 
+  const url = '/futuremacholder/getcurrentlyloginmacuser/'      
+  axios.post(url, { 
     user: parsedUser
   })
 
