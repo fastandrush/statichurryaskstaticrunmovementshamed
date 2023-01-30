@@ -32,6 +32,12 @@ SwiperCore.use([Navigation,Thumbs]);
 
 export default  function  MacSetItems(props) {
 
+  const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
+  const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+  const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
+
+  axios.defaults.baseURL = backEndPathnameURI;
+
   const macSetItemsBackGroudnColors = ['gray', 'green', 'yellow', 'pink', 'chocolate', 'aqua', 'lavender', 'brown', 'magenta', 'white', '#5F9EA0', '#BDB76B', '#B8860B' ];
 
   const randomBackgroundColor = Math.floor(Math.random() * 14);
@@ -620,12 +626,12 @@ let _itemData = undefined;
 
 for ( let exec = 0 ; exec < shippingDetails.length; exec++ ) {
 
-  await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/shipping/jandt/calculateshippingprice', {
+  await axios.post('/shipping/jandt/calculateshippingprice', {
                                                                   idx: shippingDetails[exec].idx,
                                                                   weight: shippingDetails[exec].weight,
                                                                   to: shippingDetails[exec].userlocation,
                                                                   from: shippingDetails[exec].itemlocation
-                                                                })
+                                                              })
 
    .then( (response)=> {
 

@@ -14,6 +14,12 @@ export default function LoginComponent() {
   const [userDetails, doSomethingWithUserDetails] = useState('Fn1 Ln1 Mn1');
   const [userPassword, doSomethingWithUserPassword] = useState('');
 
+  const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
+  const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+  const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
+
+  axios.defaults.baseURL = backEndPathnameURI;
+
   const [day, doSomethingWithDay] = useState();
   const [date, doSomethingWithDate] = useState();
   const [month, doSomethingWithMonth] = useState();
@@ -99,8 +105,6 @@ export default function LoginComponent() {
 
   }
   
-  axios.defaults.baseURL = 'https://statichurryaskstaticrunmovementshamed-api.onrender.com/';
-
   const login = async () => {
   
     const parsedDetails = userDetails.split(" ");

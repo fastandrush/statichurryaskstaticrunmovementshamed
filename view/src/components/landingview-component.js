@@ -46,6 +46,12 @@ import UserDashboard from './userdashboard-component';
 
 export default function LandingView(props) {
 
+const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
+const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
+
+axios.defaults.baseURL = backEndPathnameURI;
+
 const [userStatusContainerDP, doSomethingUserStatusContainerDp] = useState('-30%');
 const [userDashboardSettingsContainer, doSomethingUserDashboardSettingsContainer] = useState('-100%');
 
@@ -161,10 +167,10 @@ const myFavoriteMacSet = (e, idx, data) => {
     //document.cookie = `Itemname=${cartitem}, item=${cartitem}`
     //alert(JSON.stringify(props.currentlyLoginUser))
     //// phone numner or a combination of username middlename and lastname being hashed using base encoding with salt and hash again with the same information
-    axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/cartitems/myfavorite', {
-                                                           user: props.currentlyLoginUser,
-                                                           item: data
-                                                           })
+    axios.post('/item/cartitems/myfavorite', {
+                                            user: props.currentlyLoginUser,
+                                            item: data
+                                             })
         .then((response)=> {
          console.log(response.data)
        })
@@ -240,7 +246,7 @@ const submitPayPalUserDetails = async () => {
  // alert()
  // alert()
 
-   axios.get('https://statichurryaskstaticrunmovementshamed/funds/asktoken/singletransfer')
+   axios.get('/funds/asktoken/singletransfer')
 
       .then( async (response)=> {
         const _payPalToken = response.data
@@ -279,7 +285,7 @@ const submitPayPalPassword = async (token) => {
   const timeStamp = new Date().toISOString();
 
 
-  await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/funds/singletransfer', {
+  await axios.post('/funds/singletransfer', {
          token: token,
          senderBatchID: `Payout_${timeStamp}`,
          desiredAmount: Number(desiredAmountPayPalTransfer).toFixed(2)
@@ -310,8 +316,7 @@ const onScrollFunction = (evt) => {
 
   return(
 
-    <Container id='landingview' fluid 
-               onScroll={(evt)=> onScrollFunction(evt)}>
+    <Container id='landingview' fluid>
         
       {/* Confirm password on paypout modal */}
       <Col id='landingview-confirmpasswordtransferfundscontainer'

@@ -20,6 +20,13 @@ import axios from 'axios';
 
 export default function GoodsItemComponent(props) {
 
+const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
+const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
+
+axios.defaults.baseURL = backEndPathnameURI;
+
+
 const [specificproduct, getSpecificProduct] = useState({
     productId: null,
     productStatisticsId: null,
@@ -338,7 +345,7 @@ const getShippingRate = async (shippingDetails, data, parsedTotalFavCartItemPric
 
   for ( let exec = 0 ; exec < shippingDetails.length; exec++ ) {
     
-    await axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/shipping/jandt/calculateshippingprice', {
+    await axios.post('/shipping/jandt/calculateshippingprice', {
                                                                     idx: shippingDetails[exec].idx,
                                                                     weight: shippingDetails[exec].weight,
                                                                     to: shippingDetails[exec].userlocation,

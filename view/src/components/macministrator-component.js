@@ -29,6 +29,12 @@ export default function Macministrator() {
   const [, updateState] = useState();
   const forceUpdate = useCallback(() => updateState({}), []);
 
+  const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
+  const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+  const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
+
+  axios.defaults.baseURL = backEndPathnameURI;
+
   const [macDataContainerIsIdleStatus, macDataContainerIsIdle] = useState(false)
   const [macData, getMacData] = useState([]) 
   
@@ -61,7 +67,7 @@ export default function Macministrator() {
 
   async function getAllMac() {
 
-   await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/getallmacs')
+   await axios.get('/macministrator/getallmacs')
       .then( async (response)=> {
         await getMacData((macs)=> macs = response.data)
         await macDataContainerIsIdle((idle)=> idle = true)
@@ -71,7 +77,7 @@ export default function Macministrator() {
   }
 
   async function getOriginatorProductSummary() {
-    await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/macministrator/getproductoriginatorsummary')
+    await axios.get('/macministrator/getproductoriginatorsummary')
         .then( async (response)=> {
           console.log(response.data)
           await doSomethingWithOriginatorProductSummary((data)=> data = response.data)
@@ -549,7 +555,7 @@ function DashboardSpecificCommandContainer(props) {
       if (props.whatPost === 'Mac') {
 
   
-        axios.post('http://localhost:4000/news/add/macnewsytlink', 
+        axios.post('/news/add/macnewsytlink', 
             fd,
             config
         ).then((response)=> { 
@@ -559,7 +565,7 @@ function DashboardSpecificCommandContainer(props) {
 
       if (props.whatPost === 'Popular posts') {
  
-        axios.post('http://localhost:4000/news/add/popularpostslink', 
+        axios.post('/news/add/popularpostslink', 
           fd,
           config
           ).then((response)=> { 
@@ -572,7 +578,7 @@ function DashboardSpecificCommandContainer(props) {
     if (ytlinkThatsOnMacNews == '' ) {
 
       if (props.whatPost === 'Mac') {
-         axios.post('http://localhost:4000/news/add/macnewsimage', 
+         axios.post('/news/add/macnewsimage', 
            fd,
            config
          ).then((response)=> { 
@@ -582,7 +588,7 @@ function DashboardSpecificCommandContainer(props) {
 
       if (props.whatPost === 'Popular posts') {
 
-        axios.post('http://localhost:4000/news/add/popularpostsimage', 
+        axios.post('/news/add/popularpostsimage', 
           fd,
           config
           ).then((response)=> { 
@@ -1382,7 +1388,7 @@ function DashboardproductGetCommandContainer(props) {
       fd.append('isaset', isASet)
       fd.append('setcount', setCount)
      
-      await axios.post('http://localhost:4000/macministrator/addproduct', fd, config)
+      await axios.post('/macministrator/addproduct', fd, config)
         .then((response)=> {
             console.log(response)
             productAddIsIdleStatus((status)=> status = true) 
@@ -1414,7 +1420,7 @@ function DashboardproductGetCommandContainer(props) {
     fd.append('macsetweight', macSetWeight)
     fd.append('macsetvat', Math.round(macSetVat))
     
-    axios.post('http://localhost:4000/macsetitem/addamacsetitem', fd, config)
+    axios.post('/macsetitem/addamacsetitem', fd, config)
      .then((response)=> {
         console.log(response)
         macMainSetItemLoadingIndicationStatus((status)=> status = false)
@@ -1765,7 +1771,7 @@ function DashboardproductGetCommandContainer(props) {
 
     doSomethingWithUpdateMacSetItemLoadingStatus((data)=> data = true)
 
-    await axios.post('https://statichurryaskstaticrunmovementshamed/macministrator/getproduct/macsetitemupdate', {
+    await axios.post('/macministrator/getproduct/macsetitemupdate', {
                                                                     itemid: macSetItemUpdateItemSearchNumber
                                                                     })
       .then((response)=> {
@@ -1782,10 +1788,10 @@ function DashboardproductGetCommandContainer(props) {
 
   const addThisProductToMacSet = async () => {
 
-     await axios.post('https://statichurryaskstaticrunmovementshamed/macsetitem/updatemacsetitem', {
-                                                                    macsetitemnumberkey: updateMacSetItemKeyNumber,
-                                                                    product: updateMacSetItemUpdateProduct
-                                                                           })
+     await axios.post('/macsetitem/updatemacsetitem', {
+                                              macsetitemnumberkey: updateMacSetItemKeyNumber,
+                                              product: updateMacSetItemUpdateProduct
+                                            })
       .then((response)=> {
          console.log(response)
       })

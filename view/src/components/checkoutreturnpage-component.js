@@ -23,8 +23,14 @@ function useQuery() {
  
 export default function CheckoutReturnPage(props) {
 
- const [checkoutPageLoadingStatus, toggleCheckoutPageLoadingStatus] = useState(true);
- const [payPalToken, getPayPalToken] = useState('');
+  const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
+  const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+  const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
+
+  axios.defaults.baseURL = backEndPathnameURI;
+
+  const [checkoutPageLoadingStatus, toggleCheckoutPageLoadingStatus] = useState(true);
+  const [payPalToken, getPayPalToken] = useState('');
 
   const query = useQuery()
 
@@ -35,7 +41,7 @@ export default function CheckoutReturnPage(props) {
 
    let paypalToken = undefined 
 
-   await axios.get('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/asktoken/singletransfer')
+   await axios.get('/item/asktoken/singletransfer')
   
     .then( async (response)=> {
        await capturePayment(response.data)
@@ -46,7 +52,7 @@ export default function CheckoutReturnPage(props) {
   }
 
   const capturePayment = async (payPalToken) => {
-    axios.post('https://statichurryaskstaticrunmovementshamed-api.onrender.com/item/checkout/capturepayment', {
+    axios.post('/item/checkout/capturepayment', {
         token: payPalToken,
         payerToken: PayerToken,
         payerID: PayerID
@@ -81,7 +87,7 @@ checkoutPageLoadingStatus ? (
   <Row id='checkoutpagereturnpage-capturecontainer'>
     <Col id='checkoutpagereturnpagecapturecontainer-paymentdetailscontainer'
          xs={4}>
-       <Col id='checkoutpagereturnpagecapturecontainer-paymentdetails'>
+       <Col id='checkoutpageret urnpagecapturecontainer-paymentdetails'>
           <h1 id='checkoutpagereturnpagecapturecontainer-pdgooddayheader'>Good day,</h1>
           <h4 id='checkoutpagereturnpagecapturecontainer-pdgreetingsheader'>Pruchase was made by, Customer name</h4>
           <h4 id='checkoutpagereturnpagecapturecontainer-pdstatusheader'><b>Status:</b> Completed</h4>

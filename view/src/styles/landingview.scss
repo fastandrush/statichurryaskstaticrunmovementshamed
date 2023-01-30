@@ -9,6 +9,1440 @@ $containersonidlebgcolor: #e2e4e1;
   padding: 0;
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 600px) {
+
+//// container 
+#landingview {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background-color: $mainbgcolor;
+    overflow-y: scroll;
+    user-select: none;
+}
+#landingview::-webkit-scrollbar {
+  display: none;
+}
+#landingview {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/// contents 
+#landingview-contentcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+/// compressor container 
+#langingview-compressorcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/// contents container 
+#langingview-contentscontainer {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+#langingview-contentscontainer::-webkit-scrollbar {
+  display: none;
+}
+#langingview-contentscontainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+//// header 
+#headercontainer {
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+}
+#header {
+  position: relative;
+  font: auto {
+    family: $main-font;
+  }
+  color: white;
+  letter-spacing: 20px;
+  font-variant: small-caps;
+}
+#macusercontrollogo {
+  position: absolute;
+  background-color: white;
+  border:1px solid white;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  padding: 8px;
+  z-index: 31;
+}
+#headersettingscontainer {
+  display: flex;
+  justify-content: flex-end;
+}
+#headersettingslogocontainer {
+  position: relative;
+  background-color: gray;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#settingslogo {
+  // background-color: gray;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 3px;
+  &:hover {
+    transform: rotate(90deg);
+  }
+  transition: 1s ease;
+}
+
+
+/// user status container 
+#langingview-userstatuscontainer {
+  position: absolute;
+  background-color: black;
+  width: 30%;
+  height: 100vh;
+  transition: left 1s ease;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-y: scroll;
+}
+///// user graph status container
+#langingview-userstatuscontainer::-webkit-scrollbar {
+  width: 18px;
+}
+#langingview-userstatuscontainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 17px;
+}
+#langingview-userstatuscontainer::-webkit-scrollbar-thumb {
+  background-color: #9e8fb2;
+  background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+/// lp paypal modal
+#landingviewuserstatus-paypalmodalcontainer {
+  position: relative;
+  height: 101%;
+  width: 100%;
+}
+#landingview-paypalmodalbg {
+  position: absolute;
+  height: 101%;
+  width: 100%;
+}
+#landingviewuserstatus-paypalform {
+  position: absolute;
+  height: auto;
+  width: 86%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 15px 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingviewuserstatuspaypalform-field {
+  font: auto {
+    family: $sub-font;
+    weight: 900;
+  }
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  width: 70%;
+  border: none;
+  outline-style: none;
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+}
+.landingviewuserstatuspaypalform-or {
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  margin-top: -5%;
+}
+#landingviewuserstatuspaypalform-submitbutton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  color: white;
+  padding: 5px 30px;
+  border-radius: 15px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 2px;
+  margin-top: 4%;
+}
+#langingviewuserstatus-graphpositioningpersonaldetailscontainer {
+  position:relative;
+  background-color:black;
+  height: 100vh;
+  width: 100%;
+
+}
+#langingviewuserstatus-graphpersonaldetailscontainer {
+  position:relative;
+  width:100%;
+  height: auto;
+  padding: 15px 20px;
+}
+#landingviewuserstatus-gphheader {
+position: relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 23px;
+}
+width: 80%;
+}
+#landingviewuserstatus-gphusername {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 25px;
+}
+}
+#landingviewuserstatus-gphaccountidnumber {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 20px;
+}
+margin-top: 3vh;
+}
+#landingviewuserstatus-gphisauthenticated {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 20px;
+} 
+}
+#langingviewuserstatus-maccredits {
+  position:relative;
+  color:white;
+  text-align: center;
+  font: auto {
+    family: $main-font;
+  }
+  letter-spacing: 2px;
+  margin-top: 5vh;
+}
+#langingviewuserstatus-buttonscontainer {
+  position:relative;
+  background-color:black;
+  border: 1px solid black;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#langingviewuserstatus-transferbutton {
+  position:relative;
+  background-color: dodgerblue;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 70px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing:2px;
+  top: 2vh;
+}
+#langingviewuserstatus-requesttotransferbutton {
+  position:relative;
+  background-color: rgb(31, 26, 26);
+  border: 1px solid white;
+  color:white;
+  padding: 10px 50px;
+  border-radius: 15px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing:2px;
+  top: 1vh;
+}
+#langingviewuserstatus-undertakerbutton {
+  position: relative;
+  background-color: dodgerblue;
+  border: 1px solid white;
+  color:white;
+  padding: 10px 70px;
+  border-radius: 15px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing:2px;
+}
+/////
+#langingview-userdashboarddisplaycontainer {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  transition: top 1s ease;
+}
+#langingview-userdashboarddisplaycontentcontainer {
+  width: 100%;
+  height: 95%;
+}
+#langingview-userdashboarddisplayclosebuttoncontainer {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+#langingview-userdashboarddisplayclosebutton {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+  color: tomato;
+  display: block;
+  margin-right: 1.2%;
+}
+#langingview-scrollbuttonscontainer {
+  position: absolute;
+  width: 100%;
+  height: 14%;
+  top: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: aqua;
+}
+///// cart container
+#landingview-cartcontainer {
+  position: relative;
+  height: 100%;
+  width: 62%;
+  display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+#landingview-cartcontentcontainer {
+  background-color: #3f0d12;
+  background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+  position: absolute;
+  width: 60%;
+  height: 600%;
+  left: 3%;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transform: rotateX(180deg);
+  transition: 1s ease;
+  overflow: hidden;
+}
+.landingview-cartinfocontainer {
+  position: relative;
+  transform: rotateX(180deg);
+  background-color: #090947;
+  background-image: linear-gradient(315deg, #090947 0%, #5a585a 74%);
+  padding: 5px;
+  height: 10vh;
+  display: flex;
+  color: white;
+  border-radius: 20px;
+  transition: top 1s ease 0.5s;
+}
+#landingview-favoriteitemscontainer {
+  position: relative;
+  //transform: rotateX(180deg);
+  height: auto;
+  width: 99%;
+  top: -21%;
+}
+#landingviewcartcontentpositioningcontainer-downfirstzeroindex {
+  position: relative;
+  position: relative;
+  width: 99%;
+  top: -50.5%;
+}
+#landingviewcartinfopriceindicationcontainer {
+  display: flex;
+  align-items: center;
+}
+#landingviewcartinfopriceindication {
+  position: relative;
+  font: auto {
+    family: $main-font;
+    size: 15px;
+  }
+  letter-spacing: 4px;
+  top: 14%;
+}
+#landingviewcartinfototalpricecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#landingviewcartinfototalpricesign {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+    size: 25px;
+  }
+  letter-spacing: 2px;
+  top: 14%;
+  left: -4%;
+}
+#landingviewcartinfototalprice {
+  margin-left: 8%;
+  color: rgb(255, 255, 255);
+}
+/////// cart content
+.landingview-cartcontent {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  height: auto;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid white;
+  overflow: hidden;     
+  top: 6.5vh;
+}
+//background-color: #b8c6db;
+//background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+.landingview-cartcontentmacset {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  height: 17vh;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid white;
+  top: 5vh;
+}
+.landingview-cartcontentfavorites {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  height: 12vh;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid black;
+}
+.landingview-cartcontentmacsetfavorites {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  height: auto;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid white;
+}
+.landingviewcartcontentmacset-namecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingviewcartcontent-name {
+  font: auto {
+    family: $sub-font;
+    size: 13px;
+  }
+  color: black;
+  text-align: center;
+}
+.landingviewcartcontent-price {
+  position:relative;
+}
+.landingviewcartcontentmacset-name {
+  font: auto {
+    family: $sub-font;
+    size: 25px;
+  }
+  color: white;
+}
+.landingviewcartcontent-priceindication {
+  position: relative;
+  color: aqua;
+  font: {
+    weight: 400;
+    size: 12px;
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  top: 1vh;
+  left: 8%;
+  letter-spacing: 1px;
+} 
+.landingviewcartcontentmacset-weightindication {
+  font: auto {
+    family: $sub-font;
+    size: 15px;
+  }
+  color: black;
+  margin-top: -6%;
+}
+.landingviewcartcontent-image {
+  height: 53%;
+  width: 35%;
+  margin-top: -3.5%;
+}
+.landingviewcartcontentmacset-pricescontainer {
+  position:relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.landingviewcartcontentmacset-priceindication {
+  position: relative;
+  color: aqua;
+  font: {
+    weight: 400;
+    size: 12px;
+  }
+  letter-spacing: 1px;
+  top: 0.5vh;
+  left: 8%;
+}
+.landingviewcartcontent-pricescontrolcontainer {
+position:relative;
+}
+.landingviewcartcontent-price {
+  position: relative;
+  color: white;
+  font: {
+    weight: 400;
+    size: 12px;
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  text-align: center;
+  top:1vh;
+  left: -15%;
+}
+.landingviewcartcontentmacset-price {
+  position: relative;
+  color: white;
+  font: {
+    weight: 400;
+    size: 12px;
+  }
+  letter-spacing: 1px;
+  text-align: center;
+  top: 3.4%;
+  left: -10%;
+}
+.landingviewcartcontentmacsetclosebuttoncontainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+.landingviewcartcontentmacsetclosebutton {
+  position: relative;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  height: 70%;
+  width: 40%;
+  color: white;
+  font: auto {
+    family: $main-font;
+  }
+  //padding: -2px 9px -2px 9px;
+  border: 1px solid white;
+  top: -2.5vh;
+  left: 3.5vh;
+}
+.landingviewcartcontentmacsetsavebuttoncontainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -39%;
+}
+.landingviewcartcontentmacsetsavebutton {
+  position: relative;
+  color: white;
+  font: auto {
+    family: $sub-font;
+    size: 15px;
+  }
+  border-radius: 10px;
+  background-color: rgb(131, 32, 32);
+  border: none;
+  outline-style: none;
+  padding: 0px 13%;
+  left: -17%;
+}
+.landingviewcartcontentmacsetdislikebuttoncontainer {
+  position: relative;
+  width: 110%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -39%;
+}
+.landingviewcartcontentmacsetdislikebutton {
+  position: relative;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  border-radius: 10px;
+  background-color: rgb(69, 145, 69);
+  border: none;
+  outline-style: none;
+  padding: 0px 20%;
+  margin-left: -14%;
+}
+#landingview-cartcontentpositioningcontainer {
+  height: 93%;
+}
+#landingview-checkoutbuttoncontainer {
+  position: relative;
+  background-color: #378b29;
+  background-image: linear-gradient(315deg, #378b29 0%, #74d680 74%);
+  transform: rotateX(180deg);
+  height: 7%;
+}
+#landingview-checkoutbutton {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+    size: 28px;
+  }
+  color: white;
+  text-align: center;
+  letter-spacing: 5px;
+  left: 31%;
+  text-decoration: none;
+}
+#landingpage-shoppingcartimage {
+  position: absolute;
+  border:1px solid white;
+  border-radius: 50%;
+  height: 70%;
+  width: 12%;
+  margin-left: 5%;
+  margin-top: -3%;
+}
+#langingview-scrollbuttonspositioningcontainer {
+  // background-color: green;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+///rgb(83, 163, 83)
+#landingview-upbutton {
+  background-color: #c3c7c7;
+  width: 10%;
+  height: 40%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-right: 1.3%;
+}
+#landingview-downbutton {
+  position: relative;
+  background-color: #c3c7c7;
+  width: 10%;
+  height: 40%;
+  bottom: 4%;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  margin-right: 1.3%;
+  bottom: 12%;
+}
+#langingview-userstatuscontainer {
+  position: absolute;
+  background-color: black;
+  width: 30%;
+  height: 100vh;
+  transition: left 1s ease;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-y: scroll;
+}
+///// user graph status container
+#langingview-userstatuscontainer::-webkit-scrollbar {
+  width: 18px;
+}
+#langingview-userstatuscontainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 17px;
+}
+#langingview-userstatuscontainer::-webkit-scrollbar-thumb {
+  background-color: #9e8fb2;
+  background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+/// lp paypal modal
+#landingviewuserstatus-paypalmodalcontainer {
+  position: relative;
+  height: 101%;
+  width: 100%;
+}
+#landingview-paypalmodalbg {
+  position: absolute;
+  height: 101%;
+  width: 100%;
+}
+#landingviewuserstatus-paypalform {
+  position: absolute;
+  height: auto;
+  width: 86%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 15px 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingviewuserstatuspaypalform-field {
+  font: auto {
+    family: $sub-font;
+    weight: 900;
+  }
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  width: 70%;
+  border: none;
+  outline-style: none;
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+}
+.landingviewuserstatuspaypalform-or {
+  text-align: center;
+  font: auto {
+    family: $sub-font;
+  }
+  margin-top: -5%;
+}
+#landingviewuserstatuspaypalform-submitbutton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  color: white;
+  padding: 5px 30px;
+  border-radius: 15px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing: 2px;
+  margin-top: 4%;
+}
+#langingviewuserstatus-graphpositioningpersonaldetailscontainer {
+  position:relative;
+  background-color:black;
+  height: 100vh;
+  width: 100%;
+
+}
+#langingviewuserstatus-graphpersonaldetailscontainer {
+  position:relative;
+  width:100%;
+  height: auto;
+  padding: 15px 20px;
+}
+#landingviewuserstatus-gphheader {
+position: relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 23px;
+}
+width: 80%;
+}
+#landingviewuserstatus-gphusername {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 25px;
+}
+}
+#landingviewuserstatus-gphaccountidnumber {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 20px;
+}
+margin-top: 3vh;
+}
+#landingviewuserstatus-gphisauthenticated {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 20px;
+} 
+}
+#langingviewuserstatus-maccredits {
+  position:relative;
+  color:white;
+  text-align: center;
+  font: auto {
+    family: $main-font;
+  }
+  letter-spacing: 2px;
+  margin-top: 5vh;
+}
+#langingviewuserstatus-buttonscontainer {
+  position:relative;
+  background-color:black;
+  border: 1px solid black;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#langingviewuserstatus-transferbutton {
+  position:relative;
+  background-color: dodgerblue;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 70px;
+  border-radius: 20px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing:2px;
+  top: 2vh;
+}
+#langingviewuserstatus-requesttotransferbutton {
+  position:relative;
+  background-color: rgb(31, 26, 26);
+  border: 1px solid white;
+  color:white;
+  padding: 10px 50px;
+  border-radius: 15px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing:2px;
+  top: 1vh;
+}
+#langingviewuserstatus-undertakerbutton {
+  position: relative;
+  background-color: dodgerblue;
+  border: 1px solid white;
+  color:white;
+  padding: 10px 70px;
+  border-radius: 15px;
+  font: auto {
+    family: $sub-font;
+  }
+  letter-spacing:2px;
+}
+
+#headersettingslogocontainer {
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+/////
+#landingview-content {
+  //border: 1px solid red;
+  height: auto;
+  display: flex;
+  color: red;
+}
+#landingviewcontent-container1 {
+  padding-left: 75px;
+  padding-right: 20px;
+}
+#landingviewcontent-container2 {
+}
+#landingviewcontent-memberandfollowuscontainer {
+  height: auto;
+  width: 90%;
+}
+#mapmaincontainer {
+  margin-top: 30px;
+  height: 12%;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mapheader {
+  height: 8%;
+}
+#videosmaincontainer {
+  margin-top: 30%;
+}
+#videosheader {
+  color: white;
+  font: {
+    size: 16px;
+  }
+  letter-spacing: 6px;
+}
+////// items container
+#itemscontainer {
+  position:relative;
+  height: auto;
+  width: 100%;
+  margin-top: 10%;
+}
+#test {
+  width: 100%;
+  height: 86%;
+  overflow-y: scroll;
+}
+#test::-webkit-scrollbar {
+  width: 15px;
+}
+#test::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+#test::-webkit-scrollbar-thumb {
+  background: aqua; 
+  border-radius: 10px;
+}
+#test::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+//// user friendly buttons container
+#langingview-scrollbuttonscontainer {
+  position: absolute;
+  width: 100%;
+  height: 14%;
+  top: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: aqua;
+}
+///// cart container
+#landingview-cartcontainer {
+  position: relative;
+  height: 100%;
+  width: 62%;
+  display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+#landingview-cartcontentcontainer {
+  background-color: #3f0d12;
+  background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+  position: absolute;
+  width: 60%;
+  height: 600%;
+  left: 3%;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transform: rotateX(180deg);
+  transition: 1s ease;
+  overflow: hidden;
+}
+.landingview-cartinfocontainer {
+  position: relative;
+  transform: rotateX(180deg);
+  background-color: #090947;
+  background-image: linear-gradient(315deg, #090947 0%, #5a585a 74%);
+  padding: 5px;
+  height: 10vh;
+  display: flex;
+  color: white;
+  border-radius: 20px;
+  transition: top 1s ease 0.5s;
+}
+#landingview-favoriteitemscontainer {
+  position: relative;
+  //transform: rotateX(180deg);
+  height: auto;
+  width: 99%;
+  top: -21%;
+}
+#landingviewcartcontentpositioningcontainer-downfirstzeroindex {
+  position: relative;
+  position: relative;
+  width: 99%;
+  top: -50.5%;
+}
+#landingviewcartinfopriceindicationcontainer {
+  display: flex;
+  align-items: center;
+}
+#landingviewcartinfopriceindication {
+  position: relative;
+  font: auto {
+    family: $main-font;
+    size: 15px;
+  }
+  letter-spacing: 4px;
+  top: 14%;
+}
+#landingviewcartinfototalpricecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#landingviewcartinfototalpricesign {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+    size: 25px;
+  }
+  letter-spacing: 2px;
+  top: 14%;
+  left: -4%;
+}
+#landingviewcartinfototalprice {
+  margin-left: 8%;
+  color: rgb(255, 255, 255);
+}
+/////// cart content
+.landingview-cartcontent {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  height: auto;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid white;
+  overflow: hidden;     
+  top: 6.5vh;
+}
+//background-color: #b8c6db;
+//background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+.landingview-cartcontentmacset {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  height: 17vh;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid white;
+  top: 5vh;
+}
+.landingview-cartcontentfavorites {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  height: 12vh;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid black;
+}
+.landingview-cartcontentmacsetfavorites {
+  position: relative;
+  transform: rotateX(180deg);
+  display: flex;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  height: auto;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  transition: 1s ease 1s;
+  border: 1px solid white;
+}
+.landingviewcartcontentmacset-namecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landingviewcartcontent-name {
+  font: auto {
+    family: $sub-font;
+    size: 13px;
+  }
+  color: black;
+  text-align: center;
+}
+.landingviewcartcontent-price {
+  position:relative;
+}
+.landingviewcartcontentmacset-name {
+  font: auto {
+    family: $sub-font;
+    size: 25px;
+  }
+  color: white;
+}
+.landingviewcartcontent-priceindication {
+  position: relative;
+  color: aqua;
+  font: {
+    weight: 400;
+    size: 12px;
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  top: 1vh;
+  left: 8%;
+  letter-spacing: 1px;
+} 
+.landingviewcartcontentmacset-weightindication {
+  font: auto {
+    family: $sub-font;
+    size: 15px;
+  }
+  color: black;
+  margin-top: -6%;
+}
+.landingviewcartcontent-image {
+  height: 53%;
+  width: 35%;
+  margin-top: -3.5%;
+}
+.landingviewcartcontentmacset-pricescontainer {
+  position:relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.landingviewcartcontentmacset-priceindication {
+  position: relative;
+  color: aqua;
+  font: {
+    weight: 400;
+    size: 12px;
+  }
+  letter-spacing: 1px;
+  top: 0.5vh;
+  left: 8%;
+}
+.landingviewcartcontent-pricescontrolcontainer {
+position:relative;
+}
+.landingviewcartcontent-price {
+  position: relative;
+  color: white;
+  font: {
+    weight: 400;
+    size: 12px;
+    family: $sub-font;
+  }
+  letter-spacing: 1px;
+  text-align: center;
+  top:1vh;
+  left: -15%;
+}
+.landingviewcartcontentmacset-price {
+  position: relative;
+  color: white;
+  font: {
+    weight: 400;
+    size: 12px;
+  }
+  letter-spacing: 1px;
+  text-align: center;
+  top: 3.4%;
+  left: -10%;
+}
+.landingviewcartcontentmacsetclosebuttoncontainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+.landingviewcartcontentmacsetclosebutton {
+  position: relative;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  height: 70%;
+  width: 40%;
+  color: white;
+  font: auto {
+    family: $main-font;
+  }
+  //padding: -2px 9px -2px 9px;
+  border: 1px solid white;
+  top: -2.5vh;
+  left: 3.5vh;
+}
+.landingviewcartcontentmacsetsavebuttoncontainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -39%;
+}
+.landingviewcartcontentmacsetsavebutton {
+  position: relative;
+  color: white;
+  font: auto {
+    family: $sub-font;
+    size: 15px;
+  }
+  border-radius: 10px;
+  background-color: rgb(131, 32, 32);
+  border: none;
+  outline-style: none;
+  padding: 0px 13%;
+  left: -17%;
+}
+.landingviewcartcontentmacsetdislikebuttoncontainer {
+  position: relative;
+  width: 110%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -39%;
+}
+.landingviewcartcontentmacsetdislikebutton {
+  position: relative;
+  color: white;
+  font: auto {
+    family: $sub-font;
+  }
+  border-radius: 10px;
+  background-color: rgb(69, 145, 69);
+  border: none;
+  outline-style: none;
+  padding: 0px 20%;
+  margin-left: -14%;
+}
+#landingview-cartcontentpositioningcontainer {
+  height: 93%;
+}
+#landingview-checkoutbuttoncontainer {
+  position: relative;
+  background-color: #378b29;
+  background-image: linear-gradient(315deg, #378b29 0%, #74d680 74%);
+  transform: rotateX(180deg);
+  height: 7%;
+}
+#landingview-checkoutbutton {
+  position: relative;
+  font: auto {
+    family: $sub-font;
+    size: 28px;
+  }
+  color: white;
+  text-align: center;
+  letter-spacing: 5px;
+  left: 31%;
+  text-decoration: none;
+}
+#landingpage-shoppingcartimage {
+  position: absolute;
+  border:1px solid white;
+  border-radius: 50%;
+  height: 70%;
+  width: 12%;
+  margin-left: 5%;
+  margin-top: -3%;
+}
+#langingview-scrollbuttonspositioningcontainer {
+  // background-color: green;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+///rgb(83, 163, 83)
+#landingview-upbutton {
+  background-color: #c3c7c7;
+  width: 10%;
+  height: 40%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-right: 1.3%;
+}
+#landingview-downbutton {
+  position: relative;
+  background-color: #c3c7c7;
+  width: 10%;
+  height: 40%;
+  bottom: 4%;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  margin-right: 1.3%;
+  bottom: 12%;
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
 //// fluid container // #381b4b  #16161a
 #landingview {
   position: relative;
@@ -26,7 +1460,7 @@ $containersonidlebgcolor: #e2e4e1;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-///// transfer funds confirm password container
+
 #landingview-confirmpasswordtransferfundscontainer {
   position: absolute;
   background-color: black;
@@ -797,6 +2231,8 @@ font: auto {
   justify-content: center;
   z-index: 20;
 }
+//////
+//// header 
 #header {
   position: relative;
   font: auto {
@@ -906,4 +2342,5 @@ font: auto {
 /* Handle on hover */
 #test::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
+}
 }
