@@ -37,6 +37,7 @@ $robotic-font: 'Nova Round', cursive;
     color: white;
     font: auto {
       family: $sub-font;
+      size:12px;
     }
     letter-spacing: 1.5px;
     &:hover {
@@ -56,6 +57,7 @@ $robotic-font: 'Nova Round', cursive;
     align-items: center;
     font: auto {
       family: $sub-font;
+      size:12px;
     }
     &:hover {
       color: red;
