@@ -282,7 +282,7 @@ async function getMacSetItems(userlocation) {
 
           // function setter getting MAC set items to be display in the UI using map JS built in function
           doSomethingWithMacSetItems((macsetitem)=> macsetitem = response.data)
-          alert(JSON.stringify(macSetIitems))
+          alert(JSON.stringify(macSetItems))
           // getting each of the user's province, city and baranggay
           // await getAddressesScope()
           // calculating total MAC set weight depending on originator's or weight on one class or seller
