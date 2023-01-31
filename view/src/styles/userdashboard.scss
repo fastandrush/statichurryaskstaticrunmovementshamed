@@ -5,6 +5,43 @@ $main-font: 'Titillium Web', sans-serif;
 $sub-font: 'Quicksand', sans-serif;
 $robotic-font: 'Nova Round', cursive;
 
+@media only screen and (min-width: 600px) {
+  #userdashboard {
+   position: relative;
+   height: 100%;
+   width: 100%;
+   //border: 1px solid red;
+   display: flex;
+  }
+  #userdashboardnav {
+    position: relative;
+    //background-color: green;
+    border:1px solid black;
+    border-right: none;
+    width: 20%;
+    height: 100%;
+    padding: 20px 10px;
+  }
+  #userdashboardcontent {
+   position: relative;
+   //background-color: gray;
+   width: 80%;
+   height: 100%;
+  }
+  #userdashboard-mobilenav {
+   background-color: brown;
+  }
+  #userdashboard-greetingscontainer {
+    position:relative;
+    //background-color: aqua;
+    border:1px solid black;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+  }
+  }
+
+@media only screen and (min-width: 1200px) {
 #userdashboard {
  position: relative;
  height: 100%;
@@ -37,4 +74,5 @@ $robotic-font: 'Nova Round', cursive;
   width: 100%;
   height: 100%;
   padding: 20px 10px;
+}
 }

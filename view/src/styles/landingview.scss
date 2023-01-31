@@ -15,11 +15,10 @@ $containersonidlebgcolor: #e2e4e1;
 //// container 
 #landingview {
     position: relative;
-    width: 100%;
     height: 100vh;
-    padding: 0;
+    width: 100%;
     background-color: $mainbgcolor;
-    overflow-y: scroll;
+    padding: 0;
     user-select: none;
 }
 #landingview::-webkit-scrollbar {
@@ -29,26 +28,130 @@ $containersonidlebgcolor: #e2e4e1;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/// contents 
+
+/// funds container 
+#landingview-confirmpasswordtransferfundscontainer {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease 0.8s;
+}
+#landingviewconfirmpasswordtransferfunds-succesfulcontainer {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+#landingviewconfirmpasswordtransferfunds-succesfulmessagecontainer {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#landingviewconfirmpasswordtransferfunds-succesfulclosebuttoncontainer {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#landingviewconfirmpasswordtransferfunds-succesfulclosebutton {
+  position: relative;
+  color: green;
+  font: auto {
+    family: $sub-font;
+    size: 17px;
+  }
+  left: -4vh;
+  top: 0.6vh;
+  letter-spacing: 4px;
+}
+#landingviewconfirmpasswordtransferfunds-succesfultransferindication {
+  color: green;
+  font: auto {
+    family: $sub-font;
+    weight: 900;
+  }
+  letter-spacing: 7px;
+}
+#landingviewconfirmpasswordtransferfunds-modal {
+  // border: 1px solid white;
+  height: 30%;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#landingviewconfirmpasswordtransferfunds-passwordfield {
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  width: 63%;
+  height: 19%;
+  font: auto {
+    family: $sub-font;
+  }
+  outline-style: none;
+  letter-spacing: 8px;
+}
+#landingviewconfirmpasswordtransferfunds-confirmpassword {
+  background-color: rgb(67, 112, 67);
+  border-radius: 20px;
+  font: auto {
+    family: $main-font;
+    variant: small-caps;
+    size: 15px;
+  }
+  color: white;
+  border: none;
+  outline-style: none;
+  padding: 5px 18px;
+  letter-spacing: 5px;
+}
+#landingviewconfirmpasswordtransferfunds-authexpirycountdownindication {
+  color: green;
+  letter-spacing: 2px;
+}
+
+//// contents 
 #landingview-contentcontainer {
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
-/// compressor container 
+//// compressor container 
 #langingview-compressorcontainer {
   position: absolute;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-/// contents container 
+//// contents container 
 #langingview-contentscontainer {
   position: absolute;
   width: 100%;
   height: 100vh;
-  overflow: scroll;
+  overflow-x:hidden;
 }
+
+/// mac user logo 
+#macusercontrollogo {
+  position: absolute;
+  background-color: white;
+  border:1px solid white;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  padding: 8px;
+  z-index: 100;
+}
+
 #langingview-contentscontainer::-webkit-scrollbar {
   display: none;
 }
@@ -57,14 +160,15 @@ $containersonidlebgcolor: #e2e4e1;
   scrollbar-width: none;
 }
 
-
 //// header 
 #headercontainer {
-  display: flex;
+  position:relative;
   height: 10%;
+  width:100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px;
+  padding: 0px 10px;
 }
 #header {
   position: relative;
@@ -74,16 +178,6 @@ $containersonidlebgcolor: #e2e4e1;
   color: white;
   letter-spacing: 20px;
   font-variant: small-caps;
-}
-#macusercontrollogo {
-  position: absolute;
-  background-color: white;
-  border:1px solid white;
-  border-radius: 50%;
-  height: 85px;
-  width: 85px;
-  padding: 8px;
-  z-index: 31;
 }
 #headersettingscontainer {
   display: flex;
@@ -110,13 +204,29 @@ $containersonidlebgcolor: #e2e4e1;
   }
   transition: 1s ease;
 }
-
+#landingview-upbutton {
+  background-color: #c3c7c7;
+  width: 10%;
+  height: 40%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-right: 1.3%;
+}
+#landingview-downbutton {
+  position: relative;
+  background-color: #c3c7c7;
+  width: 10%;
+  height: 40%;
+  bottom: 4%;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  margin-right: 1.3%;
+  bottom: 12%;
+}
 
 /// user status container 
 #langingview-userstatuscontainer {
   position: absolute;
   background-color: black;
-  width: 30%;
+  width: 100%;
   height: 100vh;
   transition: left 1s ease;
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
@@ -315,7 +425,8 @@ font: auto {
   }
   letter-spacing:2px;
 }
-/////
+
+///// user dashboard
 #langingview-userdashboarddisplaycontainer {
   position: absolute;
   background-color: white;
@@ -353,6 +464,7 @@ font: auto {
   align-items: center;
   // background-color: aqua;
 }
+
 ///// cart container
 #landingview-cartcontainer {
   position: relative;
@@ -735,227 +847,8 @@ position:relative;
   justify-content: space-between;
   align-items: flex-end;
 }
+
 ///rgb(83, 163, 83)
-#landingview-upbutton {
-  background-color: #c3c7c7;
-  width: 10%;
-  height: 40%;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  margin-right: 1.3%;
-}
-#landingview-downbutton {
-  position: relative;
-  background-color: #c3c7c7;
-  width: 10%;
-  height: 40%;
-  bottom: 4%;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-  margin-right: 1.3%;
-  bottom: 12%;
-}
-#langingview-userstatuscontainer {
-  position: absolute;
-  background-color: black;
-  width: 30%;
-  height: 100vh;
-  transition: left 1s ease;
-  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  overflow-y: scroll;
-}
-///// user graph status container
-#langingview-userstatuscontainer::-webkit-scrollbar {
-  width: 18px;
-}
-#langingview-userstatuscontainer::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 17px;
-}
-#langingview-userstatuscontainer::-webkit-scrollbar-thumb {
-  background-color: #9e8fb2;
-  background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
-/// lp paypal modal
-#landingviewuserstatus-paypalmodalcontainer {
-  position: relative;
-  height: 101%;
-  width: 100%;
-}
-#landingview-paypalmodalbg {
-  position: absolute;
-  height: 101%;
-  width: 100%;
-}
-#landingviewuserstatus-paypalform {
-  position: absolute;
-  height: auto;
-  width: 86%;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 15px 10px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.landingviewuserstatuspaypalform-field {
-  font: auto {
-    family: $sub-font;
-    weight: 900;
-  }
-  padding: 5px;
-  border-radius: 10px;
-  text-align: center;
-  width: 70%;
-  border: none;
-  outline-style: none;
-  border: 1px solid black;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: transparent;
-}
-.landingviewuserstatuspaypalform-or {
-  text-align: center;
-  font: auto {
-    family: $sub-font;
-  }
-  margin-top: -5%;
-}
-#landingviewuserstatuspaypalform-submitbutton {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-  color: white;
-  padding: 5px 30px;
-  border-radius: 15px;
-  font: auto {
-    family: $sub-font;
-  }
-  letter-spacing: 2px;
-  margin-top: 4%;
-}
-#langingviewuserstatus-graphpositioningpersonaldetailscontainer {
-  position:relative;
-  background-color:black;
-  height: 100vh;
-  width: 100%;
-
-}
-#langingviewuserstatus-graphpersonaldetailscontainer {
-  position:relative;
-  width:100%;
-  height: auto;
-  padding: 15px 20px;
-}
-#landingviewuserstatus-gphheader {
-position: relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 23px;
-}
-width: 80%;
-}
-#landingviewuserstatus-gphusername {
-position:relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 25px;
-}
-}
-#landingviewuserstatus-gphaccountidnumber {
-position:relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 20px;
-}
-margin-top: 3vh;
-}
-#landingviewuserstatus-gphisauthenticated {
-position:relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 20px;
-} 
-}
-#langingviewuserstatus-maccredits {
-  position:relative;
-  color:white;
-  text-align: center;
-  font: auto {
-    family: $main-font;
-  }
-  letter-spacing: 2px;
-  margin-top: 5vh;
-}
-#langingviewuserstatus-buttonscontainer {
-  position:relative;
-  background-color:black;
-  border: 1px solid black;
-  width: 100%;
-  height: 25%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-}
-#langingviewuserstatus-transferbutton {
-  position:relative;
-  background-color: dodgerblue;
-  border: 1px solid white;
-  color: white;
-  padding: 10px 70px;
-  border-radius: 20px;
-  font: auto {
-    family: $sub-font;
-  }
-  letter-spacing:2px;
-  top: 2vh;
-}
-#langingviewuserstatus-requesttotransferbutton {
-  position:relative;
-  background-color: rgb(31, 26, 26);
-  border: 1px solid white;
-  color:white;
-  padding: 10px 50px;
-  border-radius: 15px;
-  font: auto {
-    family: $sub-font;
-  }
-  letter-spacing:2px;
-  top: 1vh;
-}
-#langingviewuserstatus-undertakerbutton {
-  position: relative;
-  background-color: dodgerblue;
-  border: 1px solid white;
-  color:white;
-  padding: 10px 70px;
-  border-radius: 15px;
-  font: auto {
-    family: $sub-font;
-  }
-  letter-spacing:2px;
-}
-
 #headersettingslogocontainer {
   display: flex;
   justify-content: center;
@@ -963,6 +856,7 @@ font: auto {
 }
 /////
 #landingview-content {
+  position:relative;
   //border: 1px solid red;
   height: auto;
   display: flex;
@@ -1026,7 +920,6 @@ font: auto {
   background: #b30000; 
 }
 
-
 //// user friendly buttons container
 #langingview-scrollbuttonscontainer {
   position: absolute;
@@ -1048,11 +941,12 @@ font: auto {
   transform-style: preserve-3d;
 }
 #landingview-cartcontentcontainer {
+  position:relative;
   background-color: #3f0d12;
   background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
   position: absolute;
-  width: 60%;
-  height: 600%;
+  width: 171%;
+  height: 600%;   
   left: 3%;
   border-radius: 25px;
   padding: 10px;
@@ -1394,36 +1288,39 @@ position:relative;
   position: relative;
   font: auto {
     family: $sub-font;
-    size: 28px;
+    size: 22px;
   }
   color: white;
   text-align: center;
   letter-spacing: 5px;
-  left: 31%;
   text-decoration: none;
+  top:0.2vh;
 }
 #landingpage-shoppingcartimage {
   position: absolute;
   border:1px solid white;
   border-radius: 50%;
-  height: 70%;
-  width: 12%;
+  height: 85%;
+  width: 42%;
   margin-left: 5%;
   margin-top: -3%;
 }
 #langingview-scrollbuttonspositioningcontainer {
+  position:relative;
   // background-color: green;
   width: 50%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  left:-0.5vh;
+  z-index:1;
 }
 ///rgb(83, 163, 83)
 #landingview-upbutton {
   background-color: #c3c7c7;
-  width: 10%;
+  width: 30%;
   height: 40%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 1.3%;
@@ -1431,12 +1328,44 @@ position:relative;
 #landingview-downbutton {
   position: relative;
   background-color: #c3c7c7;
-  width: 10%;
+  width: 30%;
   height: 40%;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 1.3%;
   bottom: 12%;
+}
+
+//// user dashboard 
+#langingview-userdashboarddisplaycontainer {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  overflow-y:hidden;  
+  transition: top 1s ease;
+}
+#langingview-userdashboarddisplaycontentcontainer {
+  position:relative;
+  width: 100%;
+  height: 95%;
+}
+#langingview-userdashboarddisplayclosebuttoncontainer {
+  position:relative;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+#langingview-userdashboarddisplayclosebutton {
+  font: auto {
+    family: $sub-font;
+    size: 20px;
+  }
+  color: tomato;
+  display: block;
+  margin-right: 1.2%;
 }
 
 }

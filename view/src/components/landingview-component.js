@@ -1,5 +1,6 @@
 import React, { useState, 
-                useEffect
+                useEffect,
+                useCallback
               } from 'react';
 
 import { Container, 
@@ -46,12 +47,16 @@ import UserDashboard from './userdashboard-component';
 
 export default function LandingView(props) {
 
+const [, updateState] = useState();
+const forceUpdate = useCallback(() => updateState({}), []);
+
 const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
 const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
 const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
 
 axios.defaults.baseURL = backEndPathnameURI;
 
+const [isXSVP, deterIfXSVP] = useState(false);
 const [userStatusContainerDP, doSomethingUserStatusContainerDp] = useState('-30%');
 const [userDashboardSettingsContainer, doSomethingUserDashboardSettingsContainer] = useState('-100%');
 
@@ -80,7 +85,7 @@ const [authenticatiponExpiryTime, authenticatiponExpiryCountTime] = useState(60)
 
 const [tokenExpiryIntervalId, setTokenExpiryIntervalId] = useState();
 
-const [payPalPhoneNumber, getPayPalPhoneNumber] = useState('');
+const [payPalPhoneNumber, getPayPalPhoneNumber] = useState('');  
 const [payPalEmailId, getPayPalEmailId] = useState('');
 const [payPalAccountId, getPayPalAccountId] = useState('');
 const [desiredAmountPayPalTransfer, getDesiredAmountPayPalTransfer] = useState(0);
@@ -90,7 +95,18 @@ const [payOutId, getPayOutId] = useState();
 
 const [succesfulTransferOfFundsCont, doSomethingSuccessfulTransferOfFundsCont] = useState(true);
 
+const __xs = window.matchMedia('(max-width: 600px)');
+const __lg = window.matchMedia('(min-width: 1200px)');
+const __md = window.matchMedia('(max-width: 992px)');
+
 useEffect(()=> {
+
+  __lg.addListener(_lgBreakpoint);
+  _lgBreakpoint(__lg);
+  __xs.addListener(_xsBreakpoint);
+  _xsBreakpoint(__xs);
+  __md.addListener(_mdBreakpoint);
+  _mdBreakpoint(__md);
   
    //document.getElementsByClassName('landingview-cartcontentmacset')[0].style.visibility = 'hidden';
    document.getElementsByClassName('landingview-cartcontent')[0].style.visibility = 'hidden';
@@ -98,8 +114,30 @@ useEffect(()=> {
  
 },[])
 
-const toggleUserStatusContainer = () => {
-   doSomethingUserStatusContainerDp((dp)=> dp === '-30%' ? '0%' : '-30%');
+function _lgBreakpoint(__lg) {
+  if (__lg.matches) {
+  }
+}
+
+function _xsBreakpoint(__xs) {
+    if (__xs.matches) {
+      deterIfXSVP((xsvp)=> xsvp = true)
+      doSomethingUserStatusContainerDp((leftProp) => leftProp = '-100%')
+    }
+}
+
+function _mdBreakpoint(_md) {
+    if (__md.matches) {
+
+    }
+}
+
+function toggleUserStatusContainer(userStatusContainerDp) {
+  if ( isXSVP === true ) {
+    doSomethingUserStatusContainerDp((leftProp) => leftProp === '-100%' ? '0%' : '-100%') 
+  } else {
+    doSomethingUserStatusContainerDp((leftProp) => leftProp === '-30%' ? '0%' : '-30%')
+  }
 }
 
 const handleUserDashboardSettingsContainer = () => {
@@ -360,10 +398,10 @@ const onScrollFunction = (evt) => {
 
             <Header doSomethingUserDashboardSettingsContainer={doSomethingUserDashboardSettingsContainer}/>
 
-            <Draggable>
+            <Draggable onStop={()=>toggleUserStatusContainer()}>
                <img src='./images/maclogo.png'
                     id='macusercontrollogo'
-                    onClick={()=> toggleUserStatusContainer()}/>
+                    alt='MAC-DISPLAYIMAGE'/>
             </Draggable>
 
             <LandscapeNav />
@@ -779,10 +817,10 @@ const onScrollFunction = (evt) => {
 
           <div id='langingview-scrollbuttonspositioningcontainer'>
            <div id='landingview-upbutton'>
-             1
+             
            </div>
            <div id='landingview-downbutton'>
-             2
+             
            </div>
           </div>
 
