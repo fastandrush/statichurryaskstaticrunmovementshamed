@@ -21,7 +21,6 @@ $containersonidlebgcolor: #e2e4e1;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
-    overflow:scroll;
 }
 #landingview::-webkit-scrollbar {
   display: none;
@@ -148,10 +147,6 @@ $containersonidlebgcolor: #e2e4e1;
 
 #langingview-contentscontainer::-webkit-scrollbar {
   display: none;
-}
-#langingview-contentscontainer {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 //// header 
