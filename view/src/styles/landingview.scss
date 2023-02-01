@@ -21,7 +21,7 @@ $containersonidlebgcolor: #e2e4e1;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
-    overflow:hidden;
+    overflow-y:hidden;
 }
 #landingview::-webkit-scrollbar {
   display: none;
@@ -119,20 +119,19 @@ $containersonidlebgcolor: #e2e4e1;
 #landingview-contentcontainer {
   position: absolute;  
   border:1px solid green;
-  height: 100vh;
+  height: auto;
   width: 100%;
-  overflow:scroll;
 }
 //// compressor container 
 #langingview-compressorcontainer {
   position: absolute;
-  height: 100%;
+  height: auto;
   width:100%;
 }
 //// contents container 
 #langingview-contentscontainer {
   position: absolute;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
