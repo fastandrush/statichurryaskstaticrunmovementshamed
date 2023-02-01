@@ -15,11 +15,13 @@ $containersonidlebgcolor: #e2e4e1;
 //// container 
 #landingview {
     position: relative;
+    border:3px solid green;
     height: 100vh;
     width: 100%;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
+    overflow-y:scroll;
 }
 #landingview::-webkit-scrollbar {
   display: none;
