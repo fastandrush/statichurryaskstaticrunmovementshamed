@@ -16,8 +16,8 @@ $containersonidlebgcolor: #e2e4e1;
 #landingview {
     position: relative;
     border:1px solid red;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
