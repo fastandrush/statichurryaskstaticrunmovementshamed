@@ -133,9 +133,9 @@ $containersonidlebgcolor: #e2e4e1;
 //// contents container 
 #langingview-contentscontainer {
   position: absolute;
-  border:1px solid yellow;
-  height: auto;
+  height: 100%;
   width: 100%;
+  overflow-y:scroll;
 }
 
 /// mac user logo 
