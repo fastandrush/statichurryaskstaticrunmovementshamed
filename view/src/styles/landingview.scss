@@ -122,10 +122,9 @@ $containersonidlebgcolor: #e2e4e1;
 #landingview-contentcontainer {
   position: absolute;
   border:2px solid red;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  overflow-y:scroll;
-  overflow-x:hidden;
+  overflow:hidden;
   z-index:1;
 }
 //// compressor container 
@@ -133,6 +132,7 @@ $containersonidlebgcolor: #e2e4e1;
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow-y:scroll;
 }
 //// contents container 
 #langingview-contentscontainer {
