@@ -121,11 +121,12 @@ $containersonidlebgcolor: #e2e4e1;
 //// contents 
 #landingview-contentcontainer {
   position: absolute;
-  border:1px solid red;
-  height: 100%;
+  border:2px solid red;
+  height: 100vh;
   width: 100%;
   overflow-y:scroll;
   overflow-x:hidden;
+  z-index:1;
 }
 //// compressor container 
 #langingview-compressorcontainer {
@@ -137,7 +138,7 @@ $containersonidlebgcolor: #e2e4e1;
 #langingview-contentscontainer {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 /// mac user logo 
