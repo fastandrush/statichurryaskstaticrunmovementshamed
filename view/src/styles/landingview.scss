@@ -15,13 +15,11 @@ $containersonidlebgcolor: #e2e4e1;
 //// container 
 #landingview {
     position: relative;
-    border:3px solid green;
     height: 100vh;
     width: 100%;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
-    overflow:hidden;
 }
 #landingview::-webkit-scrollbar {
   display: none;
@@ -122,20 +120,18 @@ $containersonidlebgcolor: #e2e4e1;
   height: 100%;
   width: 100%;
   overflow-y:scroll;
+  overflow-x:hidden;
 }
 //// compressor container 
 #langingview-compressorcontainer {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow-y:scroll;
+  height: 100%
 }
 //// contents container 
 #langingview-contentscontainer {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow-y:scroll;
 }
 
 /// mac user logo 
