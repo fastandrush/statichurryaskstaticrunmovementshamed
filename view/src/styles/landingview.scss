@@ -22,6 +22,7 @@ $containersonidlebgcolor: #e2e4e1;
     padding: 0;
     user-select: none;
     overflow-x:hidden;
+    overflow-y:scroll;
 }
 #landingview::-webkit-scrollbar {
   display: none;
