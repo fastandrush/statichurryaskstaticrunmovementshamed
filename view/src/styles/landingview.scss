@@ -119,13 +119,15 @@ $containersonidlebgcolor: #e2e4e1;
 //// contents 
 #landingview-contentcontainer {
   position: absolute;
-  height: 100%;
+  border:1px solid green;
+  height: auto;
   width: 100%;
 }
 //// compressor container 
 #langingview-compressorcontainer {
   position: absolute;
-  height: 100%
+  height: 100%;
+  width:100%;
 }
 //// contents container 
 #langingview-contentscontainer {
