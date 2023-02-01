@@ -21,7 +21,7 @@ $containersonidlebgcolor: #e2e4e1;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
-    overflow-y:scroll;
+    overflow:hidden;
 }
 #landingview::-webkit-scrollbar {
   display: none;
@@ -118,6 +118,7 @@ $containersonidlebgcolor: #e2e4e1;
 //// contents 
 #landingview-contentcontainer {
   position: absolute;
+  border:1px solid red;
   height: 100%;
   width: 100%;
   overflow-y:scroll;
