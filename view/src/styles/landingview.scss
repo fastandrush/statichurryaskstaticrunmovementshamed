@@ -126,16 +126,14 @@ $containersonidlebgcolor: #e2e4e1;
 //// compressor container 
 #langingview-compressorcontainer {
   position: absolute;
-  height: 100vh;
+  height: auto;
   width:100%;
-  overflow:scroll;
 }
 //// contents container 
 #langingview-contentscontainer {
   position: absolute;
-  height: 100vh;
+  height: auto;
   width: 100%;
-  overflow:scroll;
 }
 
 /// mac user logo 
