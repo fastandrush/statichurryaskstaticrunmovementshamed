@@ -465,8 +465,7 @@ font: auto {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  top:-7vh;
-  z-index:30;
+  top:-10vh;
 }
 ///// cart container
 #landingview-cartcontainer {
@@ -841,7 +840,7 @@ position:relative;
   width: 35%;
   margin-left: 5%;
   margin-top: -3%;
-  z-index:40;
+  z-index:99;
 }
 
 
@@ -923,20 +922,20 @@ position:relative;
 #landingview-upbutton {
   background-color: #c3c7c7;
   width: 50%;
-  height: 55%;
+  height: 60%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 2vh;
-  top:-5vh;
+  top:-7vh;
 }
 #landingview-downbutton {
   position: relative;
   background-color: #c3c7c7;
   width: 50%;
-  height: 55%;
+  height: 60%;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 2vh;
-  bottom:0vh;
+  bottom:-2vh;
 }
 
 //// user dashboard 
