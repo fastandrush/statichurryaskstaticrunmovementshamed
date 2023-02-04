@@ -452,10 +452,12 @@ font: auto {
 #langingview-scrollbuttonscontainer {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 14%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index:99;
+  top:86%;
 }
 #langingview-scrollbuttonspositioningcontainer {
   position:relative;
@@ -476,7 +478,6 @@ font: auto {
   display: flex;
   align-items: center;
   transform-style: preserve-3d;
-  z-index:99;
 }
 #landingview-cartcontentcontainer {
   background-color: #3f0d12;
@@ -838,10 +839,9 @@ position:relative;
   border:1px solid white;
   border-radius: 50%;
   height: 75%;
-  width: 45%;
+  width: 40%;
   margin-left: 5%;
   top: -25%;
-  z-index:200;
 }
 
 

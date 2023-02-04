@@ -713,13 +713,13 @@ const onScrollFunction = (evt) => {
  </Link>
 </div>
 
-</div>
+              </div>
 
-<img src='../images/statistic.png'
-alt='MAC-SHOPPINGCART-IMAGE'
-id='landingpage-shoppingcartimage'  
-onClick={(e)=> toggleCart(e)}/>
-
+              <img src='../images/statistic.png'
+                   alt='MAC-SHOPPINGCART-IMAGE'
+                   id='landingpage-shoppingcartimage'  
+                   onClick={(e)=> toggleCart(e)}/>
+                   
             </div>
 
             <div id='langingview-scrollbuttonspositioningcontainer'>
