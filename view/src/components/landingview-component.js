@@ -549,57 +549,57 @@ const onScrollFunction = (evt) => {
 
             <div id='landingview-cartcontainer' style={{zIndex: cartItemCheckOutBtnZindex}}>
 
-<div id='landingview-cartcontentcontainer'
-style={{opacity: cartContainer, top: cartContainerOffSetTop, transition: cartContainerTransitionProp}}>
+              <div id='landingview-cartcontentcontainer'
+                 style={{opacity: cartContainer, top: cartContainerOffSetTop, transition: cartContainerTransitionProp}}>
 
-<div id='landingview-cartcontentpositioningcontainer'>
+                <div id='landingview-cartcontentpositioningcontainer'>
 
-<div className='landingview-cartinfocontainer'
- style={{top: cartInfoContainerOffSetTop}}>
-<Col id='landingviewcartinfopriceindicationcontainer'>
-<p id='landingviewcartinfopriceindication'>Total:</p>
-</Col>
-<Col id='landingviewcartinfototalpricecontainer'>
-<p id='landingviewcartinfototalpricesign'><b>₱<span id='landingviewcartinfototalprice'>{props.cartTotalPrice.toFixed(2)}</span></b></p>
-</Col>
-</div>
+                  <div className='landingview-cartinfocontainer'
+                   style={{top: cartInfoContainerOffSetTop}}>
+                     <Col id='landingviewcartinfopriceindicationcontainer'>
+                       <p id='landingviewcartinfopriceindication'>Total:</p>
+                     </Col>
+                     <Col id='landingviewcartinfototalpricecontainer'>
+                      <p id='landingviewcartinfototalpricesign'><b>₱<span id='landingviewcartinfototalprice'>{props.cartTotalPrice.toFixed(2)}</span></b></p>
+                     </Col>
+                  </div>
 
-<div id='test'>
+                  <div id='test'>
 
-<div id='landingview-favoriteitemscontainer'>
-{
-  props.favoriteItemsOnCart.map((data, idx)=> {
-    return <>
-            {
-             data.macset.isamacset === 'true' ? (
-              <div className='landingview-cartcontentmacsetfavorites'
-              key={idx} 
-              style={{marginTop: cartItemOffSetTop}}>
+                    <div id='landingview-favoriteitemscontainer'>
+                      {
+                        props.favoriteItemsOnCart.map((data, idx)=> {
+                     return <>
+                     {
+                     data.macset.isamacset === 'true' ? (
+                    <div className='landingview-cartcontentmacsetfavorites'
+                         key={idx} 
+                         style={{marginTop: cartItemOffSetTop}}>
                
-              <Col lg={5} className='landingviewcartcontentmacset-namecontainer'>
-                <p className='landingviewcartcontentmacset-name'>{data.macset.macsetname}</p>
-                <p className='landingviewcartcontentmacset-weightindication'>weight: 0 grams</p>
-              </Col>
-              <Col lg={6} className='landingviewcartcontentmacset-pricescontainer'>
-              <Col>
-               <p className='landingviewcartcontentmacset-priceindication'>Product price </p>
-               <p className='landingviewcartcontentmacset-priceindication'>Shipping price</p>
-               <p className='landingviewcartcontentmacset-priceindication'>Total price </p>
-              </Col>
-              <Col>
-               <p className='landingviewcartcontentmacset-price'>&#8369;{data.macset.macsetprice}</p>
-               <p className='landingviewcartcontentmacset-price'>&#8369;{data.shippingprice}</p>
-                <p className='landingviewcartcontentmacset-price'>&#8369;{Number(data.macset.macsetprice) + Number(data.shippingprice)}</p>
-              </Col>
-              </Col>
-              <Col>      
-              <Col className='landingviewcartcontentmacsetdislikebuttoncontainer'>
-                <button className='landingviewcartcontentmacsetdislikebutton'
+                    <Col lg={5} className='landingviewcartcontentmacset-namecontainer'>
+                         <p className='landingviewcartcontentmacset-name'>{data.macset.macsetname}</p>
+                         <p className='landingviewcartcontentmacset-weightindication'>weight: 0 grams</p>
+                    </Col>
+                    <Col lg={6} className='landingviewcartcontentmacset-pricescontainer'>
+                    <Col>
+                     <p className='landingviewcartcontentmacset-priceindication'>Product price </p>
+                     <p className='landingviewcartcontentmacset-priceindication'>Shipping price</p>
+                     <p className='landingviewcartcontentmacset-priceindication'>Total price </p>
+                    </Col>
+                    <Col>
+                     <p className='landingviewcartcontentmacset-price'>&#8369;{data.macset.macsetprice}</p>
+                     <p className='landingviewcartcontentmacset-price'>&#8369;{data.shippingprice}</p>
+                     <p className='landingviewcartcontentmacset-price'>&#8369;{Number(data.macset.macsetprice) + Number(data.shippingprice)}</p>
+                    </Col>
+                     </Col>
+                     <Col>      
+                       <Col className='landingviewcartcontentmacsetdislikebuttoncontainer'>
+                     <button className='landingviewcartcontentmacsetdislikebutton'
                          onClick={(e)=> myFavoriteMacSet(e, idx, data)}>
-                   dislike  
-                </button>
-              </Col>
-              </Col>
+                        dislike  
+                     </button>
+                    </Col>
+                   </Col>
               </div> 
              )
              :
@@ -614,12 +614,12 @@ style={{opacity: cartContainer, top: cartContainerOffSetTop, transition: cartCon
              )
            }
           </>
-  })
+                       })
 }
-</div>
+                    </div>
 
-<div id='landingviewcartcontentpositioningcontainer-downfirstzeroindex'> 
-  {
+                  <div id='landingviewcartcontentpositioningcontainer-downfirstzeroindex'> 
+   {
   props.cartItems.map((data, idx)=> {
     return <>
             {
@@ -701,7 +701,7 @@ style={{opacity: cartContainer, top: cartContainerOffSetTop, transition: cartCon
 
 </div>
 
-</div>
+                </div>
 
 <div id='landingview-checkoutbuttoncontainer'
     style={{display: cartItemCheckOutBtn}}>
@@ -731,7 +731,7 @@ onClick={(e)=> toggleCart(e)}/>
            </div>
             </div>
 
-         </div>
+          </div>
 
         </Col>  
 

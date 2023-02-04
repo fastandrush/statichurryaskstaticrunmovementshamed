@@ -466,6 +466,7 @@ font: auto {
   justify-content: flex-end;
   align-items: flex-end;
   top:-10vh;
+  z-index:99;
 }
 ///// cart container
 #landingview-cartcontainer {
@@ -475,7 +476,7 @@ font: auto {
   display: flex;
   align-items: center;
   transform-style: preserve-3d;
-  z-index:40;
+  z-index:99;
 }
 #landingview-cartcontentcontainer {
   background-color: #3f0d12;
@@ -839,7 +840,7 @@ position:relative;
   height: 70%;
   width: 35%;
   margin-left: 5%;
-  margin-top: -3%;
+  top: -10%;
   z-index:99;
 }
 
