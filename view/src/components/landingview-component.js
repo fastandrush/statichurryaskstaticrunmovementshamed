@@ -826,7 +826,6 @@ const onScrollFunction = (evt) => {
         </Col>
          
        
-
         <div id='langingview-userdashboarddisplaycontainer'
              style={{top: userDashboardSettingsContainer}}>
              <Col id='langingview-userdashboarddisplaycontentcontainer'>
