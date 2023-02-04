@@ -134,6 +134,7 @@ $containersonidlebgcolor: #e2e4e1;
   border:3px solid green;
   height: 100vh;
   width: 100%;
+  z-index:20;
   overflow-y:scroll;
 }
 /// mac user logo 
@@ -464,6 +465,7 @@ font: auto {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index:30;
 }
 ///// cart container
 #landingview-cartcontainer {
