@@ -48,7 +48,7 @@ function lgDevices() {
 }
 
 function mdDevices() {
-  alert('Medium viewports')
+  
 }
 
 function xsDevices() {
