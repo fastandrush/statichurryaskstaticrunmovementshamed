@@ -119,7 +119,7 @@ $containersonidlebgcolor: #e2e4e1;
   position: absolute;  
   height: 100vh;
   width: 100vw;
-  overflow-y:scroll;
+  overflow:hidden;
 }
 //// compressor container 
 #langingview-compressorcontainer {
@@ -127,6 +127,7 @@ $containersonidlebgcolor: #e2e4e1;
   border:3px solid coral;
   height: 100vh;
   width:100%; 
+  overflow-y:scroll;
 }
 //// contents container 
 #langingview-contentscontainer {
