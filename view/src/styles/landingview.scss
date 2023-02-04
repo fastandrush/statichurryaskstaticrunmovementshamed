@@ -21,7 +21,7 @@ $containersonidlebgcolor: #e2e4e1;
     background-color: $mainbgcolor;
     padding: 0;
     user-select: none;
-    overflow:hidden;
+    overflow:scroll;
 }
 #landingview::-webkit-scrollbar {
   display: none;
@@ -121,8 +121,6 @@ $containersonidlebgcolor: #e2e4e1;
   border:1px solid green;
   height: 100vh;
   width: 100vw;
-  overflow-y: scroll;
-  overflow-x:hidden;
 }
 //// compressor container 
 #langingview-compressorcontainer {
