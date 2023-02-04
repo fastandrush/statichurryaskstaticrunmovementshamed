@@ -451,9 +451,18 @@ font: auto {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-
+  align-items: flex-end;
 }
+#langingview-scrollbuttonspositioningcontainer {
+  // background-color: green;
+  width: 100;
+  height: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 
 ///// cart container
 #landingview-cartcontainer {
@@ -827,15 +836,6 @@ position:relative;
   width: 12%;
   margin-left: 5%;
   margin-top: -3%;
-}
-#langingview-scrollbuttonspositioningcontainer {
-  // background-color: green;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 
 
