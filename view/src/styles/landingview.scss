@@ -465,7 +465,7 @@ font: auto {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  top:-2vh;
+  top:-7vh;
   z-index:30;
 }
 ///// cart container
@@ -476,6 +476,7 @@ font: auto {
   display: flex;
   align-items: center;
   transform-style: preserve-3d;
+  z-index:40;
 }
 #landingview-cartcontentcontainer {
   background-color: #3f0d12;
@@ -840,7 +841,7 @@ position:relative;
   width: 35%;
   margin-left: 5%;
   margin-top: -3%;
-  z-index:100;
+  z-index:40;
 }
 
 
@@ -921,8 +922,8 @@ position:relative;
 ///rgb(83, 163, 83)
 #landingview-upbutton {
   background-color: #c3c7c7;
-  width: 30%;
-  height: 60%;
+  width: 50%;
+  height: 55%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 2vh;
   top:-5vh;
@@ -930,12 +931,12 @@ position:relative;
 #landingview-downbutton {
   position: relative;
   background-color: #c3c7c7;
-  width: 30%;
-  height: 60%;
+  width: 50%;
+  height: 55%;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 2vh;
-  bottom:-5vh;
+  bottom:0vh;
 }
 
 //// user dashboard 
