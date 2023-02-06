@@ -133,7 +133,7 @@ $containersonidlebgcolor: #e2e4e1;
   position: absolute;
   height: 100vh;
   width: 100%;
-  z-index:100;
+  z-index:20;
   overflow-y:scroll;
 }
 /// mac user logo 
@@ -460,7 +460,6 @@ font: auto {
 }
 #langingview-scrollbuttonspositioningcontainer {
   position:relative;
-  background-color:green;
   width: 38%;
   height: 100%;
   display: flex;
@@ -837,8 +836,8 @@ position:relative;
   position: absolute;
   border:1px solid white;
   border-radius: 35%;
-  height: 85%;
-  width: 40%;
+  height: 95%;
+  width: 45%;
   margin-left: 5%;
   top: -5%;
 }
@@ -925,7 +924,7 @@ position:relative;
   width: 50%;
   height: 70%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  margin-right: 2vh;
+  margin-right: 2.5vh;
   top:-7vh;
 }
 #landingview-downbutton {
@@ -935,7 +934,7 @@ position:relative;
   height: 70%;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
-  margin-right: 2vh;
+  margin-right: 2.5vh;
   bottom:-2vh;
 }
 
