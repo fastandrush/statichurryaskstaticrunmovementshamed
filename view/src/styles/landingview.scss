@@ -840,10 +840,8 @@ position:relative;
   height: 100%;
   width: 40%;
   margin-left: 5%;
-  top: -5%;
+  top: -2%;
 }
-
-
 
 
 ///rgb(83, 163, 83)
@@ -923,7 +921,7 @@ position:relative;
 #landingview-upbutton {
   background-color: #c3c7c7;
   width: 50%;
-  height: 95%;
+  height: 10vh;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 2.5vh;
   top:-7vh;
@@ -932,7 +930,7 @@ position:relative;
   position: relative;
   background-color: #c3c7c7;
   width: 50%;
-  height: 95%;
+  height: 10vh;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 2.5vh;
