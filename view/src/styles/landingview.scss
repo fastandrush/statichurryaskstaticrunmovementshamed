@@ -468,7 +468,6 @@ font: auto {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  top:-10vh;
   z-index:99;
 }
 ///// cart container
@@ -838,8 +837,8 @@ position:relative;
 #landingpage-shoppingcartimage {
   position: absolute;
   border:1px solid white;
-  border-radius: 50%;
-  height: 75%;
+  border-radius: 40%;
+  height: 80%;
   width: 40%;
   margin-left: 5%;
   top: -5%;
