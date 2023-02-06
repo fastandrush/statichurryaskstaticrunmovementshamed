@@ -133,7 +133,7 @@ $containersonidlebgcolor: #e2e4e1;
   position: absolute;
   height: 100vh;
   width: 100%;
-  z-index:20;
+  z-index:100;
   overflow-y:scroll;
 }
 /// mac user logo 
@@ -450,14 +450,13 @@ font: auto {
 ///// userfriendly button constainer
 #langingview-scrollbuttonscontainer {
   position: absolute;
-  background-color:aqua;
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   z-index:99;
-  top:82%;
+  top:80%;
 }
 #langingview-scrollbuttonspositioningcontainer {
   position:relative;
@@ -469,7 +468,6 @@ font: auto {
   justify-content: flex-end;
   align-items: flex-end;
   z-index:99;
-  top:-5vh;
 }
 ///// cart container
 #landingview-cartcontainer {
@@ -838,8 +836,8 @@ position:relative;
 #landingpage-shoppingcartimage {
   position: absolute;
   border:1px solid white;
-  border-radius: 40%;
-  height: 80%;
+  border-radius: 35%;
+  height: 85%;
   width: 40%;
   margin-left: 5%;
   top: -5%;
