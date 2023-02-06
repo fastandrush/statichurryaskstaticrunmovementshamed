@@ -467,6 +467,7 @@ font: auto {
   justify-content: flex-end;
   align-items: flex-end;
   z-index:99;
+  top:-1vh;
 }
 ///// cart container
 #landingview-cartcontainer {
@@ -834,10 +835,9 @@ position:relative;
 }
 #landingpage-shoppingcartimage {
   position: absolute;
-  border:1px solid white;
   border-radius: 35%;
-  height: 95%;
-  width: 45%;
+  height: 100%;
+  width: 40%;
   margin-left: 5%;
   top: -5%;
 }
@@ -922,7 +922,7 @@ position:relative;
 #landingview-upbutton {
   background-color: #c3c7c7;
   width: 50%;
-  height: 70%;
+  height: 80%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 2.5vh;
   top:-7vh;
@@ -931,7 +931,7 @@ position:relative;
   position: relative;
   background-color: #c3c7c7;
   width: 50%;
-  height: 70%;
+  height: 80%;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 2.5vh;
