@@ -469,6 +469,7 @@ font: auto {
   justify-content: flex-end;
   align-items: flex-end;
   z-index:99;
+  top:-5vh;
 }
 ///// cart container
 #landingview-cartcontainer {
@@ -924,7 +925,7 @@ position:relative;
 #landingview-upbutton {
   background-color: #c3c7c7;
   width: 50%;
-  height: 60%;
+  height: 70%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 2vh;
   top:-7vh;
@@ -933,7 +934,7 @@ position:relative;
   position: relative;
   background-color: #c3c7c7;
   width: 50%;
-  height: 60%;
+  height: 70%;
   bottom: 4%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 2vh;
