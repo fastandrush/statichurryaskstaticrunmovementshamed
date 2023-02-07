@@ -4,6 +4,125 @@ $containersonidlebgcolor: #e2e4e1;
 $main-font: 'Titillium Web', sans-serif;
 $sub-font: 'Quicksand', sans-serif;
 $robotic-font: 'Nova Round', cursive; 
+
+
+@media only screen and (max-width: 600px) { 
+  #macnews {
+    background-color: $subbgcolor;
+    height: 450px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+  }
+  #macnewsheadercontainer {
+    position:relative;
+    height: 8%;
+    width:100%;
+    display:flex;
+  }
+  #macnews-macheader {
+    position:relative;
+    font: {
+      family: $sub-font;
+      variant: small-caps;
+      size: 13px;
+    }
+    letter-spacing: 7px;
+    color: white;
+    top: 1.3vh;
+    left: 1.2vh;
+  }
+  #macnewsheader-viewcontainer {
+    position:relative;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+  }
+  #macnewsheader-view {
+    position: relative;
+    font: {
+      family: $sub-font;
+      variant: small-caps;
+      size: 10px;
+    }
+    letter-spacing: 2px;
+    color: white;
+    right: 5%;
+    top:1vh;
+  }
+  #macnews-hr {
+    //background-color: gray;
+    height: 1px;
+    width: 100%;
+  }
+  #macnews-newscontainer {
+    background-color: $subbgcolor;
+    height: 92%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+  }
+  #macnewscontentcontainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  .randommacnewscontainer {
+    background-color: $subbgcolor;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #macnewsrandomnewsimage {
+    &:hover {
+      transform: scale(1.1, 1.1)
+    }
+    transition: transform 1s ease;
+  }
+  #macnews-container {
+    background-color: $subbgcolor;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #macnews-swiper {
+    background-color: $subbgcolor;
+    height: 100%;
+    width: 100%;
+  }
+  .macnewscontent {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    overflow: hidden;
+    right: 0%;
+  }
+  .macnewsimage {
+    height: 100%;
+    width: 50%;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+    transition: transform 1s ease;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
 #macnews {
   background-color: $subbgcolor;
   height: 450px;
@@ -111,4 +230,5 @@ $robotic-font: 'Nova Round', cursive;
     transform: scale(1.1, 1.1);
   }
   transition: transform 1s ease;
+}
 }

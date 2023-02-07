@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState
+              } from 'react';
 
 import { Col } from 'react-bootstrap';
 
@@ -12,17 +13,17 @@ import { EffectCube, EffectFade, Navigation, Pagination } from "swiper";
 
 import '../styles/trend.scss';
 
-
-
-
-export default function Trend() {
+export default function Trend(props) {
 
   const [perfectGoodsContOpacity, doSomethingWithPerfectGoodsContOpacity] = useState('0');
   const [perfectSnacksContOpacity, doSomethingWithPerfectSnacksContOpacity] = useState('0');
   const [perfectEquipsContOpacity, doSomethingWithPerfectEquipsContOpacity] = useState('0');
 
+  const [trendSlidesPerView, updateTrendSlidesPerView] = useState(4);
+
   const togglePerfectGoodsModal = (e) => {
     doSomethingWithPerfectGoodsContOpacity((modal)=> modal === '0' ? '1' : '0')
+    alert(trendSlidesPerView)
   }
 
   const togglePerfectSnacksModal = (e) => {
@@ -37,7 +38,7 @@ export default function Trend() {
         <Col id='trend'>
 
            <Swiper id='swiper'
-                   slidesPerView={4}>
+                   slidesPerView={props.trendSlidesPerView}>
 
               <SwiperSlide className='trendswiperslide'>
 

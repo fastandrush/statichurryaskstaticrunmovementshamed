@@ -11,7 +11,6 @@ $containersonidlebgcolor: #e2e4e1;
 }
 
 @media only screen and (max-width: 600px) {
-
 //// container 
 #landingview {
     position: relative;
@@ -157,7 +156,7 @@ $containersonidlebgcolor: #e2e4e1;
 //// header 
 #headercontainer {
   position:relative;
-  height: 20%;
+  height: 15%;
   width:100%;
   display: flex;
   justify-content: center;
@@ -173,6 +172,7 @@ $containersonidlebgcolor: #e2e4e1;
   color: white;
   letter-spacing: 20px;
   font-variant: small-caps;
+  top:1.5vh;
 }
 #header-masterprotectionconstitution {
   position: relative;
@@ -181,7 +181,7 @@ $containersonidlebgcolor: #e2e4e1;
     size:10px;
   }
   color: white;
-  letter-spacing: 20px;
+  letter-spacing: 1px;
   font-variant: small-caps;
 }
 #headersettingscontainer {
@@ -243,19 +243,72 @@ $containersonidlebgcolor: #e2e4e1;
 }
 ///// user graph status container
 #langingview-userstatuscontainer::-webkit-scrollbar {
-  width: 18px;
+  width: 10px;
+  &:hover{
+    background-color:violet
+  }
+  transition:0.5s ease;
 }
 #langingview-userstatuscontainer::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 17px;
+  &:hover{
+    background-color:violet
+  }
+  transition:0.5s ease;
 }
 #langingview-userstatuscontainer::-webkit-scrollbar-thumb {
   background-color: #9e8fb2;
   background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
   border-radius: 10px;
+  &:hover{
+    background-color:violet
+  }
+  transition:0.5s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
+}
+//// user status header container 
+#langingviewuserstatus-graphpersonaldetailscontainer {
+  position:relative;
+  width:100%;
+  height: auto;
+  padding: 15px 20px;
+}
+#landingviewuserstatus-gphheader {
+position: relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 15px;
+}
+width: 80%;
+}
+#landingviewuserstatus-gphusername {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 15px;
+}
+}
+#landingviewuserstatus-gphaccountidnumber {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 15px;
+}
+margin-top: 3vh;
+}
+#landingviewuserstatus-gphisauthenticated {
+position:relative;
+color: white;
+font: auto {
+ family: $sub-font;
+ size: 15px;
+}
 }
 /// lp paypal modal
 #landingviewuserstatus-paypalmodalcontainer {
@@ -331,52 +384,13 @@ $containersonidlebgcolor: #e2e4e1;
   width: 100%;
 
 }
-#langingviewuserstatus-graphpersonaldetailscontainer {
-  position:relative;
-  width:100%;
-  height: auto;
-  padding: 15px 20px;
-}
-#landingviewuserstatus-gphheader {
-position: relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 23px;
-}
-width: 80%;
-}
-#landingviewuserstatus-gphusername {
-position:relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 25px;
-}
-}
-#landingviewuserstatus-gphaccountidnumber {
-position:relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 20px;
-}
-margin-top: 3vh;
-}
-#landingviewuserstatus-gphisauthenticated {
-position:relative;
-color: white;
-font: auto {
- family: $sub-font;
- size: 20px;
-} 
-}
 #langingviewuserstatus-maccredits {
   position:relative;
   color:white;
   text-align: center;
   font: auto {
     family: $main-font;
+    size:15px;
   }
   letter-spacing: 2px;
   margin-top: 5vh;
@@ -397,7 +411,7 @@ font: auto {
   background-color: dodgerblue;
   border: 1px solid white;
   color: white;
-  padding: 10px 70px;
+  padding: 5px 15px;
   border-radius: 20px;
   font: auto {
     family: $sub-font;
@@ -410,7 +424,7 @@ font: auto {
   background-color: rgb(31, 26, 26);
   border: 1px solid white;
   color:white;
-  padding: 10px 50px;
+  padding: 5px 45px;
   border-radius: 15px;
   font: auto {
     family: $sub-font;
@@ -423,7 +437,7 @@ font: auto {
   background-color: dodgerblue;
   border: 1px solid white;
   color:white;
-  padding: 10px 70px;
+  padding: 5px 65px;
   border-radius: 15px;
   font: auto {
     family: $sub-font;
@@ -868,12 +882,16 @@ position:relative;
   position:relative;
   //border: 1px solid red;
   height: auto;
+  width:100%;
   display: flex;
+  flex-direction:column;
   color: red;
 }
 #landingviewcontent-container1 {
-  padding-left: 75px;
-  padding-right: 20px;
+  position:relative;
+  height:auto;
+  width:100%;
+  padding:10px 20px;
 }
 #landingviewcontent-container2 {
 }
@@ -938,7 +956,7 @@ position:relative;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-right: 2.5vh;
   top:-7vh;
-  z-index:2;
+  z-index:1;
 }
 #landingview-downbutton {
   position: relative;
@@ -949,9 +967,32 @@ position:relative;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   margin-right: 2.5vh;
   bottom:-2vh;
-  z-index:2;
+  z-index:1;
 }
 
+//// speacial item here container 
+#specialitemsherecontainer{
+  position:relative;
+  background-color:red;
+  height:60%;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0px 5px;
+}
+#specialitemsherecontainer-header {
+  position:relative;
+  color:white;
+  font: auto {
+    size:35px;
+  }
+  letter-spacing:1vh;
+  text-align:center;
+}
 }
 
 @media only screen and (min-width: 1200px) {

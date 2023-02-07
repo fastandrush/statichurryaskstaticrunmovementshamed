@@ -1,3 +1,164 @@
+$mainbgcolor: #16161a;
+$subbgcolor:  #27272b;
+$containersonidlebgcolor: #e2e4e1;
+$main-font: 'Titillium Web', sans-serif;
+$sub-font: 'Quicksand', sans-serif;
+$robotic-font: 'Nova Round', cursive;
+
+@media only screen and (max-width: 600px)  {
+ #dashboardproductsummary-presentstatisticsmacusergraph {
+    position:relative;
+    height: 75%;
+    width: 90%;
+    border:1px solid dodgerblue;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+#dashboardproductsummary-lasttwoweeksmacusergraph {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+} 
+#dashboardproductsummary-swipermacusergraph {
+    width: 100%;
+    height: 100%;
+}
+#dashboardproductsummary-lasttwoweeksheadermacusergraph {
+    position: absolute;
+    background-color:white;
+    height: 4.3%;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+} 
+#dashboardproductsummary-settingsbuttonmacusergraph {
+    height: 90%;
+    width: 90%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+}
+#dashboardproductsummary-lasttwoweekstablemacusergraph {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#dashboardproductsummary-lasttwoweekstableofcontentsmacusergraph {
+    width: 100%;
+    height: 100%;
+}
+#dashboardproductsummary-contentscontainermacusergraph {
+    width: 100%;
+    height: 93%;
+    display: flex;
+    padding-top: 7.3%;
+}
+#dashboardproductsummary-dayscontainermacusergraph {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+.dashboardproductsummary-lasttwoweekspointersmacusergraph {
+    position:relative;
+    color: black;
+    font: auto {
+      size: 13px;
+    }
+}
+#dashboardproductsummary-dayspositioningcontainermacusergraph {
+    position:relative;
+    background-color:white;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.dashboardproductsummarylasttwoweeks-daysmacusergraph {
+    position:relative;
+    text-align: center;
+    padding: 2%;
+    color: black;
+    font: auto {
+        size: 12px;
+    }
+    left:0.5vh;
+}
+#dashboardproductsummary-lasttwoweekspointercontainermacusergraph {
+    position: ralative;
+    background-color: white;
+    border-bottom: 1px solid white;
+    width: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#dashboardproductsummary-lasttwoweeksbarcontainermacusergraph {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1.5%;
+}
+.dashboardproductsummary-lasttwoweeksbarpositionningcontainermacusergraph {
+    position: relative;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: flex-end;
+    top:1px;
+}
+.dashboardproductsummary-lasttwoweeksbarfullscopemacusergraph {
+    position: absolute;
+    border: 1px solid rgb(221, 120, 137);
+    width: 3%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 30px;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+.dashboardproductsummary-lasttwoweeksbarscopemacusergraph {
+    width: 100%;
+    height: 1%;
+    border-radius: 30px;
+    transition: height 1s ease;
+}
+.dashboardproductsummary-lasttwoweeksinsidestatisticspositioningcontainermacusergraph {
+    position: absolute;
+    background-color: white;
+    width: 250%;
+    height: 100%;
+    top: 50%;
+    right: 50%;
+    transform: translate(100%, -52%);
+    z-index: 1;
+    display: none;
+    padding-left: 4%
+}
+.lasttwoweeks-insidestatisticscontainermacusergraph {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 1px solid red;
+    z-index: 2;
+    padding-left: 4%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
 #dashboardproductsummary-presentstatisticsmacusergraph {
     position:relative;
     height: 85%;
@@ -146,3 +307,4 @@
     z-index: 2;
     padding-left: 4%;
   }
+}

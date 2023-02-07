@@ -7,9 +7,11 @@ import '../styles/storewelcomeintroduction.scss';
 export default function StoreWelcomeIntroduction() {
   return(
       <Col id='storewelcomeintroduction-controlcontainer'>
+
           <Col id='storewelcomeintroduction-messageindicationcontainer'>
              <p id='storewelcomeintroduction-messageindication'>Need a marketing solution? A merchandise or content have it with MAC </p>
           </Col>
+
          <Col id='storewelcomeintroduction'>
            <Col className='storewelcomeintroduction-positioningcontainer'>
              <p className='storewelcomeintroduction-paymentsolution'><b>A payment gateway solution</b></p>
@@ -31,7 +33,8 @@ export default function StoreWelcomeIntroduction() {
             <img src='../images/graphdp.jpg'
                  className='storewelcomeintroductiondp'/>
            </Col>
-         </Col>   
+         </Col>
+         
       </Col>
   )
 }

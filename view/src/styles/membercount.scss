@@ -5,6 +5,52 @@ $main-font: 'Titillium Web', sans-serif;
 $sub-font: 'Quicksand', sans-serif;
 $robotic-font: 'Nova Round', cursive;
 $population-font: 'Comfortaa', cursive;
+
+@media only screen and (max-width: 600px) { 
+  #membercount {
+    background-color: $subbgcolor;
+    width: 95%;
+    height: 400px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 30px;
+    border: 0.5px solid white;
+    margin-top: 10%;
+    margin-left:auto;
+    margin-right:auto;
+    overflow-y: scroll;
+  }
+  #membercount::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #membercount {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  }
+  #membercount-header {
+    font: auto {
+      size: 14px;
+      family: $main-font;
+    }
+    letter-spacing: 6.5px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  #populationscopeapply-proportion {
+     margin-left: 2%;
+  }
+  .membourcount-scopepopulationheader {
+    font: auto {
+      size: 12px;
+      family: $population-font;
+    }
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {  
 #membercount {
   background-color: $subbgcolor;
   width: 100%;
@@ -44,4 +90,4 @@ scrollbar-width: none;  /* Firefox */
   }
   margin-top: 2%;
 }
-
+}

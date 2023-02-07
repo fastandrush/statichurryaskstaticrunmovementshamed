@@ -5,7 +5,7 @@ $main-font: 'Titillium Web', sans-serif;
 $sub-font: 'Quicksand', sans-serif;
 $robotic-font: 'Nova Round', cursive;
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   #userdashboard {
    position: relative;
    height: 100%;

@@ -160,9 +160,14 @@ const [cartTotalPrice, getCartTotalPrice] = useState(0);
 const [totalFavCartItemPrice, getTotalFavCartItemPrice] = useState([]);
 const [parsedTotalFavCartItemPrice, getParsedTotalFavCartItemPrice]  = useState(0);
 
+const [trendSlidesPerView, updateTrendSlidesPerView] = useState(4);
+
 const __xs = window.matchMedia('(max-width: 600px)');
 const __lg = window.matchMedia('(min-width: 1200px)');
 const __md = window.matchMedia('(max-width: 992px)');
+
+
+
 
 useEffect(() => {
 
@@ -193,17 +198,17 @@ useEffect(() => {
 
     }
 
-}, [])
+}, [trendSlidesPerView])
   
 function _lgBreakpoint(__lg) {
     if (__lg.matches) {
-      
+   
     }
 }
 
 function _xsBreakpoint(__xs) {
       if (__xs.matches) {
-       
+        updateTrendSlidesPerView((slidesperview)=> slidesperview = 2)
       }
 }
 
@@ -675,6 +680,8 @@ async function getId() {
                                       getCartTotalPrice={getCartTotalPrice}
 
                                       macCredits={macCredits}
+
+                                      trendSlidesPerView={trendSlidesPerView}
                                       />}
                                       exact>
 

@@ -8,7 +8,7 @@ $robotic-font: 'Nova Round', cursive;
 @media only screen and (max-width: 600px) {
   #landscapenav {
     position:relative;
-    height: 100px;
+    height: 10%;
     background-color:  #3f145f;
   }
   #landscapenav-linknav {
@@ -37,7 +37,7 @@ $robotic-font: 'Nova Round', cursive;
     color: white;
     font: auto {
       family: $sub-font;
-      size:12px;
+      size:10px;
     }
     letter-spacing: 1.5px;
     &:hover {
@@ -51,13 +51,13 @@ $robotic-font: 'Nova Round', cursive;
     border: none;
     margin-right: 2.2%;
     color: white;
-    border: 1px solid white;
+    border: 0.1vh solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     font: auto {
       family: $sub-font;
-      size:12px;
+      size:10px;
     }
     &:hover {
       color: red;

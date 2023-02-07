@@ -454,13 +454,14 @@ const onScrollFunction = (evt) => {
 
             <StoreWelcomeIntroduction />
 
-            <Col style={{backgroundColor: 'red', height: '60%', width: '90%', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginTop: '5%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <h1 style={{color:'white', fontSize: '10vh', letterSpacing: '1.5vh'}}>SPECIAL ITEMS HERE</h1>
+            <Col id='specialitemsherecontainer'>
+                <h1 id='specialitemsherecontainer-header'>SPECIAL ITEMS HERE</h1>
             </Col>
 
-            <Trend />
+            <Trend trendSlidesPerView={props.trendSlidesPerView}/>
             
             <Col id='landingview-content'>
+              
               <Col lg={8} id='landingviewcontent-container1'>
 
                 <Announcement />
@@ -808,7 +809,7 @@ const onScrollFunction = (evt) => {
 
            <MacUserGraph/>
 
-           <h3 id='langingviewuserstatus-maccredits'>&#8369; {props.macCredits.toFixed(2)}</h3>
+           <p id='langingviewuserstatus-maccredits'>&#8369; {props.macCredits.toFixed(2)}</p>
 
            <Col id='langingviewuserstatus-buttonscontainer'> 
               <button id='langingviewuserstatus-transferbutton'
