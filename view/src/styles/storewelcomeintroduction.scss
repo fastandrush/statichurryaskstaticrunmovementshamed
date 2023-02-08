@@ -10,12 +10,12 @@ $robotic-font: 'Nova Round', cursive;
 
  #storewelcomeintroduction-controlcontainer {
    position: relative;
-   height: 75%;
+   height: 200%;
    width: 93%;
    display: block;
    margin-left: auto;
    margin-right: auto;
-   margin-top: 7%;
+   margin-top: 10vh;
 }
 #storewelcomeintroduction-messageindicationcontainer {
    position:relative;
@@ -25,6 +25,7 @@ $robotic-font: 'Nova Round', cursive;
    flex-direction:column;
    justify-content:center;
    align-items:center; 
+   text-align:center;
 }
 #storewelcomeintroduction-messageindication {
    color: white;
@@ -57,8 +58,8 @@ $robotic-font: 'Nova Round', cursive;
   margin: 0;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -130%);
-  transform: translate(-50%, -130%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font: auto {
     family: $sub-font;
     size: 20px;
@@ -74,8 +75,8 @@ $robotic-font: 'Nova Round', cursive;
   margin: 0;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -100%);
-   transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
    font: auto {
      family: $sub-font;
      size: 20px;

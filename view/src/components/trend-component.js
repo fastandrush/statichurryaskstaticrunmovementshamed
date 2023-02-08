@@ -23,7 +23,6 @@ export default function Trend(props) {
 
   const togglePerfectGoodsModal = (e) => {
     doSomethingWithPerfectGoodsContOpacity((modal)=> modal === '0' ? '1' : '0')
-    alert(trendSlidesPerView)
   }
 
   const togglePerfectSnacksModal = (e) => {
@@ -59,7 +58,7 @@ export default function Trend(props) {
                            onClick={(e)=> togglePerfectGoodsModal(e)}>
                  <div className='trendsitemcontainer'
                       style={{ opacity: perfectGoodsContOpacity}}>
-                    <p>Test cpmntetm</p>
+                    <p></p>
                  </div>
                  <img src="../images/perfectgoods.jpg"
                       className='trenddisplaypicture'/>

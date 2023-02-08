@@ -164,7 +164,7 @@ const [trendSlidesPerView, updateTrendSlidesPerView] = useState(4);
 
 const __xs = window.matchMedia('(max-width: 600px)');
 const __lg = window.matchMedia('(min-width: 1200px)');
-const __md = window.matchMedia('(max-width: 992px)');
+const __md = window.matchMedia('(min-width: 992px)');
 
 
 
@@ -202,19 +202,19 @@ useEffect(() => {
   
 function _lgBreakpoint(__lg) {
     if (__lg.matches) {
-   
+      updateTrendSlidesPerView((slidesperview)=> slidesperview = 4)
     }
 }
 
 function _xsBreakpoint(__xs) {
       if (__xs.matches) {
-        updateTrendSlidesPerView((slidesperview)=> slidesperview = 2)
+        updateTrendSlidesPerView((slidesperview)=> slidesperview = 1)
       }
 }
 
 function _mdBreakpoint(__md) {
       if (__md.matches) {
-       
+        updateTrendSlidesPerView((slidesperview)=> slidesperview = 2)
       }
 }
 

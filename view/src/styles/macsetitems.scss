@@ -5,6 +5,291 @@ $main-font: "Titillium Web", sans-serif;
 $sub-font: "Quicksand", sans-serif;
 $robotic-font: "Nova Round", cursive;
 
+
+@media only screen and (max-width: 600px) { 
+  #macsetitems {
+    position: relative;
+    height: auto;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .macsetitemscontainer {
+    position: relative;
+    background-color: gray;
+    width: 100%;
+    height: 60vh;
+    margin-top: 25vh;
+    transition: background-color 1s ease;
+  }
+  .macsetitemsisolationcontainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .macsetitemsbuttonscontainer {
+    position: relative;
+    height: 15%;
+    top: 100%;
+  }
+  //////////////
+  .macitemsproductdetailscontainer {
+    position: absolute;
+    background-color: #363636;
+    width: 105%;
+    height: 155%;
+    left: -2%;
+    top: -10%;
+    z-index: 50;
+    transform: scale(0, 0);
+    transition: 0.4s ease;
+  }
+  /////////////
+  .macitemsproductdetailscontainer-isolationcontainer {
+    position:relative;
+    height: 93%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .macitemsproductdetailscontainer-isolationcontainer::-webkit-scrollbar {
+    width: 20px;
+  }
+  .macitemsproductdetailscontainer-isolationcontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  .macitemsproductdetailscontainer-isolationcontainer::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  .macitemsproductdetailscontainer-isolationcontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+  .macitemssetandspecificloadingspinnercontainer {
+    position: relative;
+    height: 93%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .macitemssetandspecificloadingspinnercontainer1 {
+    margin-left: 14px;
+  }
+  .macitemssetandspecificloadingspinnercontainer2 {
+    margin-left: -10px;
+  }
+  .macitemssetandspecificloadingspinnercontainer3 {
+    margin-left: -10px;
+  }
+  .productdetails-swiperdisplayimage {
+    height: 70%;
+    width: 50%;
+    margin-top: 2%;
+  }
+  .productdetails-swiperthumb {
+    height: 20%;
+    width: 50%;
+  }
+  .macitemsproductdetailscontentcontainer {
+    position: relative;
+    height: 35%;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .macitemsproductdetailscontent {
+    position: relative;
+    height: 100%;
+    display: block;
+    flex-direction:row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+  }
+  .macitemsproductdetails-pricecontentcontainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .macitemsproductdetails-contentproductprice {
+    font: auto {
+      family: $sub-font;
+    }
+    display: block;
+    margin-top: 18%;
+    margin-left: 10%;
+    color: rgb(160, 139, 139);
+    letter-spacing: 5px;
+    display: flex;
+  }
+  .macsetitems-productdetailsinthesetproductname {
+    text-align: center;
+    color: rgb(160, 139, 139);
+    letter-spacing: 3px;
+    margin-top: 13%;
+    font: auto {
+      family: $sub-font;
+    }
+  }
+  .macsetitems-productinthesetdisplayimage {
+    position: relative;
+    height: 90%;
+    width: 100%;
+  }
+  ////// product details / user page
+  .macsetitemspecificproductcontainer {
+    position: relative;
+    background-color: #363636;
+    height: 93%;
+    width: 100%;
+    overflow-y: scroll;
+    display: none;
+  }
+  .macsetitemspecificproductcontainer::-webkit-scrollbar {
+    width: 20px;
+  }
+  .macsetitemspecificproductcontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  .macsetitemspecificproductcontainer::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
+  .macitemsproductdetailscontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+  }
+  ////////////
+  .macitemsproductdetailsclosebuttoncontainer {
+    height: 7%;
+    width: 95%;
+    display: flex;
+    border-top: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #363636;
+  }
+  .macitemsproductdetailstrymeaddtocartbutton {
+    width: 46%;
+    text-align: center;
+    padding: 7px 20px;
+    color: rgb(45, 111, 172);
+    font: auto {
+      family: $sub-font;
+    }
+    letter-spacing: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.4%;
+  }
+  .macitemsproductdetailsclosebutton {
+    position: relative;
+    top: 0.8vh;
+    color: rgb(45, 111, 172);
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 1%;
+  }
+  .macsetitem1 {
+    position: relative;
+    height: 100%;
+  }
+  .macsetitem2 {
+    position: relative;
+    height: 100%;
+  }
+  .macsetitem-headercontainer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1%;
+  }
+  .macsetitem-header {
+    background-color: rgb(41, 47, 63);
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 15px;
+    }
+    height: 100%;
+    width: 15%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+  .macsetitem-contentcontainer {
+    position:relative;
+    height: 90%;
+    width: 100%;
+  }
+  .macsetitems-indicationdefinetion {
+    margin-left: 5%;
+    margin-top: 4%;
+    font: auto {
+      family: $sub-font;
+    }
+  }
+  .macsetitems-pricecontainer {
+    background: radial-gradient(
+        ellipse farthest-corner at right bottom,
+        #fedb37 0%,
+        #fdb931 8%,
+        #9f7928 30%,
+        #8a6e2f 40%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse farthest-corner at left top,
+        #ffffff 0%,
+        #ffffac 8%,
+        #d1b464 25%,
+        #5d4a1f 62.5%,
+        #5d4a1f 100%
+      );
+    height: auto;
+    width: 30%;
+    padding: 2px 20px;
+    border-radius: 30px;
+    margin-top: 7%;
+    margin-left: 10%;
+  }
+  .macsetitems-indicationdefinetionprice {
+    margin-top: 4%;
+    text-align: center;
+    font: auto {
+      family: $sub-font;
+    }
+    color: rgb(155, 17, 17);
+    letter-spacing: 2.5px;
+  }
+  .macsetitems-displayimage {
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .macsetitems-eyescannerdisplayimage {
+    position: relative;
+    height: 100%;
+    width: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 16%;
+  }
+}
+
+@media only screen and (min-width: 1200px) { 
 #macsetitems {
   position: relative;
   height: auto;
@@ -12,7 +297,7 @@ $robotic-font: "Nova Round", cursive;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+  margin-top:10vh;
 }
 .macsetitemscontainer {
   position: relative;
@@ -285,4 +570,5 @@ $robotic-font: "Nova Round", cursive;
   margin-left: auto;
   margin-right: auto;
   top: 16%;
+}
 }

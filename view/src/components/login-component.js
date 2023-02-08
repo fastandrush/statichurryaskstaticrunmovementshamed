@@ -138,8 +138,11 @@ export default function LoginComponent() {
 
     return(
       <Col id='loginpage'>
+
         <Col id='formcontainer'>
-          <h5 id='loginpage-macheader'>MAC</h5>
+
+          <h5 id='loginpage-macheader'>MPC</h5>
+
           <Col id='form'>
              <Col id='formwithincontainer1'>
                 <input type='text' 
@@ -165,6 +168,7 @@ export default function LoginComponent() {
                     id='loginpage-octuposdp'/>
              </Col>
           </Col>
+
         </Col>
       </Col>
     )

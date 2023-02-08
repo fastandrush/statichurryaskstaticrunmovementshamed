@@ -856,7 +856,7 @@ function Header(props) {
         <Col id='headercontainer'>
 
           <Col lg={11}>
-           <p id='header-mac'>mac</p>
+           <p id='header-mac'>mpc</p>
            <p id='header-masterprotectionconstitution'>Master Protection Constitution</p> 
           </Col>
 

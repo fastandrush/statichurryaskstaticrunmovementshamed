@@ -318,6 +318,7 @@ async function contactNumberValidationError() {
    await doSomethingContactnumberBorderErr((border)=> border = '1px solid tomato')
    contactInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 const getDigitCode = (e) => {
   switch(e.target.id) {
      case 'firstdigitcode':
@@ -340,6 +341,7 @@ const getDigitCode = (e) => {
      break;
   }
 }
+
 const verifyContactNumber = async () => { 
 
   doSometingWithcontactnumberverifyingloadingstatus((isIdle)=> isIdle = true)
@@ -358,6 +360,7 @@ const verifyContactNumber = async () => {
     })
 
 }
+
 const verifyPhoneDigitCode = () => {
    
   doSomethingVerifyDigitCodeLoadingStatus((isIdle)=> isIdle = true)
@@ -387,12 +390,15 @@ const verifyPhoneDigitCode = () => {
     doSomethinhWigitcodefieldsBorderErr((borderErr)=> borderErr = '1px solid red')
   }
 }
+
 function countdowntimerObj() {
   setInterval(startResendCountDownTimer, 1000)
 }
+
 function startResendCountDownTimer() {
   dosomethingresendcountdowntimer((time) => time - 1)
 }
+
 const resendOTP = async () => {
 
   await axios.get('/futuremacholder/validatingcontactnumberinformation')
@@ -404,6 +410,7 @@ const resendOTP = async () => {
   }) 
 
 }
+
 //////
 const getAddressInformation = (e) => {
     switch(e.target.id) {
@@ -436,6 +443,7 @@ const getAddressInformation = (e) => {
       break;
     }
 }
+
 const validateAddressInformation = async () => {
       
      if ( country === '') {
@@ -504,18 +512,22 @@ const validateAddressInformation = async () => {
      }
 
 }
+
 async function addressInformationUIValidationSuccess() {
     await addressInfoIsIdleStatus((isIdle) => isIdle = false)
     await  addressInfoSendingRequestLoadingStatusIsIdle((isIdle)=> true)
     await doSomethingAddressInformationFormContainer((prop) => prop = '-100%')
     investButtonHelperFunction();
 }
+
 const closeAddressInformationRegistrationModal = async (evt) => {
   await doSomethingAddressInformationFormContainer((prop) => prop = '-100%')
 }
+
 async function countryInfoValidationError() {
 
 }
+
 async function countryInfoValidationSuccess() {
     
 }
@@ -526,12 +538,14 @@ async function islandInfoValidationSuccess() {
   await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
   addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function islandInfoValidationError() {
   await doSomethingWithIslandError((errmessage)=> errmessage = 'You dont have an island')
   await doSomethingIslandBorderErr((border)=> border = '0.5px solid red')
   await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
   addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function provinceInfoValidationSuccess() {
   await doSomethingWithProvinceError((errmessage)=> errmessage = '')
   await doSomethingProvinceBorderErr((border)=> border = '0.5px solid aqua')
@@ -539,12 +553,14 @@ async function provinceInfoValidationSuccess() {
   await doSomethingAddressInfoVerified((status)=> status = true)
   addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function provinceInfoValidationError() {
     await doSomethingWithProvinceError((errmessage)=> errmessage = 'You dont have a province')
     await doSomethingProvinceBorderErr((border)=> border = '0.5px solid red')
     await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
     addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function provinceInfoValidationSuccess() {
     await doSomethingWithProvinceError((errmessage)=> errmessage = '')
     await doSomethingProvinceBorderErr((border)=> border = '0.5px solid aqua')
@@ -559,6 +575,7 @@ async function cityInfoValidationError() {
     await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
     addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function cityInfoValidationSuccess() {
     await doSomethingWithCityError((errmessage)=> errmessage = '')
     await doSomethingCityBorderErr((border)=> border = '0.5px solid aqua')
@@ -572,6 +589,7 @@ async function baranggayInfoValidationError() {
     await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
     addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function baranggayInfoValidationSuccess() {
     await doSomethingWithBaranggayError((errmessage)=> errmessage = '')
     await doSomethingBaranggayBorderErr((border)=> border = '0.5px solid aqua')
@@ -585,6 +603,7 @@ async function streetInfoValidationError() {
     await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
     addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function streetInfoValidationSuccess() {
     await doSomethingWithStreetError((errmessage)=> errmessage = '')
     await doSomethingStreetBorderErr((border)=> border = '0.5px solid aqua')
@@ -598,6 +617,7 @@ async function trademarkInfoValidationError() {
     await doSomethingCountryBorderErr((border) => border = '1px solid aqua')
     addressInfoIsIdleStatus((isIdle) => isIdle = false)
 }
+
 async function trademarkInfoValidationSuccess() {
     await doSomethingWithTrademarkError((errmessage)=> errmessage = '')
     await doSomethingTrademarkBorderErr((border)=> border = '0.5px solid aqua')
@@ -1005,7 +1025,7 @@ function investButtonHelperFunction() {
                               contactNumberVerified={contactNumberVerified}/>
 
 
-         <Col>
+         <Col id='futuremacholderinvestbuttoncontainer'>
              {
                 investButton ? ( 
                   <>

@@ -4,6 +4,7 @@ $robotic-font: "Nova Round", cursive;
 $mainbgcolor: #2b2b31;
 $subbgcolor: #27272b;
 $containersonidlebgcolor: #e2e4e1;
+
 * {
   margin: 0;
   padding: 0;
@@ -172,7 +173,7 @@ $containersonidlebgcolor: #e2e4e1;
   color: white;
   letter-spacing: 20px;
   font-variant: small-caps;
-  top:1.5vh;
+  top:1vh;
 }
 #header-masterprotectionconstitution {
   position: relative;
@@ -405,6 +406,7 @@ font: auto {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  top:-1.5vh;
 }
 #langingviewuserstatus-transferbutton {
   position:relative;
@@ -415,9 +417,10 @@ font: auto {
   border-radius: 20px;
   font: auto {
     family: $sub-font;
+    size:12px;
   }
   letter-spacing:2px;
-  top: 2vh;
+  top: 1vh;
 }
 #langingviewuserstatus-requesttotransferbutton {
   position:relative;
@@ -428,9 +431,10 @@ font: auto {
   border-radius: 15px;
   font: auto {
     family: $sub-font;
+    size:12px;
   }
   letter-spacing:2px;
-  top: 1vh;
+  top: 0vh;
 }
 #langingviewuserstatus-undertakerbutton {
   position: relative;
@@ -441,8 +445,10 @@ font: auto {
   border-radius: 15px;
   font: auto {
     family: $sub-font;
+    size:12px;
   }
   letter-spacing:2px;
+  top:-1vh;
 }
 
 ///// user dashboard
@@ -880,7 +886,6 @@ position:relative;
 /////
 #landingview-content {
   position:relative;
-  //border: 1px solid red;
   height: auto;
   width:100%;
   display: flex;
@@ -894,10 +899,12 @@ position:relative;
   padding:10px 20px;
 }
 #landingviewcontent-container2 {
+  position:relative;
 }
 #landingviewcontent-memberandfollowuscontainer {
+  position:relative;
   height: auto;
-  width: 90%;
+  width: 100%;
 }
 #mapmaincontainer {
   margin-top: 30px;
@@ -978,7 +985,7 @@ position:relative;
   width:90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top:5%;
+  margin-top:10vh;
   display:flex;
   justify-content:center;
   align-items:center;

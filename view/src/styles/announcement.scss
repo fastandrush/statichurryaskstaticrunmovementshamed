@@ -1,3 +1,62 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width: 600px) {
+  #announcement {
+    height: 200px;
+    width: 100%;
+    margin-top: 10vh;
+    padding-left: 2%;
+    padding-top: 1%;
+  }
+  #announcementheader {
+    color: white;
+    font: {
+      size: 15px;
+    }
+    letter-spacing: 1px;
+  }
+  #announcement-hr1 {
+    background-color: gray;
+    width: 97%;
+    height: 1px;
+  }
+  #announcement-hr2 {
+    background-color: gray;
+    width: 97%;
+    height: 1px;
+  }
+  #announcementcontainer {
+    width: 97%;
+    height: 84%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #theannouncement {
+    position: relative;
+    color: white;
+    left: 100%;
+    animation: runAnnouncement 30s ease infinite;
+    transition: 1s ease;
+    letter-spacing: 2px;
+  }
+  @keyframes runAnnouncement {
+    from {
+      left: 100%;
+    }
+    to {
+      left: -100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
 #announcement {
   height: 200px;
   width: 100%;
@@ -45,4 +104,5 @@
   to {
     left: -100%;
   }
+}
 }
