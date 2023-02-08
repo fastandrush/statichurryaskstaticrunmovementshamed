@@ -667,6 +667,7 @@ function investButtonHelperFunction() {
              style={{top: personalInformationFormContainer}}>
              
           <div id='personalinformation-contentcontainer'>
+
              <div id='personalinformationform'>
                 <p id='firstnameerror'>{firstnameErr}</p>
                 <input type='text'
@@ -717,7 +718,7 @@ function investButtonHelperFunction() {
                 </button>
               ) : (
                 <>
-                <button id='personalinformation-exitbutton'
+                <button id='personalinformation-addchangesbutton'
                    onClick={()=> valdiatePersonalInformation()}>
                    ADD CHANGES
                 </button>
@@ -837,12 +838,12 @@ function investButtonHelperFunction() {
             <div id='addressinformation-exitbuttoncontainer'>
               {
                 addressInfoLoadingStatus ? (
-                  <button id='addressinformation-exitbutton'>
+                  <button id='addressinformation-addchangesbutton'>
                     <Spinner id='addressinformation-exitloadingspinner' animation="border" variant="danger" />
                   </button>
                 ) : (
                   <>
-                  <button id='addressinformation-exitbutton'
+                  <button id='addressinformation-addchangesbutton'
                           onClick={()=> validateAddressInformation()}>
                           ADD CHANGES
                   </button>
@@ -861,6 +862,7 @@ function investButtonHelperFunction() {
              style={{top: contactInformationFormContainer}}>
 
            <div id='contactinformation-contentcontainer'>
+
               <div id='contactinformationform'> 
                   <p id='contacterror'>{contactErr}</p>
                   <input type='number'
@@ -993,7 +995,7 @@ function investButtonHelperFunction() {
                 </button>
                ) : (
                 <>
-                <button id='contanctinformation-exitbutton'
+                <button id='contanctinformation-addchangesbutton'
                    onClick={()=> validateContactInformation()}>
                         ADD CHANGES
                 </button>

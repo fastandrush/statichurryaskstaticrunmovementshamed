@@ -69,27 +69,39 @@ $robotic-font: 'Nova Round', cursive;
   #personalinformation-formcontainer {
     position: absolute;
     background-color:  rgb(189, 184, 184);
+    height: 100vh;
     width: 100%;
-    height: 100%;
     z-index: 1;
     transition: top 1s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow:hidden;
+    overflow-y: scroll;
+  }
+  #personalinformation-formcontainer::-webkit-scrollbar {
+    display: none;
+  }
+  #personalinformation-formcontainer {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
   }
   #personalinformation-contentcontainer {
+    position:relative;
+    height:100%;
+    width:100%;
     display: flex;
+    flex-direction:column;
+    overflow-y:scroll;
   }
   #personalinformationform {
-    //background-color: chocolate;
-    width: 45%;
-    height: 100%;
+    position:relative;
+    height:auto;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    padding:5px 10px;
   }
   #firstname {
     border: none;
@@ -113,28 +125,34 @@ $robotic-font: 'Nova Round', cursive;
     text-align: center;
   }
   #personalinformationform-guidescontainer {
-    //background-color: aqua;
-    width: 55%;
-    height: 100%;
+    position:relative;
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding:20px 10px;
   }
-  #personalinformation-exitbuttoncontainer {
+  #personalinformation-exitbuttoncontainer {  
+    position:relative;
+    height: 15vh;
     width: 100%;
-    height: auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
   }
-  #personalinformation-exitbutton {
+  #personalinformation-addchangesbutton {
     position: relative;
     background-color: white;
     border: none;
     border-radius: 20px;
-    width: 15%;
-    padding: 5px 10px;
+    width: auto;
+    padding: 5px 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: 100%;
+    outline-style: none;
   }
   #personalinformation-skipbutton {
   position:relative;
@@ -146,7 +164,8 @@ $robotic-font: 'Nova Round', cursive;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  top: 150%;
+  top:1vh;
+  outline-style: none;
   }
   /////////
   #contactinformation {
@@ -180,34 +199,47 @@ $robotic-font: 'Nova Round', cursive;
   #contactinformation-formcontainer {
     position: absolute;
     background-color: rgb(87, 136, 192);
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    width: 100%;  
     z-index: 1;
     transition: top 1s ease;
     display: flex;
     flex-direction: column;
-    overflow:hidden;
+    overflow-y:scroll;
+  }
+  #contactinformation-formcontainer::-webkit-scrollbar {
+    display: none;
+  }
+  #contactinformation-formcontainer {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+
+  #contactinformation-contentcontainer {
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction:column; 
+    overflow-y:scroll; 
   }
   #contactinformationform {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-  }
-  #contactinformation-contentcontainer {
-    display: flex;
+    position:relative;
+    height: auto;
     width: 100%;
-    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px 20px;
   }
   #contactinformationform-guidescontainer {
-    width: 55%;
-    height: 100%;
+    position:relative;
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding:70px 10px;
   }
   #contactnumber::-webkit-outer-spin-button,
   #contactnumber::-webkit-inner-spin-button {
@@ -216,16 +248,18 @@ $robotic-font: 'Nova Round', cursive;
   #contactnumber {
     border: none;
     border-radius: 20px;
-    height: 7%;
-    width: 40%;
+    height: 5vh;
+    width: 100%;
     text-align: center;
+    outline-style:none;
   }
   #contactemail {
     border: none;
     border-radius: 20px;
-    height: 7%;
-    width: 40%;
+    height: 5vh;
+    width: 100%;
     text-align: center;
+    outline-style:none;
   }
   #phonumberverified {
     position: relative;
@@ -317,31 +351,38 @@ $robotic-font: 'Nova Round', cursive;
     top: 30%;
   }
   #contactinformation-exitbuttoncontainer {
+    position:relative;
+    height: 15vh;
     width: 100%;
-    height: 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px 0px;
   }
-  #contanctinformation-exitbutton {
+  #contanctinformation-addchangesbutton {
     position: relative;
     border: none;
     border-radius: 20px;
-    width: 15%;
+    width: auto;
     padding: 5px 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: -3.5vh;
+    outline-style: none;
   }
   #contanctinformation-skipbutton {
     position: relative;
     background-color: white;
     border: 0.5px solid black;
     border-radius: 20px;
-    width: 15%;
+    width: auto;
     padding: 5px 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: -2vh;
+    top:1vh;
+    outline-style: none;
   }
   //////
   #addressinformation {
@@ -361,18 +402,21 @@ $robotic-font: 'Nova Round', cursive;
     //overflow: hidden;
   }
   #addressinformation-contentcontainer {
-    display: flex;
+    position:relative;
     width: 100%;
     height: 90%;
+    display: flex;
+    flex-direction:column;
+    overflow-y:scroll;
   }
   #addressinformationform {
-    width: 50%;
-    height: 100%;
+    position:relative;
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    display: flex;
+    justify-content: center;
+    padding:5px 5px;
   }
   .addressfields {
     border: 0.5px solid black;
@@ -383,11 +427,13 @@ $robotic-font: 'Nova Round', cursive;
     margin-top: 8px;
   } 
   #addresstinformationform-guidescontainer {
-    width: 55%;
-    height: 100%;
+    position:relative;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding:30px 10px;
   }
   #addressinformation-definetioncontainer {
     position: absolute;
@@ -406,15 +452,28 @@ $robotic-font: 'Nova Round', cursive;
   #addressinformation-formcontainer {
     position: absolute;
     background-color:white;
+    height: 100vh;
     width: 100%;
-    height: 100%;
     z-index: 1;
     transition: top 1s ease;
-    overflow:hidden;
+    overflow-y:scroll;
+  }
+  #addressinformation::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #addressinformation {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
   #addressinformation-exitbuttoncontainer {
+    position:relative;
+    height: 15vh;
     width: 100%;
-    height: 10%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
   }
   #addressinformation-exitloadingspinner {
     position: relative;
@@ -422,29 +481,30 @@ $robotic-font: 'Nova Round', cursive;
     margin-left: auto;
     margin-right: auto;
   }
-  #addressinformation-exitbutton {
+  #addressinformation-addchangesbutton {
     position: relative;
     background-color: white;
     border: 0.5px solid black;
     border-radius: 20px;
-    width: 15%;
+    width: auto;
     padding: 5px 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: -3vh;
+    outline-style: none;
   }
   #addressinformation-skipbutton {
     position: relative;
     background-color: white;
     border: 0.5px solid black;
     border-radius: 20px;
-    width: 15%;
+    width: auto;
     padding: 5px 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: -1vh;
+    top:1vh;
+    outline-style: none;
   }
   //////
   #investloadingspinner {
@@ -533,6 +593,7 @@ $robotic-font: 'Nova Round', cursive;
   }
 
 }
+
 @media only screen and (min-width: 1200px) { 
 #futuremacholder {
   position: relative;
