@@ -28,7 +28,7 @@ const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statich
 const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:4000/');
 const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
 
-axios.defaults.baseURL = developmentBackEndPathnameURI;
+axios.defaults.baseURL = backEndPathnameURI;
 
 const location = useLocation();
 const [, updateState] = useState();
@@ -688,7 +688,7 @@ async function getId() {
                                       trendSlidesPerView={trendSlidesPerView}
 
                                       xs={xs}
-                                      
+
                                       />}
                                       exact>
 
