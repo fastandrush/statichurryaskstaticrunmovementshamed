@@ -19,7 +19,7 @@ $robotic-font: 'Nova Round', cursive;
 }
 #storewelcomeintroduction-messageindicationcontainer {
    position:relative;
-   height: 20%;
+   height: 12%;
    width: 100%;
    display:flex;
    flex-direction:column;
@@ -44,7 +44,6 @@ $robotic-font: 'Nova Round', cursive;
   flex-direction:column;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
 }
 .storewelcomeintroduction-positioningcontainer {
   position: relative;

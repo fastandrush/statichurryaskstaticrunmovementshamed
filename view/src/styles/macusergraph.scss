@@ -32,7 +32,7 @@ $robotic-font: 'Nova Round', cursive;
 #dashboardproductsummary-lasttwoweeksheadermacusergraph {
     position: absolute;
     background-color:white;
-    height: 4.3%;
+    height: 5%;
     width: 100%;
     display: flex;
     z-index: 1;
@@ -51,10 +51,12 @@ $robotic-font: 'Nova Round', cursive;
     width: 100%;
 }
 #dashboardproductsummary-lasttwoweekstableofcontentsmacusergraph {
+    position:relative;
     width: 100%;
     height: 100%;
 }
 #dashboardproductsummary-contentscontainermacusergraph {
+    position:relative;
     width: 100%;
     height: 93%;
     display: flex;
@@ -91,10 +93,10 @@ $robotic-font: 'Nova Round', cursive;
     font: auto {
         size: 12px;
     }
-    left:0.5vh;
+    left:-0.5vh;
 }
 #dashboardproductsummary-lasttwoweekspointercontainermacusergraph {
-    position: ralative;
+    position: relative;
     background-color: white;
     border-bottom: 1px solid white;
     width: 5vh;
@@ -104,6 +106,9 @@ $robotic-font: 'Nova Round', cursive;
     align-items: center;
 }
 #dashboardproductsummary-lasttwoweeksbarcontainermacusergraph {
+    position:relative;
+    height:100%;
+    width:100%;
     border: 1px solid black;
     display: flex;
     justify-content: space-evenly;
@@ -111,6 +116,8 @@ $robotic-font: 'Nova Round', cursive;
 }
 .dashboardproductsummary-lasttwoweeksbarpositionningcontainermacusergraph {
     position: relative;
+    height:auto;
+    width:100%;
     border-bottom: 1px solid white;
     display: flex;
     align-items: flex-end;
@@ -270,7 +277,7 @@ $robotic-font: 'Nova Round', cursive;
   .dashboardproductsummary-lasttwoweeksbarfullscopemacusergraph {
     position: absolute;
     border: 1px solid rgb(221, 120, 137);
-    width: 3%;
+    width: 5%;
     height: 100%;
     display: flex;
     align-items: flex-end;

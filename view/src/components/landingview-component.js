@@ -535,7 +535,12 @@ const onScrollFunction = (evt) => {
                                     
                                     cartContainer={cartContainer}
                                     
-                                    closeCart={closeCart}/>
+                                    closeCart={closeCart}
+                                    
+                                    xs={props.xs}
+                                    
+                                    />
+                                
 
              <ItemsEquipsComponent />
              

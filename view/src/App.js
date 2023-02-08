@@ -25,14 +25,15 @@ import './styles/mac.scss';
 function MAC() {
 
 const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
-const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:4000/');
 const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
 
-axios.defaults.baseURL = backEndPathnameURI;
+axios.defaults.baseURL = developmentBackEndPathnameURI;
 
 const location = useLocation();
 const [, updateState] = useState();
 const forceUpdate = useCallback(() => updateState({}), []);
+const [xs, isXS] = useState(false); 
 
 // mac id 
 const [userId, doSomethindWithUserId] = useState(''); 
@@ -203,18 +204,21 @@ useEffect(() => {
 function _lgBreakpoint(__lg) {
     if (__lg.matches) {
       updateTrendSlidesPerView((slidesperview)=> slidesperview = 4)
+      isXS((isxs)=> isxs = false) 
     }
 }
 
 function _xsBreakpoint(__xs) {
       if (__xs.matches) {
         updateTrendSlidesPerView((slidesperview)=> slidesperview = 1)
+        isXS((isxs)=> isxs = true) 
       }
 }
 
 function _mdBreakpoint(__md) {
       if (__md.matches) {
         updateTrendSlidesPerView((slidesperview)=> slidesperview = 2)
+        isXS((isxs)=> isxs = true) 
       }
 }
 
@@ -682,6 +686,9 @@ async function getId() {
                                       macCredits={macCredits}
 
                                       trendSlidesPerView={trendSlidesPerView}
+
+                                      xs={xs}
+                                      
                                       />}
                                       exact>
 

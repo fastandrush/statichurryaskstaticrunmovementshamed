@@ -760,6 +760,7 @@ async function compromiseShippingRatesOnOriginitors() {
   return (
 
     <Col id='macsetitems'>
+
     {
     props.macSetItems.map((data, macSetItemidx)=> {
 
@@ -895,6 +896,7 @@ async function compromiseShippingRatesOnOriginitors() {
              </Col>  
     })
     }
+    
     </Col> 
 
  )

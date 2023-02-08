@@ -149,8 +149,10 @@ const showItemModal = async (e, modalIdx, data) => {
   //const itemDetailsModal = goodItemsContainer.children[1]
  
     const itemDetailsModal = document.getElementsByClassName('gooditems-storeanditemmodaldetailscontainer');
-    //const itemdetailsmodaloffsetLeft = itemDetailsModal.offSetLeft;
-    
+    const itemdetailsmodaloffsetLeft = itemDetailsModal.offSetLeft;
+  
+
+    if (props.xs === false) {
     await axios.post('http://localhost:4000/getitems/specificitem', {
       itemname: data.productname,
       itemsortspecification: data.productsorttype,
@@ -179,6 +181,8 @@ const showItemModal = async (e, modalIdx, data) => {
    
     
 
+
+    }
 }
 
 const closeStoreAndItemsDetailsModal = (evt) => {
@@ -474,12 +478,12 @@ async function compromiseShippingRatesOnOriginitors() {
       
         <h1 id='goodsitemcomponent-marketingheader'>Marketing</h1>
 
-        <Col id='goodsitemcomponent-positioningcontainer'>
+        <Row id='goodsitemcomponent-positioningcontainer'>
      
            <>
             {
               props.itemsGoods.map((data, modalIdx)=> {
-               return <div className='goodsitemcontainer'
+               return <Col xs={4} className='goodsitemcontainer'
                             key={modalIdx}>
    
                         <Col className='goodsitem' >
@@ -583,10 +587,8 @@ async function compromiseShippingRatesOnOriginitors() {
                           )    
                           }
                         </div>
-    
-                     
-                     
-                      </div>
+                
+                      </Col>
               })
             }
            </>
@@ -625,9 +627,9 @@ async function compromiseShippingRatesOnOriginitors() {
                                   </>
                                 )
                             } 
-                         </div>
+           </div>
 
-        </Col>
+        </Row>
 
       </Col>
     )

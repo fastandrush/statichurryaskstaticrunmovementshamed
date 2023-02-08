@@ -90,6 +90,10 @@ function LastTwoWeeksStatisticsTableOfContents(props) {
            <Col lg={11} id='dashboardproductsummary-dayspositioningcontainermacusergraph'>
              {
                [
+                {
+                  day: '',
+                  isSunday: ''
+                },
                  {
                    day: 'Sun',
                    isSunday: 'issunday'
@@ -173,7 +177,6 @@ function LastTwoWeeksStatisticsBarContainer(props) {
                            <div className='dashboardproductsummary-lasttwoweeksbarscopemacusergraph'
                                 onMouseOver={(e)=> hoverLastTwoWeeksInsideProductStatistics(e, idx)}
                                 onMouseLeave={(e)=> unHoveredLastTwoWeeksInsideProductStatistics(e, idx)}>   
-   
                            </div>
                         </div>
                         <div className='dashboardproductsummary-lasttwoweeksinsidestatisticspositioningcontainermacusergraph'

@@ -13,8 +13,14 @@ $robotic-font: 'Nova Round', cursive;
     z-index: 1;
   }
   #goodsitemcomponent-positioningcontainer {
-    display: flex;
-    flex-wrap: wrap;
+    position:relative;
+    height:auto;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     padding: 2% 0% 2% 2%;
   }
   #goodsitemcomponent-marketingheader {
@@ -31,9 +37,7 @@ $robotic-font: 'Nova Round', cursive;
     position: relative;
     display:flex;
     height: 35vh;
-    width: 18vw;
     margin-top: 10vh;
-    margin-left: 5.5%;
   }
   .goodsitem {
     position: absolute;
@@ -58,6 +62,7 @@ $robotic-font: 'Nova Round', cursive;
     margin-right: auto;
   }
   .gooditems-storemodaldetailscontainer {
+    position:relative;
     width: 100%;
     height: 40vh;
   }
@@ -66,6 +71,7 @@ $robotic-font: 'Nova Round', cursive;
     height: 70%;
   }
   .gooditems-storeanditemmodaldetailsclosecontainer {
+    position:relative;
     width: 100%;
     height: 10%;
     display: flex;
@@ -141,7 +147,7 @@ $robotic-font: 'Nova Round', cursive;
     width: 100%;
   }
   .gooditems-itemmodalindicationscontainer {
-   // background-color: white;
+    background-color: white;
     position: absolute;
     width: 100%;
     height: auto; 
@@ -178,7 +184,6 @@ $robotic-font: 'Nova Round', cursive;
     padding: 2px 10px;
     border-radius: 20px;
     display: block;
-    top:1vh;
     margin-left: auto;
     margin-right: auto;
   }
@@ -197,7 +202,7 @@ $robotic-font: 'Nova Round', cursive;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0vh;
+    margin-top: -1.5vh;
   }
   .goodsitemstorecontainer {
     position: absolute;
@@ -236,7 +241,7 @@ $robotic-font: 'Nova Round', cursive;
   .gooditems-storeanditemmodaldetailscontainer {
     position: absolute;
     background-color: white;
-    width: 130%;
+    width: 50vh;
     height: auto;
     margin: 0;
     top: 50%;
