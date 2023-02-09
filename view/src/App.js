@@ -28,7 +28,7 @@ const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statich
 const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:4000/');
 const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
 
-axios.defaults.baseURL = backEndPathnameURI;
+axios.defaults.baseURL = developmentBackEndPathnameURI;
 
 const location = useLocation();
 const [, updateState] = useState();

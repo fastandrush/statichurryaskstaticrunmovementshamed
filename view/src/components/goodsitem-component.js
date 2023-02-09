@@ -21,10 +21,10 @@ import axios from 'axios';
 export default function GoodsItemComponent(props) {
 
 const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
-const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:8000/');
+const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:4000/');
 const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
 
-axios.defaults.baseURL = backEndPathnameURI;
+axios.defaults.baseURL = developmentBackEndPathnameURI;
 
 
 const [specificproduct, getSpecificProduct] = useState({
@@ -150,7 +150,111 @@ const showItemModal = async (e, modalIdx, data) => {
  
     const itemDetailsModal = document.getElementsByClassName('gooditems-storeanditemmodaldetailscontainer');
     const itemdetailsmodaloffsetLeft = itemDetailsModal.offSetLeft;
-  
+    
+    const nodecontainer = e.target.parentElement.parentElement
+    const offsetleft = nodecontainer.offsetLeft
+
+   
+    
+    if (props.xs === true) {
+
+      await axios.post('http://localhost:4000/getitems/specificitem', {
+        itemname: data.productname,
+        itemsortspecification: data.productsorttype,
+        itemoriginator: data.originator
+       })
+       .then( async (response)=> {
+    
+           console.log(response.data)
+          
+           if ( offsetleft === 125) {
+             await getGoodsSpecificProduct((item)=> item = response.data)
+             await getSpecificProduct((item)=> item = response.data[0])
+          
+             if (  response.data[0].productavailablecolors.length > 0 ) {
+               const availableColor = response.data[0].productavailablecolors[0].split(",")
+               doSomethingWithAvailableColorData((ac)=> ac = availableColor)
+             }
+             if (  response.data[0].productavailablesizes.length > 0 ) {
+              const availableSizes = response.data[0].productavailablesizes[0].split(",")
+              doSomethingWithAvailableSizesData((as)=> as = availableSizes)
+             }
+
+             itemDetailsModal[modalIdx].style.display = 'block';
+             } else if (offsetleft < 125) {
+
+                if ( offsetleft < 50 ) {
+                  await getGoodsSpecificProduct((item)=> item = response.data)
+                  await getSpecificProduct((item)=> item = response.data[0])
+               
+                  if (  response.data[0].productavailablecolors.length > 0 ) {
+                    const availableColor = response.data[0].productavailablecolors[0].split(",")
+                    doSomethingWithAvailableColorData((ac)=> ac = availableColor)
+                  }
+                  if (  response.data[0].productavailablesizes.length > 0 ) {
+                   const availableSizes = response.data[0].productavailablesizes[0].split(",")
+                   doSomethingWithAvailableSizesData((as)=> as = availableSizes)
+                  }
+     
+                  itemDetailsModal[modalIdx].style.display = 'block';
+                  itemDetailsModal[modalIdx].style.transform = 'translate(-14%,-50%)'
+                }
+                else {
+                  await getGoodsSpecificProduct((item)=> item = response.data)
+                  await getSpecificProduct((item)=> item = response.data[0])
+               
+                  if (  response.data[0].productavailablecolors.length > 0 ) {
+                    const availableColor = response.data[0].productavailablecolors[0].split(",")
+                    doSomethingWithAvailableColorData((ac)=> ac = availableColor)
+                  }
+                  if (  response.data[0].productavailablesizes.length > 0 ) {
+                   const availableSizes = response.data[0].productavailablesizes[0].split(",")
+                   doSomethingWithAvailableSizesData((as)=> as = availableSizes)
+                  }
+     
+                  itemDetailsModal[modalIdx].style.display = 'block';
+                  itemDetailsModal[modalIdx].style.transform = 'translate(-33%,-50%)'
+                }
+
+             } else {
+
+              if ( offsetleft < 200 ) {
+                await getGoodsSpecificProduct((item)=> item = response.data)
+                await getSpecificProduct((item)=> item = response.data[0])
+             
+                if (  response.data[0].productavailablecolors.length > 0 ) {
+                  const availableColor = response.data[0].productavailablecolors[0].split(",")
+                  doSomethingWithAvailableColorData((ac)=> ac = availableColor)
+                }
+                if (  response.data[0].productavailablesizes.length > 0 ) {
+                 const availableSizes = response.data[0].productavailablesizes[0].split(",")
+                 doSomethingWithAvailableSizesData((as)=> as = availableSizes)
+                }
+   
+                itemDetailsModal[modalIdx].style.display = 'block';
+                itemDetailsModal[modalIdx].style.transform = 'translate(-61%,-50%)'
+              }
+              else {
+                await getGoodsSpecificProduct((item)=> item = response.data)
+                await getSpecificProduct((item)=> item = response.data[0])
+             
+                if (  response.data[0].productavailablecolors.length > 0 ) {
+                  const availableColor = response.data[0].productavailablecolors[0].split(",")
+                  doSomethingWithAvailableColorData((ac)=> ac = availableColor)
+                }
+                if (  response.data[0].productavailablesizes.length > 0 ) {
+                 const availableSizes = response.data[0].productavailablesizes[0].split(",")
+                 doSomethingWithAvailableSizesData((as)=> as = availableSizes)
+                }
+   
+                itemDetailsModal[modalIdx].style.display = 'block';
+                itemDetailsModal[modalIdx].style.transform = 'translate(-87%,-50%)'
+              }
+           
+             }
+
+       })
+    }
 
     if (props.xs === false) {
     await axios.post('http://localhost:4000/getitems/specificitem', {
@@ -177,12 +281,8 @@ const showItemModal = async (e, modalIdx, data) => {
          itemDetailsModal[modalIdx].style.display = 'block';
 
      })
+    } 
 
-   
-    
-
-
-    }
 }
 
 const closeStoreAndItemsDetailsModal = (evt) => {
@@ -477,160 +577,161 @@ async function compromiseShippingRatesOnOriginitors() {
       <Col id='goodsitemcomponent'>
       
         <h1 id='goodsitemcomponent-marketingheader'>Marketing</h1>
-
+  
         <Row id='goodsitemcomponent-positioningcontainer'>
-     
-           <>
-            {
-              props.itemsGoods.map((data, modalIdx)=> {
-               return <Col xs={4} className='goodsitemcontainer'
-                            key={modalIdx}>
-   
-                        <Col className='goodsitem' >
 
-                             <img src={data.productmainselectionimages[0]}
-                                   className='goodsitemproductdisplayimage'
-                                   onClick={(e)=> showItemModal(e, modalIdx, data)}
-                                   alt='PRODUCT-DISPLAYIMAGE'  />
-                        
-                        </Col>
+         <>
+          {
+           props.itemsGoods.map((data, modalIdx)=> {
+            return <Col xs={4} className='goodsitemcontainer'
+                         key={modalIdx}>
 
-                        <div className='gooditems-storeanditemmodaldetailscontainer'>
-                          { 
-                          storeAndItemModalLoadingIndicator ? 
-                          (
-                            <Spinner animation="border" variant="secondary" className="storeanditemmodalspinner"/>
-                          ) 
-                          :
-                          (
-                          <>
+                     <Col className='goodsitem' >
 
-                           <div className='gooditems-storemodaldetailscontainer'>
+                          <img src={data.productmainselectionimages[0]}
+                                className='goodsitemproductdisplayimage'
+                                onClick={(e)=> showItemModal(e, modalIdx, data)}
+                                alt='PRODUCT-DISPLAYIMAGE'  />
+                     
+                     </Col>
 
-                             <div className='gooditemsstoremodaldetails-storedpcontainer'>
-                               <div className='gooditems-storeanditemmodaldetailsclosecontainer' >
-                                  <p className='gooditems-storeanditemmodaldetailsclose' 
-                                    onClick={(evt)=> closeStoreAndItemsDetailsModal(evt)}>
-                                      x
-                                  </p>
-                               </div>
-                               <div className='gooditems-storeanditemmodaldetaildsdp'>
-                            1 
-                               </div>
-                             </div>
-              
-                             <div className='gooditemsstoremodaldetails-reactindicationcontainer'>
-                          <div className='gooditemsstoremodaldetails-heartandfollowcontainer'>
-                            <p>0 Heart</p>
-                            <p>0 Followers</p>
+                     <div className='gooditems-storeanditemmodaldetailscontainer'>
+                       { 
+                       storeAndItemModalLoadingIndicator ? 
+                       (
+                         <Spinner animation="border" variant="secondary" className="storeanditemmodalspinner"/>
+                       ) 
+                       :
+                       (
+                       <>
+
+                        <div className='gooditems-storemodaldetailscontainer'>
+
+                          <div className='gooditemsstoremodaldetails-storedpcontainer'>
+                            <div className='gooditems-storeanditemmodaldetailsclosecontainer' >
+                               <p className='gooditems-storeanditemmodaldetailsclose' 
+                                 onClick={(evt)=> closeStoreAndItemsDetailsModal(evt)}>
+                                   x
+                               </p>
+                            </div>
+                            <div className='gooditems-storeanditemmodaldetaildsdp'>
+                         1 
+                            </div>
                           </div>
-                          <div className='gooditemsstoremodaldetails-likeanddislikecontainer'>
-                            <p>0 Likes</p>
-                            <p>0 Disikes</p>
-                          </div>
-                             </div> 
-                           </div>
-  
-                           <div className='gooditems-itemmodaldetailscontainer'> 
-  
-                           <Swiper className='gooditems-itemmodalswiper'
-                                    slidesPerView={2}>
-                              <SwiperSlide className='gooditems-itemmodalswiperslide'>
-                                <p className='gooditems-productname'>{data.productname}</p>
-                              </SwiperSlide>
-                              {
-                                goodsSpecificProduct.map((data, idx) => {
-                                  return <>
-                                         {
-                                          data.productmainselectionimages.map((data, idx)=> {
-                                            return <SwiperSlide className='gooditems-itemmodalswiperslide'>
-                                                       <img src={data}
-                                                            className='gooditems-itemmodalmaindisplayimages'/>
-                                                   </SwiperSlide>
-                                          })
-                                         }
-                                         </>
-                                })
-                              }
-                           </Swiper>
-  
-                           <div className='gooditems-itemmodaldetailspositioningcontainer'>
-                              
-                           <div className='gooditems-itemmodalindicationscontainer'>
-                            { 
-                            goodsSpecificProduct.map((data, idx)=> {
-                              return <>
-                                      <p className='gooditems-itemmodallocationsindication' key={idx}>{data.productextrainformationlocation.island}, {data.productextrainformationlocation.province}, {data.productextrainformationlocation.city}, {data.productextrainformationlocation.baranggay}</p>
-                                      <p className='gooditems-itemmodalpriceindication'>
-                                         <span>&#8369;{data.productprice}</span>
-                                      </p>
-                                      <button onClick={(e)=> showSpecificItem(e, modalIdx, data)}
-                                        className='gooditems-itemmodalviewitembutton'>
-                                          select
-                                      </button><br/>
-                                      <button className='gooditems-itemmodaltrymeaddingtocartbutton'
-                                          onClick={(e)=> landingViewAddMeToCart(e, idx, data)}>
-                                          add me to cart
-                                      </button>
-                                     </>
-                            })
-                            }
-                            
-                           
-                           </div>
-      
-                           </div>
-                        
-                           </div>
-
-                          </>
-                          )    
-                          }
+           
+                          <div className='gooditemsstoremodaldetails-reactindicationcontainer'>
+                       <div className='gooditemsstoremodaldetails-heartandfollowcontainer'>
+                         <p>0 Heart</p>
+                         <p>0 Followers</p>
+                       </div>
+                       <div className='gooditemsstoremodaldetails-likeanddislikecontainer'>
+                         <p>0 Likes</p>
+                         <p>0 Disikes</p>
+                       </div>
+                          </div> 
                         </div>
-                
-                      </Col>
-              })
-            }
-           </>
 
-           <div className='goodsitemstorecontainer'>
-                            {
-                                itemSpecificLoadingStatus ? (
-                                  <Spinner animation="border" variant="danger" />
-                                ) : (
-                                  <>
-                                  <StoreLandingViewReview specificproduct={specificproduct}
-                                         specificMacProductObjIdleStatus={specificMacProductObjIdleStatus}
-      
-                                         productInfoClickFromMacSetModal={props.productInfoClickFromMacSetModal}
-                                         itemspecification={props.itemspecification}
-      
-                                         availableColorsData={availableColorsData}
-                                         availableSizesData={availableSizesData}
-      
-                                         getprodutprice={props.getprodutprice}
-                                         getselectedproduct={props.getselectedproduct}
-      
-                                         selectedSpecificItem={props.selectedSpecificItem}
-                                         getSelectedSpecificItem={props.getSelectedSpecificItem}
-                                       
-                                         selectedColor={props.selectedColor}
-                                         getSelectedColor={props.getSelectedColor}
-                
-                                         selectedSizes={props.selectedSizes}
-                                         getSelectedSizes={props.getSelectedSizes}
-                                         
-                                         selectedSizesSpecification={props.selectedSizesSpecification}
-                                         getSelectedSizesSpecification={props.getSelectedSizesSpecification}
-                                 
-                                          closeSpecificItem={closeSpecificItem}/>
+                        <div className='gooditems-itemmodaldetailscontainer'> 
+
+                        <Swiper className='gooditems-itemmodalswiper'
+                                 slidesPerView={2}>
+                           <SwiperSlide className='gooditems-itemmodalswiperslide'>
+                             <p className='gooditems-productname'>{data.productname}</p>
+                           </SwiperSlide>
+                           {
+                             goodsSpecificProduct.map((data, idx) => {
+                               return <>
+                                      {
+                                       data.productmainselectionimages.map((data, idx)=> {
+                                         return <SwiperSlide className='gooditems-itemmodalswiperslide'>
+                                                    <img src={data}
+                                                         className='gooditems-itemmodalmaindisplayimages'/>
+                                                </SwiperSlide>
+                                       })
+                                      }
+                                      </>
+                             })
+                           }
+                        </Swiper>
+
+                        <div className='gooditems-itemmodaldetailspositioningcontainer'>
+                           
+                        <div className='gooditems-itemmodalindicationscontainer'>
+                         { 
+                         goodsSpecificProduct.map((data, idx)=> {
+                           return <>
+                                   <p className='gooditems-itemmodallocationsindication' key={idx}>{data.productextrainformationlocation.island}, {data.productextrainformationlocation.province}, {data.productextrainformationlocation.city}, {data.productextrainformationlocation.baranggay}</p>
+                                   <p className='gooditems-itemmodalpriceindication'>
+                                      <span>&#8369;{data.productprice}</span>
+                                   </p>
+                                   <button onClick={(e)=> showSpecificItem(e, modalIdx, data)}
+                                     className='gooditems-itemmodalviewitembutton'>
+                                       select
+                                   </button><br/>
+                                   <button className='gooditems-itemmodaltrymeaddingtocartbutton'
+                                       onClick={(e)=> landingViewAddMeToCart(e, idx, data)}>
+                                       add me to cart
+                                   </button>
                                   </>
-                                )
-                            } 
-           </div>
+                         })
+                         }
+                         
+                        
+                        </div>
+   
+                        </div>
+                     
+                        </div>
+
+                       </>
+                       )    
+                       }
+                    </div>
+                   </Col>
+                  
+                  
+           })
+          }
+        </>
+
+        <div className='goodsitemstorecontainer'>
+                         {
+                             itemSpecificLoadingStatus ? (
+                               <Spinner animation="border" variant="danger" />
+                             ) : (
+                               <>
+                               <StoreLandingViewReview specificproduct={specificproduct}
+                                      specificMacProductObjIdleStatus={specificMacProductObjIdleStatus}
+   
+                                      productInfoClickFromMacSetModal={props.productInfoClickFromMacSetModal}
+                                      itemspecification={props.itemspecification}
+   
+                                      availableColorsData={availableColorsData}
+                                      availableSizesData={availableSizesData}
+   
+                                      getprodutprice={props.getprodutprice}
+                                      getselectedproduct={props.getselectedproduct}
+   
+                                      selectedSpecificItem={props.selectedSpecificItem}
+                                      getSelectedSpecificItem={props.getSelectedSpecificItem}
+                                    
+                                      selectedColor={props.selectedColor}
+                                      getSelectedColor={props.getSelectedColor}
+             
+                                      selectedSizes={props.selectedSizes}
+                                      getSelectedSizes={props.getSelectedSizes}
+                                      
+                                      selectedSizesSpecification={props.selectedSizesSpecification}
+                                      getSelectedSizesSpecification={props.getSelectedSizesSpecification}
+                              
+                                       closeSpecificItem={closeSpecificItem}/>
+                               </>
+                             )
+                         } 
+        </div>
 
         </Row>
-
+      
       </Col>
     )
 }
