@@ -17,7 +17,7 @@ export default function LoginComponent() {
   const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
   const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:4000/');
   const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
-;
+  
   axios.defaults.baseURL = backEndPathnameURI;
 
   const [day, doSomethingWithDay] = useState();
@@ -133,7 +133,7 @@ export default function LoginComponent() {
      document.cookie = `username=${fn}; expires=${day}, ${date} ${month} ${year} ${hour}:${minute}:${seconds} UTC`
 
      alert('Registered')
-      
+
   }
 
 
