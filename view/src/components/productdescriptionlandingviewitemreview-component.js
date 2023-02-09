@@ -812,7 +812,7 @@ props.specificProductLoadingStatus ?
                                      onClick={(e)=> incrementSelectionImage(e, idx)}>
                                  +
                              </button>
-                         </div> 
+                           </div> 
                              
                          <img key={idx}
                               src={data}

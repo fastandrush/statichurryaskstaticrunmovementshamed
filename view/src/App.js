@@ -234,14 +234,14 @@ async function getUser(parsedUser) {
   let userdata = undefined;
  
   // qeurying user collection to get a favorite items on cart
-alert('1')
+
   const url = '/futuremacholder/getcurrentlyloginmacuser/';
   axios.post(url, { 
     user: parsedUser
   })
 
    .then( async (response)=> {
-   alert('2')
+
      const favitem = response.data.itemsoncart;
   
      for ( let exec = 0; exec < favitem.length; exec++ ) {
@@ -272,7 +272,7 @@ alert('1')
       favoriteItemsOnCart.push(favItem)
      
      }
-  alert('3')
+
     getIfCurrentlyLoginUser((user)=> user = response.data)
     getMacCredits((credits)=> credits = Number(response.data.maccredits.based) + Number(response.data.maccredits.investment))
     await getMacSetItems(response.data.userlocation)
@@ -284,7 +284,7 @@ alert('1')
 /// getting MAC set items, fetchind datas are async, first getting the user and their favorite items before
 // loading the fetch news or post's assuming user's will click directly on cart on page load
 async function getMacSetItems(userlocation) {
-  alert('4')
+ 
    await axios.get('/macsetitem/get')
 
        .then( async (response)=> {

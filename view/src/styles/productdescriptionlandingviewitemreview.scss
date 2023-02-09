@@ -5,6 +5,495 @@ $main-font: "Titillium Web", sans-serif;
 $sub-font: "Quicksand", sans-serif;
 $robotic-font: "Nova Round", cursive;
 //#363636
+
+@media only screen and (max-width: 600px) { 
+  #specificproductcontainerlvir {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0px;
+    color: black;
+  }
+  #specificproductloadingspinnercontainerlvir {
+    position: relative;
+    background-color: maroon;
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .specificproductloadingspinner1lvir {
+    margin-left: 0%;
+  }
+  .specificproductloadingspinner2lvir {
+    margin-left: 2%;
+  }
+  .specificproductloadingspinner3lvir {
+    margin-left: 2%;
+  }
+  #specificproduct-pnlvir {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $main-font;
+      size: 22px;
+    }
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproduct-pplvir {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $main-font;
+      size: 30px;
+    }
+    letter-spacing: 4px;
+    margin-top: 4%;
+    color: black;
+  }
+  #specificproductcontainer-originatorlvir {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $main-font;
+    }
+    letter-spacing: 4px;
+    margin-top: 10%;
+    color: black;
+  }
+  #specificproductcontainer-shippingoptionscontainerlvir {
+    background-color: red;
+  }
+  #specificproductcontainer-shippingoptionslvir {
+  }
+  #specificproductcontainer-shippingfeelvir {
+  }
+  //// specific procuct item images container
+  #specificproductcontainer-mainimagescontainerlvir {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin-top: 5%;
+  }
+  #specificproductcontainer-itemdisplayimageindicationlvir {
+    font: auto {
+      family: $sub-font;
+      size: 24px;
+      variant: small-caps;
+    }
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproductcontainermainimagescontainer-swiperlvir {
+    position: relative;
+    width: 80%;
+    height: 33vh;
+    margin-top: 2%;
+  }
+  #specificproductcontainermainimagescontainer-swiperslidelvir {
+    padding: 3%;
+  }
+  .specificproductcontainermainimagescontainerswiper-imagelvir {
+    height: 100%;
+    width: 100%;
+  }
+  ////// product description container
+  #specificproductcontainer-productdescriptioncontainerlvir {
+     height: 100%;
+     width: 75%;
+     margin-top: 7%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+  }
+  #specificproductcontainer-productdescriptionheaderlvir {
+    position:relative;
+    color: black;
+    font: auto {
+      size: 18px;
+      family: $sub-font;
+    }
+    text-align:center;
+    letter-spacing: 4px;
+  }
+  #specificproductcontainer-productdescriptionlvir {
+    position:relative;
+    color: white;
+    font: auto {
+      size: 17px;
+      family: $sub-font;
+    }
+    text-align:center;
+    letter-spacing: 4px;
+    margin-top: 2.4%;
+    color: black;
+    text-indent: 5%;
+    line-height:3.5vh;
+  }
+  //// product extra information
+  #specificproductcontainer-productextainformationcontainerlvir {
+    position:relative;
+    height:auto;
+    width: 75%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+  }
+  #specificproductcontainer-productextainformationheaderlvir {
+    position:relative;
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 17px;
+    }  
+    text-align:center;
+    letter-spacing: 4px;
+  }
+  #specificproductcontainer-productextainformationindicationcontainerlvir {
+  }
+  .specificproductcontainer-productextainformationindicationlvir {
+   font: auto {
+     family: $sub-font;
+   }
+   letter-spacing: 2px;
+   margin-top: 1%;
+   margin-left: 5%;
+   color: black;
+  }
+  ////// product extra information location 
+  #specificproductcontainer-productextainformationlocationcontainerlvir {
+    position:relative;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+  } 
+  #specificproductcontainer-productextainformationlocationheaderlvir {
+    position:relative;
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 17px;
+    }  
+    text-align:center;
+    letter-spacing: 4px;
+  }
+  #specificproductcontainer-productextainformationindicationlocationcontainerlvir {
+  } 
+  .specificproductcontainer-productextainformationlocationindicationlvir {
+    position:relative;
+    font: auto {
+      family: $sub-font;
+    }
+    letter-spacing: 2px;
+    text-align:center;
+    margin-top: 1%;
+    margin-left: 5%;
+  } 
+  ////////
+  ///////// selection images
+  #specificproductcontainer-selectionimagescontainerlvir {
+    position:relative;
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+  }
+  #specificproductcontainerselectionimage-imagepositioncontainerlvir {
+    position:relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+  }
+  #specificproductcontainerselectionimages-choosespecificitemindicationlvir {
+    font: auto {
+      family: $sub-font;
+      size: 25px;
+    }
+    color: white;
+    letter-spacing: 4px;
+    text-align: center;
+    color: black;
+  }
+  #specificproductcontainerselectionimages-choosespecificitemindicationcountlvir {
+    font: auto {
+      family: $sub-font;
+      size: 25px;
+    }
+    color: white;
+    letter-spacing: 4px;
+    margin-left: 0%;
+    text-align: center;
+    color: black;
+  }
+  .specificproductcontainerselectionimage-imagecontainerlvir {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+  }
+  .specificproductcontainerselectionimage-incredecrebuttoncontainerlvir {
+    position:relative;
+  //border: 1px solid black;
+    height: auto;
+    width: 55%;
+    padding: 10px 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: -0.1vh;
+  }
+  .specificproductcontainerselectionimage-decrementbuttonlvir {
+     border: none;
+    // background-color: #20bf55;
+    // background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+     background-color: dodgerblue;
+     border-radius: 50%;
+     font: auto {
+       family: $sub-font;
+       size: 30px;
+     }
+     padding: 5px 15px;
+     color: white;
+  }
+  .specificproductcontainerselectionimage-inputfieldlvir {
+     text-align: center;
+     font: auto {
+      family: $sub-font;
+      size: 30px;
+      weight: 500;
+    }
+    border-radius: 20px;
+    width: 10%;
+    height: 100%;
+    outline-style: none;
+    border: none;
+  }
+  .specificproductcontainerselectionimage-incrementbuttonlvir {
+    border: none;
+    background-color: red;
+    border-radius: 50%;
+    font: auto {
+      family: $sub-font;
+      size: 30px;
+    }
+    padding: 5px 15px;
+    color: white;
+  }
+  .specificproductcontainerselectionimagelvir {
+    position:relative;
+    height: 28vh;
+    width: 40%;
+    border-radius: 20px;
+  }
+  .specificproductcontainerselectionimage-ordercountindicationlvir {
+    font: auto {
+      family: $main-font;
+      size: 35px;
+      variant: small-caps;
+    }
+    color: white;
+  }
+  ///// available colors
+  #specificproductcontainer-availablecolorscontainerlvir {
+    position:relative;
+    height:auto;
+    width:100%;
+    margin-top: 10%;
+    padding: 10px 10px;
+  }
+  #specificproductcontainer-availablecolorsheaderlvir {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 26px;
+    }  
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproductcontaineravailablecolor-colorcontainerlvir {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 240px;
+  }
+  .specificproductcontaineravailablecolor-colorpositioningcontainerlvir {
+    position: relative;
+    height: 60%;
+    width: 15%;
+    border-radius: 50%;
+  }
+  .specificproductcontaineravailablecolor-selectedcountlvir {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font: auto {
+      family: $main-font;
+      size: 60px;
+    }
+    color: white;
+  }
+  .specificproductcontaineravailablecolor-colorpositioningcontaineranimatedlvir {
+    position: relative;
+    height: 60%;
+    width: 15%;
+    border-radius: 50%;
+    animation: bounce 1.5s linear 2s infinite;
+    transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+  }
+  @keyframes bounce {
+    0%   {bottom:30px;}
+    25%  {bottom:20px;}
+    50%  {bottom:10px;}
+    75%  {bottom:5px;}
+    100% {bottom:-10px;}
+  }
+  //// available sizes 
+  #specificproductcontainer-availablesizescontainerlvir {
+    position:relative;
+    height:auto;
+    width:100%;
+    margin-top: 10%;
+    padding: 10px 10px;
+  }
+  #specificproductcontainer-availablesizesheaderlvir {
+    position:relative;
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 26px;
+    }  
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproductcontaineravailablesizes-sizescontainerlvir {
+    position:relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 240px;
+    margin-top: 5%;
+  }
+  .specificproductcontaineravailablesizes-sizespositioningcontainerlvir {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 4%; 
+  }
+  .specificproductcontaineravailablesizes-incredecrebtncontainerlvir {
+    position:relative;
+    display: flex;
+    height: auto;
+    width: 90%;
+    padding: 0px 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -3%;
+  }
+  .specificproductcontaineravailablesizes-pcsfieldlvir {
+    position:relative;
+    text-align: center;
+    font: auto {
+     family: $sub-font;
+     size: 30px;
+     weight: 500;
+   }
+   width: 15%;
+   height: 100%;
+   outline-style: none;
+   border: none;
+  }
+  .specificproductcontaineravailablesizes-decrementbtnlvir {
+    position:relative;
+    border: none;
+    background-color: red;
+    border-radius: 50%;
+    font: auto {
+      family: $sub-font;
+      size: 20px;
+    }
+    padding: 0px 15px;
+    color: white;
+  }
+  .specificproductcontaineravailablesizes-incrementbtnlvir {
+    position:relative;
+    border: none;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    font: auto {
+      family: $sub-font;
+      size: 20px;
+    }
+    padding: 5px 15px;
+    color: white;
+  }
+  .specificproductcontaineravailablesizes-specificationfieldlvir {
+    position:relative;
+    text-align: center;
+    font: auto {
+     family: $sub-font;
+     size: 13px;
+     weight: 500;
+   }
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 1px solid black;
+   outline-style: none;
+   width: 60%;
+   height: 6vh;
+   margin-left: 0%;
+   letter-spacing: 2px;
+  }
+  .specificproductcontaineravailablesizes-sizelvir {
+    position:relative;
+    font: auto {
+      family: $main-font;
+      size: 18px;
+    }
+    letter-spacing: 6px;
+    transition: 1s ease;
+    margin-left: 3%;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
 #specificproductcontainerlvir {
   position: relative;
   background-color: white;
@@ -462,4 +951,4 @@ $robotic-font: "Nova Round", cursive;
   margin-left: 3%;
 }
 /// available colors
-
+}

@@ -514,11 +514,12 @@ font: auto {
   transform-style: preserve-3d;
 }
 #landingview-cartcontentcontainer {
+  position:relative;
   background-color: #3f0d12;
   background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
   position: absolute;
-  width: 60%;
-  height: 600%;
+  width: 150%;
+  height: 720%;
   left: 3%;
   border-radius: 25px;
   padding: 10px;
@@ -660,6 +661,11 @@ font: auto {
 }
 .landingview-cartcontentmacsetfavorites {
   position: relative;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: auto;
+  width:100%;
+  color: black;
   transform: rotateX(180deg);
   display: flex;
   background: radial-gradient(
@@ -678,20 +684,19 @@ font: auto {
       #5d4a1f 62.5%,
       #5d4a1f 100%
     );
-  height: auto;
-  border-radius: 20px;
   padding: 5px;
-  color: black;
+  top:-17vh;
   transition: 1s ease 1s;
-  border: 1px solid white;
 }
 .landingviewcartcontentmacset-namecontainer {
+  position:relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .landingviewcartcontent-name {
+  position:relative;
   font: auto {
     family: $sub-font;
     size: 13px;
@@ -703,11 +708,13 @@ font: auto {
   position:relative;
 }
 .landingviewcartcontentmacset-name {
+  position:relative;
+  color: white;
   font: auto {
     family: $sub-font;
     size: 25px;
   }
-  color: white;
+  text-align:center;
 }
 .landingviewcartcontent-priceindication {
   position: relative;
@@ -854,18 +861,18 @@ position:relative;
   background-color: #378b29;
   background-image: linear-gradient(315deg, #378b29 0%, #74d680 74%);
   transform: rotateX(180deg);
-  height: 7%;
+  height: 10%;
 }
 #landingview-checkoutbutton {
-  position: relative;
+  position: absolute;
+  color: white;
   font: auto {
     family: $sub-font;
-    size: 28px;
+    size: 25px;
   }
-  color: white;
+  transform: translate(60%,-10.5%);
   text-align: center;
   letter-spacing: 5px;
-  left: 31%;
   text-decoration: none;
 }
 #landingpage-shoppingcartimage {
@@ -939,10 +946,11 @@ position:relative;
   width: 100%;
   height: 86%;
   z-index:200;
+  overflow-x:hidden;
   overflow-y: scroll;
 }
 #test::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 #test::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 

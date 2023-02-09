@@ -110,7 +110,8 @@ useEffect(()=> {
   
    //document.getElementsByClassName('landingview-cartcontentmacset')[0].style.visibility = 'hidden';
    document.getElementsByClassName('landingview-cartcontent')[0].style.visibility = 'hidden';
-   document.getElementsByClassName('landingview-cartcontentfavorites')[0].style.visibility = 'hidden';
+   document.getElementsByClassName('landingview-cartcontentmacsetfavorites')[0].style.visibility = 'hidden';
+  // document.getElementsByClassName('landingview-cartcontentfavorites')[0].style.visibility = 'hidden';
  
 },[])
 
@@ -153,7 +154,7 @@ const toggleCart = (e) => {
        //cartContent.style.transition = '1s ease'
        setDefaultCartContainerTransitionProp((transition)=> transition = '1s ease')
        toggleCartContainer((toggle)=> toggle = '1')
-       doSomethingWithCartContainerOffSetTop((offset)=> offset = '-600%')
+       doSomethingWithCartContainerOffSetTop((offset)=> offset = '-750%')
        doSomethingWithCartInfoContainerOffSetTop((offset)=> offset = '0%')
        doSomethingWithCartItemOffSetTop((offset)=> offset = '3%')
        doSomethingWithCartItemCheckOutBtn((dp)=> dp = 'block' )
@@ -610,13 +611,35 @@ const onScrollFunction = (evt) => {
              )
              :
              (
-            <div className='landingview-cartcontentfavorites'
-                 key={idx}
-                 style={{marginTop: cartItemOffSetTop}}>
-              <p>{data.macset.isamacset}</p>
-              <button style={{zIndex: 10}}
-                         onClick={(evt)=> {alert(JSON.stringify(data))} }>click me</button>
-            </div>
+              <div className='landingview-cartcontentmacsetfavorites'
+              key={idx} 
+              style={{marginTop: cartItemOffSetTop}}>
+    
+         <Col lg={5} className='landingviewcartcontentmacset-namecontainer'>
+              <p className='landingviewcartcontentmacset-name'>{data.macset.macsetname}</p>
+              <p className='landingviewcartcontentmacset-weightindication'>weight: 0 grams</p>
+         </Col>
+         <Col lg={6} className='landingviewcartcontentmacset-pricescontainer'>
+         <Col>
+          <p className='landingviewcartcontentmacset-priceindication'>Product price </p>
+          <p className='landingviewcartcontentmacset-priceindication'>Shipping price</p>
+          <p className='landingviewcartcontentmacset-priceindication'>Total price </p>
+         </Col>
+         <Col>
+          <p className='landingviewcartcontentmacset-price'>&#8369;{data.macset.macsetprice}</p>
+          <p className='landingviewcartcontentmacset-price'>&#8369;{data.shippingprice}</p>
+          <p className='landingviewcartcontentmacset-price'>&#8369;{Number(data.macset.macsetprice) + Number(data.shippingprice)}</p>
+         </Col>
+          </Col>
+          <Col>      
+            <Col className='landingviewcartcontentmacsetdislikebuttoncontainer'>
+          <button className='landingviewcartcontentmacsetdislikebutton'
+              onClick={(e)=> myFavoriteMacSet(e, idx, data)}>
+             dislike  
+          </button>
+         </Col>
+        </Col>
+   </div> 
              )
            }
           </>
