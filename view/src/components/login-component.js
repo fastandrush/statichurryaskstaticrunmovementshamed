@@ -133,6 +133,7 @@ export default function LoginComponent() {
      document.cookie = `username=${fn}; expires=${day}, ${date} ${month} ${year} ${hour}:${minute}:${seconds} UTC`
 
      alert('Registered')
+      
   }
 
 
