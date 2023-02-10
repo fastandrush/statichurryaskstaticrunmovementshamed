@@ -5,6 +5,489 @@ $main-font: "Titillium Web", sans-serif;
 $sub-font: "Quicksand", sans-serif;
 $robotic-font: "Nova Round", cursive;
 //#363636
+
+@media only screen and (max-width: 600px) { 
+  #specificproductcontainermacsetitems {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0px;
+    color: black;
+  }
+  #specificproductloadingspinnercontainermacsetitems {
+    position: relative;
+    background-color: maroon;
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .specificproductloadingspinner1macsetitems {
+    margin-left: 0%;
+  }
+  .specificproductloadingspinner2macsetitems {
+    margin-left: 2%;
+  }
+  .specificproductloadingspinner3macsetitems {
+    margin-left: 2%;
+  }
+  #specificproduct-pnmacsetitems {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $main-font;
+      size: 22px;
+    }
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproduct-ppmacsetitems {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $main-font;
+      size: 30px;
+    }
+    letter-spacing: 4px;
+    margin-top: 4%;
+    color: black;
+  }
+  #specificproductcontainer-originatormacsetitems {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $main-font;
+    }
+    letter-spacing: 4px;
+    margin-top: 10%;
+    color: black;
+  }
+  #specificproductcontainer-shippingoptionscontainermacsetitems {
+    background-color: red;
+  }
+  #specificproductcontainer-shippingoptionsmacsetitems {
+  }
+  #specificproductcontainer-shippingfeemacsetitems {
+  }
+  //// specific procuct item images container
+  #specificproductcontainer-mainimagescontainermacsetitems {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin-top: 5%;
+  }
+  #specificproductcontainer-itemdisplayimageindicationmacsetitems {
+    font: auto {
+      family: $sub-font;
+      size: 24px;
+      variant: small-caps;
+    }
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproductcontainermainimagescontainer-swipermacsetitems {
+    position: relative;
+    width: 50%;
+    height: 33vh;
+    margin-top: 2%;
+  }
+  #specificproductcontainermainimagescontainer-swiperslidemacsetitems {
+    padding: 3%;
+  }
+  .specificproductcontainermainimagescontainerswiper-imagemacsetitems {
+    height: 100%;
+    width: 100%;
+  }
+  ////// product description container
+  #specificproductcontainer-productdescriptioncontainermacsetitems {
+     position:relative;
+     height: 100%;
+     width: 75%;
+     margin-top: 7%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+  }
+  #specificproductcontainer-productdescriptionheadermacsetitems {
+    position:relative;
+    color: black;
+    font: auto {
+      family: $sub-font;
+      size: 18px;
+    }
+    letter-spacing: 4px;
+    text-align:center;
+  }
+  #specificproductcontainer-productdescriptionmacsetitems {
+    position:relative;
+    color: black;
+    font: auto {
+      family: $sub-font;
+      size: 17px;
+    }
+    letter-spacing: 4px;
+    margin-top: 1.7%;
+    text-indent: 5%;
+    text-align:center;
+  }
+  //// product extra information
+  #specificproductcontainer-productextainformationcontainermacsetitems {
+    position:relative;
+    width: 75%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+  }
+  #specificproductcontainer-productextainformationheadermacsetitems {
+    position:relative;
+    color: black;
+    font: auto {
+      family: $sub-font;
+      size: 17px;
+    }  
+    letter-spacing: 4px;
+    text-align:center;
+  }
+  #specificproductcontainer-productextainformationindicationcontainermacsetitems {
+  }
+  .specificproductcontainer-productextainformationindicationmacsetitems {
+   font: auto {
+     family: $sub-font;
+   }
+   letter-spacing: 2px;
+   margin-top: 1%;
+   margin-left: 5%;
+   color: black;
+  }
+  ////// product extra information location 
+  #specificproductcontainer-productextainformationlocationcontainermacsetitems {
+    position:relative;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+  } 
+  #specificproductcontainer-productextainformationlocationheadermacsetitems {
+    position:relative;
+    color: black;
+    font: auto {
+      family: $sub-font;
+      size: 17px;
+    }  
+    letter-spacing: 4px;
+    text-align:center;
+  }
+  #specificproductcontainer-productextainformationindicationlocationcontainermacsetitems {
+  } 
+  .specificproductcontainer-productextainformationlocationindicationmacsetitems {
+    position:relative;
+    color: black;
+    font: auto {
+      family: $sub-font;
+    }
+    letter-spacing: 2px;
+    margin-top: 1%;
+    margin-left: 5%;
+    text-align:center;
+  } 
+  ////////
+  ///////// selection images
+  #specificproductcontainer-selectionimagescontainermacsetitems {
+    position:relative;
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+  }
+  #specificproductcontainerselectionimage-imagepositioncontainermacsetitems {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 95%;
+    margin-top: 4%;
+  }
+  #specificproductcontainerselectionimages-choosespecificitemindicationmacsetitems {
+    font: auto {
+      family: $sub-font;
+      size: 25px;
+    }
+    color: white;
+    letter-spacing: 4px;
+    text-align: center;
+    color: black;
+  }
+  #specificproductcontainerselectionimages-choosespecificitemindicationcountmacsetitems {
+    font: auto {
+      family: $sub-font;
+      size: 25px;
+    }
+    color: white;
+    letter-spacing: 4px;
+    margin-left: 0%;
+    text-align: center;
+    color: black;
+  }
+  .specificproductcontainerselectionimage-imagecontainermacsetitems {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+  }
+  .specificproductcontainerselectionimage-incredecrebuttoncontainermacsetitems {
+    position:relative;
+    height: auto;
+    width: 55%;
+    padding: 10px 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: -5%;
+  }
+  .specificproductcontainerselectionimage-decrementbuttonmacsetitems {
+     border: none;
+    // background-color: #20bf55;
+    // background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+     background-color: dodgerblue;
+     border-radius: 50%;
+     font: auto {
+       family: $sub-font;
+       size: 28px;
+     }
+     padding: 5px 15px;
+     color: white;
+  }
+  .specificproductcontainerselectionimage-inputfieldmacsetitems {
+     text-align: center;
+     font: auto {
+      family: $sub-font;
+      size: 28px;
+      weight: 500;
+    }
+    border-radius: 20px;
+    width: 10%;
+    height: 100%;
+    outline-style: none;
+    border: none;
+  }
+  .specificproductcontainerselectionimage-incrementbuttonmacsetitems {
+    border: none;
+    background-color: red;
+    border-radius: 50%;
+    font: auto {
+      family: $sub-font;
+      size: 30px;
+    }
+    padding: 5px 15px;
+    color: white;
+  }
+  .specificproductcontainerselectionimagemacsetitems {
+    position:relative;
+    height: 28vh;
+    width: 45%;
+    border-radius: 20px;
+  }
+  .specificproductcontainerselectionimage-ordercountindicationmacsetitems {
+    font: auto {
+      family: $main-font;
+      size: 35px;
+      variant: small-caps;
+    }
+    color: white;
+  }
+  ///// available colors
+  #specificproductcontainer-availablecolorscontainermacsetitems {
+    position:relative;
+    height:auto;
+    width:100%;
+    margin-top: 10%;
+    padding: 10px 10px;
+  }
+  #specificproductcontainer-availablecolorsheadermacsetitems {
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 26px;
+    }  
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproductcontaineravailablecolor-colorcontainermacsetitems {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 240px;
+  }
+  .specificproductcontaineravailablecolor-colorpositioningcontainermacsetitems {
+    position: relative;
+    height: 60%;
+    width: 15%;
+    border-radius: 50%;
+  }
+  .specificproductcontaineravailablecolor-selectedcountmacsetitems {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font: auto {
+      family: $main-font;
+      size: 60px;
+    }
+    color: white;
+  }
+  .specificproductcontaineravailablecolor-colorpositioningcontaineranimatedmacsetitems {
+    position: relative;
+    height: 60%;
+    width: 15%;
+    border-radius: 50%;
+    animation: bounce 1.5s linear 2s infinite;
+    transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+  }
+  @keyframes bounce {
+    0%   {bottom:30px;}
+    25%  {bottom:20px;}
+    50%  {bottom:10px;}
+    75%  {bottom:5px;}
+    100% {bottom:-10px;}
+  }
+  //// available sizes 
+  #specificproductcontainer-availablesizescontainermacsetitems {
+    position:relative;
+    height:auto;
+    width:100%;
+    margin-top: 10%;
+    padding: 10px 10px;
+  }
+  #specificproductcontainer-availablesizesheadermacsetitems {
+    position:relative;
+    text-align: center;
+    color: white;
+    font: auto {
+      family: $sub-font;
+      size: 26px;
+    }  
+    letter-spacing: 4px;
+    color: black;
+  }
+  #specificproductcontaineravailablesizes-sizescontainermacsetitems {
+    position:relative;
+    height: 240px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .specificproductcontaineravailablesizes-sizespositioningcontainermacsetitems {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 4%; 
+  }
+  .specificproductcontaineravailablesizes-incredecrebtncontainermacsetitems {
+    position:relative;
+    display: flex;
+    height: auto;
+    width: 55%;
+    padding: 0px 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -3%;
+  }
+  .specificproductcontaineravailablesizes-pcsfieldmacsetitems {
+    text-align: center;
+    font: auto {
+     family: $sub-font;
+     size: 30px;
+     weight: 500;
+   }
+   width: 15%;
+   height: 100%;
+   outline-style: none;
+   border: none;
+  }
+  .specificproductcontaineravailablesizes-decrementbtnmacsetitems {
+    border: none;
+    background-color: red;
+    border-radius: 50%;
+    font: auto {
+      family: $sub-font;
+      size: 20px;
+    }
+    padding: 0px 15px;
+    color: white;
+  }
+  .specificproductcontaineravailablesizes-incrementbtnmacsetitems {
+    border: none;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    font: auto {
+      family: $sub-font;
+      size: 20px;
+    }
+    padding: 5px 15px;
+    color: white;
+  }
+  .specificproductcontaineravailablesizes-specificationfieldmacsetitems {
+    text-align: center;
+    font: auto {
+     family: $sub-font;
+     size: 17px;
+     weight: 500;
+   }
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 1px solid black;
+   outline-style: none;
+   width: 60%;
+   height: 6vh;
+   margin-left: 0%;
+   letter-spacing: 2px;
+  }
+  .specificproductcontaineravailablesizes-sizemacsetitems {
+    position:relative;
+    font: auto {
+      family: $main-font;
+      size: 20px;
+    }
+    letter-spacing: 6px;
+    transition: 1s ease;
+    margin-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
 #specificproductcontainermacsetitems {
   position: relative;
   background-color: white;
@@ -459,6 +942,7 @@ $robotic-font: "Nova Round", cursive;
   letter-spacing: 6px;
   transition: 1s ease;
   margin-left: 3%;
+}
 }
 /// available colors
 

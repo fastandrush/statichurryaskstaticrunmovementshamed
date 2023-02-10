@@ -1,5 +1,6 @@
 import React, { useState,
-                useEffect
+                useEffect,
+                useCallback
               } from 'react';
 
 import { Col } from 'react-bootstrap';
@@ -23,7 +24,14 @@ export default function CheckOutPage(props) {
  const location = useLocation();
  const navigate = useNavigate();
 
- const itemData = location.state;
+ const [, updateState] = useState();
+ const forceUpdate = useCallback(() => updateState({}), []);
+
+ const [itemData, updateItemData] = useState(
+  [
+  
+ ]
+ );
 
  const [parsedMechandiseTotalPrice, stackMerchandiseTotalPrice] = useState(0) 
  const [parsedShippingTotalPrice, stackShippingTotalPrice] = useState(0);
@@ -35,6 +43,8 @@ export default function CheckOutPage(props) {
  const [paymentFormModal, togglePaymentForModal] = useState(false);
   
  useEffect( async ()=> {
+
+  updateItemData((itemdata)=> itemdata = location.state)
 
   if ( paymentFormModal === true ) {
     return
@@ -49,10 +59,12 @@ export default function CheckOutPage(props) {
      for ( let exec = 0; exec < itemData.length; exec++) {
 
       const isamacset = JSON.stringify(itemData[exec].data.macset.isamacset)
+
+    
   
       if ( itemData[exec].data.macset.isamacset === 'true' ) {
-        itemPrice  = JSON.stringify(itemData[exec].data.macset.macsetprice).slice(0, 100000) 
-        stackedMerhcandiseTotalPrice.push(Number(itemPrice))
+        itemPrice  = itemData[exec].data.macset.macsetprice.slice(0, 100000) 
+        stackedMerhcandiseTotalPrice.push(itemPrice)
       }
          
       if ( itemData[exec].data.macset.isamacset === 'false' ) {
@@ -62,17 +74,20 @@ export default function CheckOutPage(props) {
 
      }
 
-  const merchandiseTotalPrice = stackedMerhcandiseTotalPrice.reduce((previousValue, currentValue)=> previousValue + currentValue, 0)
-  
+  const merchandiseTotalPrice = stackedMerhcandiseTotalPrice.reduce((previousValue, currentValue)=> Number(previousValue) + Number(currentValue), 0)
+ 
   stackMerchandiseTotalPrice((totalprice)=> totalprice = merchandiseTotalPrice)
 
+
   const qwerty = document.getElementsByClassName('checkoutpagecontentcontainer2shippingcontainer-originatorindication');
+
+ 
 
   for ( let exec = 0; exec < qwerty.length; exec++) {
     qwerty[exec].style.display = 'none'
   }
 
-  qwerty[0].style.display = 'block';
+ // qwerty[0].style.display = 'none'
 
   const shippingPrices = document.getElementsByClassName('checkoutpagecontentcontainer2shippingindication-shippingrate');
 
@@ -91,9 +106,10 @@ export default function CheckOutPage(props) {
 
   }
   
+ 
   return
       
- },[])
+ },[itemData])
 
 
 const initialOptions = {
@@ -226,9 +242,7 @@ const submitCheckoutPurchaseDetails = async (token) => {
         (
            <>
            <Col id='checkoutpage'>
-            <button onClick={()=> buy()}>
-               click me
-            </button>
+
              <Col id='checkoutpagepositioningbuttonscontainer'>
                 <Col id='checkoutpagebuttonscontainer'
                      onClick={()=> { alert(JSON.stringify(itemData))}}>
@@ -238,7 +252,8 @@ const submitCheckoutPurchaseDetails = async (token) => {
 
             <Col id='checkoutpagepositioningcontentcontainer'>
                 <Col id='checkoutpage-contentcontainer1'>
-                 <Swiper id='checkoutpage-swiper'>
+                 <Swiper id='checkoutpage-swiper'
+                         slidesPerView={1}>
                     {
                       itemData.map((data, idx)=> {
                         return <>

@@ -168,8 +168,6 @@ const __lg = window.matchMedia('(min-width: 1200px)');
 const __md = window.matchMedia('(min-width: 992px)');
 
 
-
-
 useEffect(() => {
 
    const userCookie = document.cookie;
@@ -255,7 +253,7 @@ async function getUser(parsedUser) {
            macsetitemlocation: favitem[exec].macset.macsetitemlocation,
            macsetweight: favitem[exec].macset.macsetweight,
            originator: favitem[exec].originator,
-           isamacset: favitem[exec].macset.isamacset,
+           isamacset: favitem[exec].macset.ismacset,
            vat: favitem[exec].vat,
          },
          productname: favitem[exec].productname,

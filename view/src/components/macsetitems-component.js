@@ -263,7 +263,7 @@ export default  function  MacSetItems(props) {
   }
 
   const tryMeAddingToCartMacSetItem = (e, idx, data) => {
-    
+      
       let itemSpecs = {
           idx: props.cartItems.length,
           macset: {
@@ -788,7 +788,7 @@ async function compromiseShippingRatesOnOriginitors() {
                            alt='MAC-DEFAULT-DISPLAY-IMAGE'
                            className='macsetitems-displayimage'/>
                 </Col>
-                </Col>
+              </Col>
 
                 <Col className='macsetitemsbuttonscontainer'>
                    <img src='../images/eye-scanner.png'
@@ -838,7 +838,7 @@ async function compromiseShippingRatesOnOriginitors() {
                                <Col lg={8} className='macitemsproductdetails-pricecontentcontainer'>
                                  <h1 className='macitemsproductdetails-contentproductprice'>&#8369; <span className='macitemsproductdetails-pricecontentcontainer'>{data.productprice}</span></h1>
                                </Col>
-                               <Col className='test'
+                               <Col className='macsetitemsproductdetails-merchandisedpandproductnamecontainer'
                                     xs={4}>
                                     <img src={data.productmainselectionimages[0]}
                                          alt='MAC-DEFAULT-DISPLAY-IMAGE'

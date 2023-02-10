@@ -870,7 +870,7 @@ position:relative;
     family: $sub-font;
     size: 25px;
   }
-  transform: translate(60%,-10.5%);
+  transform: translate(60%,-5.5%);
   text-align: center;
   letter-spacing: 5px;
   text-decoration: none;
@@ -943,8 +943,9 @@ position:relative;
   margin-top: 10%;
 }
 #test {
-  width: 100%;
+  position:relative;
   height: 86%;
+  width: 100%;
   z-index:200;
   overflow-x:hidden;
   overflow-y: scroll;

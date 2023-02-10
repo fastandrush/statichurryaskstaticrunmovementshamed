@@ -218,6 +218,7 @@ const myFavoriteMacSet = (e, idx, data) => {
 
 const checkOut = () => {
   
+  
   for ( let exec = 0; exec < props.favoriteItemsOnCart.length; exec++) {
       if ( props.favoriteItemsOnCart[exec].idx === 0 ) {
        
