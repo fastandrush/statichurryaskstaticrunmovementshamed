@@ -21,8 +21,6 @@ export default function MacNews(props) {
   const [macNews1SequenceNumber1, doSomethingWithMacNewsSequenceNumber1] = useState([]);
   const [randomMacNews, changeRandomMacNews] = useState(0);
 
-
-
   useEffect(()=> {
     document.getElementsByClassName('')
   }, [])
@@ -32,7 +30,7 @@ export default function MacNews(props) {
         
        <Col id='macnewsheadercontainer'>
          <Col lg={8}>
-           <h1 id='macnews-macheader'>MAC</h1>
+           <h1 id='macnews-macheader'>MPC</h1>
          </Col>
          <Col id='macnewsheader-viewcontainer'
               lg={4}>
@@ -46,17 +44,24 @@ export default function MacNews(props) {
        <Col id='macnews-newscontainer'>
 
        <div id='macnewscontentcontainer'>
-          <div className='randommacnewscontainer'>
-             {
-                props.macNewsIsIdleStatus ? (
-                   <div>
-                      <img src={props.macNews[0].image}
-                            id='macnewsrandomnewsimage'/>
-                   </div>
-                ) : (
-                  <Spinner animation="border" variant="danger" />
-                )
-              }
+          <div className='randommacnewscontainer' style={{color:'white'}}>
+          {
+            props.contents.length > 0 && 
+            <>
+            {
+             props.contentcontainerloadstate ? (
+              <div>
+              <img src={props.contents[0].image}
+                    id='macnewsrandomnewsimage'/>
+              </div>
+             ) : ( 
+             <Spinner animation="border" variant="danger" />
+             )
+            }
+        </>
+    
+          }
+          
             
           </div>
           <div id='macnews-container'>
@@ -70,17 +75,19 @@ export default function MacNews(props) {
                   id="macnews-swiper">
          
                  {
-                   props.macNews.map((data, idx)=> {
+                   props.contents.map((data, idx)=> {
                       return   <>
                                {
-                                  props.macNewsIsIdleStatus ? (
+                                  props.contentcontainerloadstate ? (
                                      <>
                                       {
                                          data.ytlinkstatus ? (
                                           <SwiperSlide className='macnewscontent'>
                                               <ReactPlayer url={data.ytlink}
                                                            height={'100%'}
-                                                           width={'50%'}/>
+                                                           width={'50%'}
+                                                           },
+                                                           />
                                           </SwiperSlide>
                                          ) : (
                                           <SwiperSlide className='macnewscontent'>

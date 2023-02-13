@@ -1,6 +1,7 @@
 import React, { useState,
-                useEffect, 
-                useCallback   
+                useMemo,
+                useEffect,
+                useCallback  
                } from 'react';
 
 import { Routes, 
@@ -18,22 +19,132 @@ import Login from './components/login-component';
 import CheckOutPage from './components/checkout-component';
 import CheckoutReturnPage from './components/checkoutreturnpage-component.js';
 
+import loadsyncdata  from './lib/loadsyncdata';
+
 import axios from 'axios';
 
 import './styles/mac.scss';
 
 function MAC() {
 
+const [, updateState] = useState();
+const forceUpdate = useCallback(() => updateState({}), []);
+
 const [backEndPathnameURI, changeBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/')
 const [developmentBackEndPathnameURI, changeDevelopmentBackEndPathnameURI] = useState('http://localhost:4000/');
 const [productionBackEndPathnameURI, changeProductionBackEndPathnameURI] = useState('https://statichurryaskstaticrunmovementshamed-api.onrender.com/');
 
-axios.defaults.baseURL = backEndPathnameURI;
+axios.defaults.baseURL = developmentBackEndPathnameURI;
+
+const [trendSlidesPerView, updateTrendSlidesPerView] = useState(4);
+
+const [xs, isXS] = useState(false); 
+const [viewport, loadviewport] = useState('Portrait');
+
+// contents 
+const [contents, savecontentsUI] = useState([]); 
+const [screensize, savescreensize] = useState(window.innerWidth);
+const [contentcontainerloadstate, contentcontainerloadstateupdate] = useState(false);
+const [popularposts, savepopularposts] = useState([]);
+const [latestcontents, savelatestcontents] = useState([]);
+
+// marketing 
+const [mpcsets, savempcsetproduct] = useState([]);
+const [mpcmarketingmerchandises, savempcmarketingmerchandises] = useState([]);
+
+{/*
+useEffect( async () => {
+
+ 
+
+   //alert(JSON.stringify(data._content._mpc))
+   //alert(JSON.stringify(data._content._popularposts))
+   //alert(JSON.stringify(data._content._latestcontents))
+
+   //alert(JSON.stringify(data._currentlyloginuser))
+   //alert(JSON.stringify(data._marketing._mpcsets))
+   //alert(JSON.stringify(data._marketing._merchandises))
+   
+   
+}, [])
+*/}
+
+
+const $loaduserinterface = async () => {
+  const $uidata = await loadsyncdata();
+  const _mpccontents = await $uidata._content._mpc;
+  const _popularpostscontent = await $uidata._porpularposts;
+  const _latestcontents = await $uidata._content._latestcontents;
+  const _mpcsetsmarketing = await $uidata._marketing._mpcsets;
+  await $loadcontent(_mpccontents,_popularpostscontent,_latestcontents);
+  await $loadmpcsetproducts(_mpcsetsmarketing);
+}
+const $loadcontent = async (_mpccontents,_popularpostscontent,_latestcontents) => {
+
+  await savecontentsUI((content)=>  content = _mpccontents);
+  await savepopularposts((posts)=> posts = _popularpostscontent);
+  await savelatestcontents((posts)=> posts = _latestcontents);
+  await contentcontainerloadstateupdate((status)=> status = true);
+
+}
+const $loadmpcsetproducts = async (_mpcsetsmarketing) => {
+  await savempcsetproduct((sets)=> sets = _mpcsetsmarketing);
+}
+const $loadmpcmarketingmerchandises = async () => {
+  await savempcmarketingmerchandises((merchandises)=> merchandises = [])
+}
+const $loadpopularposts = async () => {
+  await savepopularposts((posts)=> posts = [])
+}
+const $loadlatestcontents = async () => {
+  await savelatestcontents((posts)=> posts = [])
+}
+
+function runUserInterface(screensize, viewport, loadviewport) {
+
+let $portraitscreenwidth = window.matchMedia('(max-width: 600px)');
+let $landscapescreenwidth = window.matchMedia('(min-width: 992px)');
+let $lGscreenwidth = window.matchMedia('(min-width: 1200px)');
+
+$portraitscreenwidth.addListener($screenbreakpoints.mobileScreenBreakpoint);
+$screenbreakpoints.mobileScreenBreakpoint($portraitscreenwidth);
+
+$landscapescreenwidth.addListener($screenbreakpoints.landscapeScreenBreakpoint);
+$screenbreakpoints.landscapeScreenBreakpoint($landscapescreenwidth);
+
+$lGscreenwidth.addListener($screenbreakpoints.lGScreenBreakpoint);
+$screenbreakpoints.lGScreenBreakpoint($lGscreenwidth);
+
+}
+
+const $screenbreakpoints = {
+  mobileScreenBreakpoint: async (__xs) => {
+    if (__xs.matches) {
+      await loadviewport((view)=> view = 'Portrait');
+      await $loaduserinterface(); 
+      await updateTrendSlidesPerView((slidesperview)=> slidesperview = 1);
+      await isXS((isxs)=> isxs = true);  
+     }
+  },
+  landscapeScreenBreakpoint: (__md) => {
+    if (__md.matches) {
+      loadviewport((view)=> view = 'Landscape')
+      updateTrendSlidesPerView((slidesperview)=> slidesperview = 2)
+      isXS((isxs)=> isxs = true) 
+    }
+  },
+  lGScreenBreakpoint: (__lg) => {
+    if (__lg.matches) {
+      loadviewport((view)=> view = 'LG')  
+      updateTrendSlidesPerView((slidesperview)=> slidesperview = 4)
+      isXS((isxs)=> isxs = false) 
+     }
+  },
+}
+
+const $runuserinterface = useMemo(async ()=>  await runUserInterface(screensize, viewport, loadviewport), [viewport]);
 
 const location = useLocation();
-const [, updateState] = useState();
-const forceUpdate = useCallback(() => updateState({}), []);
-const [xs, isXS] = useState(false); 
 
 // mac id 
 const [userId, doSomethindWithUserId] = useState(''); 
@@ -46,20 +157,6 @@ const [macCredits, getMacCredits] = useState(0.00);
 const [mainNews, doSomethingWithTheMainNews] = useState([]); 
 const [restOfTheMainNewseStatusLoadingUpdate, doSomethingWithTheRestOfTheMainNewsStatusLoadingUpdate] = useState(false);
 
-// mac news state / is idle status 
-const [macNews, doSomethingWithTheMacNews] = useState([
-                                                {
-                                                topic: 'Topic', 
-                                                image: '../images-leaves-image.png',
-                                                goal: 'Goal',
-                                                author: 'Author',
-                                                date: 'Date',
-                                                ytlinkstatus: 'false',
-                                                ytlink: 'false',
-                                                sequence: 1
-                                                }]); 
-
-const [macNewsIsIdleStatus, doSomethingMacNewsIsIdleStatus] = useState(false);
    
 // ph news state / is idle status 
 const [popularPosts, doSomethingPopularPosts] = useState(['1', '2', '3']);
@@ -161,64 +258,16 @@ const [cartTotalPrice, getCartTotalPrice] = useState(0);
 const [totalFavCartItemPrice, getTotalFavCartItemPrice] = useState([]);
 const [parsedTotalFavCartItemPrice, getParsedTotalFavCartItemPrice]  = useState(0);
 
-const [trendSlidesPerView, updateTrendSlidesPerView] = useState(4);
-
-const __xs = window.matchMedia('(max-width: 600px)');
-const __lg = window.matchMedia('(min-width: 1200px)');
-const __md = window.matchMedia('(min-width: 992px)');
+function loadUserInterface() {
 
 
-useEffect(() => {
+ // const data = await loadsyncdata();
 
-   const userCookie = document.cookie;
-   const parsedUser = userCookie.slice(9, 1000);
+}
 
-    if ( location.pathname === '/' ) {
-      
-     getUser(parsedUser);
-
-     // setInterval(updateMacUI, 3000);
-
-     __lg.addListener(_lgBreakpoint);
-     _lgBreakpoint(__lg);
-     __xs.addListener(_xsBreakpoint);
-     _xsBreakpoint(__xs);
-     __md.addListener(_mdBreakpoint);
-     _mdBreakpoint(__md);
-
-    } else {
-
-      __lg.addListener(_lgBreakpoint);
-      _lgBreakpoint(__lg);
-      __xs.addListener(_xsBreakpoint);
-      _xsBreakpoint(__xs);
-      __md.addListener(_mdBreakpoint);
-      _mdBreakpoint(__md);
-
-    }
-
-}, [trendSlidesPerView])
+function processContents() {
   
-function _lgBreakpoint(__lg) {
-    if (__lg.matches) {
-      updateTrendSlidesPerView((slidesperview)=> slidesperview = 4)
-      isXS((isxs)=> isxs = false) 
-    }
-}
-
-function _xsBreakpoint(__xs) {
-      if (__xs.matches) {
-        updateTrendSlidesPerView((slidesperview)=> slidesperview = 1)
-        isXS((isxs)=> isxs = true) 
-      }
-}
-
-function _mdBreakpoint(__md) {
-      if (__md.matches) {
-        updateTrendSlidesPerView((slidesperview)=> slidesperview = 2)
-        isXS((isxs)=> isxs = true) 
-      }
-}
+} 
 
 function getLocationOnScroll() {
    //store cookie deny from entering page redirect somewhere
@@ -226,61 +275,9 @@ function getLocationOnScroll() {
    //apply on scroll if var is undefine/show warning to delete or ban account
 }
 
-async function getUser(parsedUser) {
-
-  let userlocation = undefined;
-  let userdata = undefined;
- 
-  // qeurying user collection to get a favorite items on cart
-
-  const url = '/futuremacholder/getcurrentlyloginmacuser/';
-  axios.post(url, { 
-    user: parsedUser
-  })
-
-   .then( async (response)=> {
-
-     const favitem = response.data.itemsoncart;
-  
-     for ( let exec = 0; exec < favitem.length; exec++ ) {
-     
-      let favItem = {
-         idx: exec + 1,
-         macset: {
-           macsetname: favitem[exec].macset.macsetname,
-           macsetprice: favitem[exec].macset.macsetprice,
-           macsetitemdisplayimage:  favitem[exec].macset.macsetitemdisplayimage,
-           macsetitemlocation: favitem[exec].macset.macsetitemlocation,
-           macsetweight: favitem[exec].macset.macsetweight,
-           originator: favitem[exec].originator,
-           isamacset: favitem[exec].macset.ismacset,
-           vat: favitem[exec].vat,
-         },
-         productname: favitem[exec].productname,
-         productprice: favitem[exec].productprice,
-         shippingprice: 0,
-         productimages: favitem[exec].productimages,
-         selectedsizes: {
-           selectedsizes: favitem[exec].selectedSizes,
-           selectedsizesspecification: favitem[exec].selectedSizes
-         },
-         selectedcolor: favitem[exec].selectedColor
-      }
-
-      favoriteItemsOnCart.push(favItem)
-     
-     }
-
-    getIfCurrentlyLoginUser((user)=> user = response.data)
-    getMacCredits((credits)=> credits = Number(response.data.maccredits.based) + Number(response.data.maccredits.investment))
-    await getMacSetItems(response.data.userlocation)
-    
-   })
-
-}
-
 /// getting MAC set items, fetchind datas are async, first getting the user and their favorite items before
 // loading the fetch news or post's assuming user's will click directly on cart on page load
+
 async function getMacSetItems(userlocation) {
  
    await axios.get('/macsetitem/get')
@@ -519,11 +516,10 @@ async function addShippingToCartTotalPrice() {
 
 function getMacContent(route) {
    axios.get('/maccontent/maccontent/maccontent')
- 
         .then( async (response)=> {
              console.log(response.data)
-             doSomethingWithTheMacNews((data)=> data = response.data)
-             doSomethingMacNewsIsIdleStatus((status)=> status = true)
+             savecontentsUI((data)=> data = response.data)
+             contentcontainerloadstate((status)=> status = true)
            await getPopularPosts()
          })
 } 
@@ -616,8 +612,9 @@ async function getId() {
  
   return (
      <>
+      <button onClick={(evt)=> alert(viewport)}>click me</button>
        <Routes>
-         
+        
          <Route path='/'
                 element={<LandingView mainNews={mainNews}
 
@@ -629,8 +626,8 @@ async function getId() {
                                       latestPosts={latestPosts}
                                       latestPostsIsIdleStatus={latestPostsIsIdleStatus}
 
-                                      macNews={macNews}
-                                      macNewsIsIdleStatus={macNewsIsIdleStatus}
+                                      contents={contents}
+                                      contentcontainerloadstate={contentcontainerloadstate}
   
                                       videosOf={videosOf}
                                       videosLoadingStatusUpdate={videosLoadingStatusUpdate}

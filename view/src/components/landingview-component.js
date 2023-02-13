@@ -19,7 +19,7 @@ import '../styles/landingview.scss';
  
 // first grid views
 import LandscapeNav from './landscapenav-component';
-import MacNews from './macnews-component';
+import Contents from './contents-component';
 import PopularPosts from './popularposts-component';
 import MacSetItems from './macsetitems-component';
 import LatestPosts from './latestposts-component';
@@ -407,8 +407,8 @@ const onScrollFunction = (evt) => {
 
             <LandscapeNav />
   
-            <MacNews macNews={props.macNews}
-                     macNewsIsIdleStatus={props.macNewsIsIdleStatus}/>
+            <Contents contents={props.contents}
+                     contentcontainerloadstate={props.contentcontainerloadstate}/>
 
             <MacSetItems macSetItems={props.macSetItems}
 
